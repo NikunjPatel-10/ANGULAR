@@ -1,0 +1,54 @@
+// Theme Colors
+$primary: #0e6cc4;
+$white: #ffffff;
+$success: #1eca1a;
+$danger: #e43536;
+$warning: #dc9909;
+$info: #8d63d3;
+
+// Body
+// $body-color:grey;
+$body-bg:#f4f8f9;
+
+// Fonts
+$text-muted: #9fa9bc;
+
+// Link color
+$link-color: $white;
+$link-hover-color: $primary;
+
+// Sidebar
+$nav-link-color: grey;
+$nav-link-active-color: $success;
+$nav-link-active-bg: $success;
+// $nav-link-font-weight: 700;
+
+// Header
+$badge-bg: $success;
+
+// Topbar
+$topbar-bg: #16191c;
+
+// Card
+
+
+// Table
+
+$theme-colors: (
+  "primary": $primary,
+  "warning": $warning,
+  "success": $success,
+  "danger": $danger,
+  "info": $info
+);
+
+
+// content
+$wrapper-bg: #212332;
+
+
+$cards-theme:(
+  brand-icon-clr:#fff,
+  staff-icon-clr:black,
+  seller-icon-clr:#fff
+)

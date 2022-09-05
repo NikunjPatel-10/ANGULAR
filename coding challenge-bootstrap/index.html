@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&family=Roboto:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <div class="d-flex h-100 overflow-hidden">
+        <!-- Aside -->
+        <aside class="primary-aside  border bg-white ">
+
+            <div class="  d-flex align-items-center p-3 ">
+                <span class="fa-regular fa-heart text-success fs-2 me-3"></span>
+                <span class=" fs-3 text-secondary">FITTLE</span>
+
+            </div>
+
+            <div class="d-flex  direction-column align-items-center h-100">
+                <div class=" flex-grow-1 ">
+                    <ul class="nav flex-column  ">
+                        <li class="nav-item mb-4 w-100 align-center">
+                            <a class="nav-link active">
+                                <div class="fa-solid fa-gauge-simple-high fs-4  "></div>
+                                <div class="fs-4 "> Dashboard</div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-4 w-100 align-center">
+                            <a class="nav-link">
+                                <div class="fa-solid fa-compact-disc fs-4 "></div>
+                                <div class="fs-4 ">My-subscription</div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-4 w-100 align-center">
+                            <a class="nav-link">
+                                <div class="fa-solid fa-vihara fs-4  "></div>
+                                <div class="fs-4 ">My studio</div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-4 w-100 align-center">
+                            <a class="nav-link">
+                                <div class="fa-solid fa-calendar fs-4 "></div>
+                                <div class="fs-4 ">Post a job</div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-4  w-100 align-center ">
+                            <a class="nav-link">
+                                <div class="fa-solid fa-bag-shopping fs-4  "></div>
+                                <div class="fs-4">My Events</div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-4   w-100 align-center">
+                            <a class="nav-link">
+                                <div class="fa-solid fa-file fs-4 "></div>
+                                <div class="fs-4"> Notifiation</div>
+                            </a>
+                        </li>
+                        <li class="nav-item  w-100 align-center ">
+                            <a class="nav-link">
+                                <div class="fa-solid fa-gear fs-4  "></div>
+                                <div class="fs-4">Settings</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div> </div>
+            </div>
+            <!-- End: Nav list -->
+        </aside>
+        <!-- End: Aside -->
+
+
+        <section class="wrapper flex-grow-1  ">
+            <!-- header section start -->
+            <header
+                class="  header-wrapper   d-flex justify-content-between  p-3 border border-secondary bg-white">
+                <div class="flex-grow-1">
+                    <nav class="navbar bg-light">
+                        <div class="container-fluid d-flex unset">
+
+                            <span class="fa-solid fa-magnifying-glass mt-1 fs-4 "></span>
+                            <input class="ms-3 fs-4 border-none" type="search" placeholder="Search" aria-label="Search">
+
+                        </div>
+                    </nav>
+                </div>
+                <div class="d-flex ">
+                    <div class="mx-2">
+                        <span class="fa-regular fa-bell position-relative m-2 fs-3">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mx-2 fs-3 bg-font-color">Ryan Gosling</div>
+                    <div class="profile-wrap  mx-2 fs-3">
+                        <img src="assets/images/profile.jpg" alt="profile.pic">
+                    </div>
+                </div>
+            </header>
+            <!-- header section end -->
+            <!-- main content  -->
+            <main class="  m-3 bg-secondary main-wrapper  ">
+
+                <div class="fs-3 mb-2 text-dark">
+                    Dashboard
+                </div>
+                <div class="mb-2 bg-font-color">Hello,Ryan1 Check out what's happenning today</div>
+
+
+                <table class="w-100">
+                    <tbody>
+                        <tr>
+                            <td class="bg-white ">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <div class=" p-2 me-3 bg-font-color"><span
+                                                class="fa-solid fa-circle-exclamation fs-3 mt-2"></span></div>
+                                        <div class="me-5 py-3 bg-font-color">Thank you for joining YPC! Go ahead and</div>
+
+                                        <div
+                                            class="border border-1 rounded-pill align-center text-white p-2 mt-2 button-bg-color">
+                                            Create now
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="border-none fs-3 text-align-center bg-white"
+                                            aria-label="Close">X</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="w-100 mt-3">
+                    <tbody>
+                        <tr>
+                            <td class="bg-white ">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <div class=" p-2 me-3 bg-font-color"><span
+                                                class="fa-solid fa-circle-exclamation fs-3 mt-2"></span></div>
+                                        <div class="me-5 py-3 bg-font-color">Thank you for joining YPC! Go ahead and</div>
+
+                                        <div
+                                            class="border border-1 rounded-pill align-center p-2 mt-2 text-color  main-bg-color">
+                                            Check-now
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="border-none fs-3 text-align-center bg-white"
+                                            aria-label="Close">X</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row mt-4  ">
+                    <div class="col-6">
+                        <div class="d-flex justify-content-between p-3 bg-white">
+                            <div class="fs-3">New Brisbane Instructors - 02</div>
+                            <div class="p-2">
+                                <span class="fa-solid fa-eye fs-5 me-2 bg-font-color"></span>
+                                <span class="fs-5 me-2 bg-font-color">Veiw all</span>
+                                <span class="fa-solid fa-caret-down fs-5 bg-font-color"></span>
+                            </div>
+                        </div>
+                        <div class="mt-3 bg-white  table-scroll  ">
+                            <table>
+                                <tbody>
+                                    <tr class=" ">
+                                        <div class="d-flex my-2 justify-content-between ">
+                                            <div>
+                                                <div class="p-2 fs-3 ">Thomas Budiman</div>
+                                                <div class="p-2 bg-font-color">24 Hours Fitness , | 1050 Brown Street, Brisbane </div>
+                                                <div class="d-flex p-2">
+                                                    <div
+                                                        class=" border rounded-pill me-2 p-2  text-white button-bg-color">
+                                                        Part Time</div>
+                                                    <div class="border main-bg-color rounded-pill text-color me-2 p-2">
+                                                        Aerial Yoga
+                                                    </div>
+                                                    <div class="border main-bg-color rounded-pill text-color p-1">Yoga
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    <tr class="mb-1">
+                                        <div class="d-flex my-2 justify-content-between ">
+                                            <div>
+                                                <div class="p-2 fs-3">Thomas Budiman</div>
+                                                <div class="p-2 bg-font-color">24 Hours Fitness , | 1050 Brown Street, Brisbane </div>
+                                                <div class="d-flex p-2">
+                                                    <div class=" border main-bg-color rounded-pill text-color me-2 p-2">
+                                                        Part Time</div>
+                                                    <div class="border main-bg-color rounded-pill text-color me-2 p-2">
+                                                        Full Time
+                                                    </div>
+                                                    <div class="border main-bg-color text-color rounded-pill  p-1">Yoga
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="d-flex my-2 justify-content-between ">
+                                            <div>
+                                                <div class="p-2 fs-3">Thomas Budiman</div>
+                                                <div class="p-2 bg-font-color ">24 Hours Fitness , | 1050 Brown Street, Brisbane </div>
+                                                <div class="d-flex p-2">
+                                                    <div class=" border main-bg-color rounded-pill text-color me-2 p-2">
+                                                        Part Time</div>
+                                                    <div class="border main-bg-color rounded-pill text-color me-2 p-2">
+                                                        Aerial Yoga
+                                                    </div>
+                                                    <div class="border main-bg-color rounded-pill text-color p-2">Casual
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex justify-content-between p-3 bg-white">
+                            <div class="fs-3">New Brisbane Instructors - 02</div>
+                            <div class="p-2">
+                                <span class="fa-solid fa-eye fs-5 me-2 bg-font-color"></span>
+                                <span class="fs-5 me-2 bg-font-color">Veiw all</span>
+                                <span class="fa-solid fa-caret-down fs-5 bg-font-color"></span>
+                            </div>
+                        </div>
+                        <div class="mt-3 bg-white  table-scroll  ">
+                            <table>
+                                <tbody>
+                                    <tr class="">
+                                        <div class="d-flex justify-content-between ">
+                                            <div>
+                                                <div class="p-1 fs-3">Yoga Master Class </div>
+                                                <div class="p-1 bg-font-color">24 Hours Fitness, | 1050 Brown Street, Brisbane </div>
+                                                
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    <hr>
+                                    <tr class="">
+                                        <div class="d-flex justify-content-between  ">
+                                            <div>
+                                                <div class="p-2 fs-3">Crossfit Professional Meetup</div>
+                                                <div class="p-2 bg-font-color">24 Hours Fitnes, | 1050 Brown Street, Brisbane </div>
+                                               
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    <hr>
+                                    <tr class="">
+                                        <div class="d-flex justify-content-between ">
+                                            <div>
+                                                <div class="p-2 fs-3">Pilates, Yoga and Barre Instructors</div>
+                                                <div class="p-2 bg-font-color">24 Hours Fitness, | 1050 Brown Street, Brisbane </div>
+                                                
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    <hr>
+                                    <tr>
+                                        <div class="d-flex justify-content-between ">
+                                            <div>
+                                                <div class="p-2 fs-3">Student Assistant educator</div>
+                                                <div class="p-2 bg-font-color">24 Hours Fitness, | 1050 Brown Street, Brisbane </div>
+                                               
+                                            </div>
+                                            <div class="p-4">
+                                                <span class="fa-regular fa-clock me-2 bg-font-color"></span>
+                                                <span class="bg-font-color">5-Min</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </main>
+            <!-- End: main content  -->
+        </section>
+    </div>
+</body>
+
+</html>
