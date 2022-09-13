@@ -1,0 +1,26 @@
+<!-- structural directives -->
+<!-- ngswitchCase -->
+<h1>{{title}}</h1>
+<input  type="text" [(ngModel)]="color">
+<div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'">Red color</h2>
+  <h2 *ngSwitchCase="'green'">green color</h2>
+  <h2 *ngSwitchCase="'blue'">blue color</h2>
+  <h2 *ngSwitchCase="'yellow'">yellow color</h2>
+  <h2 *ngSwitchCase="'orange'">orange color</h2>
+  <h2 *ngSwitchDefault>Unknown color</h2>
+</div>
+
+<!-- ngIf -->
+<button (click)="getValue()">Click</button>
+<p *ngIf="get">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, tempore!</p>
+
+<!-- ngFor -->
+<ul *ngFor="let item of user">
+  <li>{{item}}</li>
+</ul>
+
+
+
+<app-parent></app-parent>
+<app-custom-pipes></app-custom-pipes>

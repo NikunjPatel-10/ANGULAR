@@ -6,8 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Nikunj patel';
- 
+  title = 'my-practice';
+  color = 'red';
+  public user = ['HTML','CSS','Javascript','bootstrap'];
+  get:boolean= false;
+
+  getValue(){
+    this.get= true;
+  }
+
   
-  
+
 }
