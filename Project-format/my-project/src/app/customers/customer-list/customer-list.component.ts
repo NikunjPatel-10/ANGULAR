@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-  public customer: any
+  public customer: any;
+  public title:string;
   constructor(private activateroute: ActivatedRoute ) {
     this.customer = [{
       id:1,
@@ -20,9 +21,11 @@ export class CustomerListComponent implements OnInit {
       email:'parth34@gmail.com'
     }
     ]
+    this.title= "add customer"
   }
 
   ngOnInit(): void {
   }
+  
 
 }

@@ -1,16 +1,17 @@
 <h1>Customer list</h1>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Email</th>
+<table class=>
+  <tr class="col-1">
+    <th class="text-center">ID</th>
+    <th class="text-center">Name</th>
+    <th class="text-center">Email</th>
   </tr>
   <tr *ngFor="let customer of customer">
     <td>{{customer.id}}</td>
     <td>{{customer.name}}</td>
-    <td>{{customer.email}}</td> <button [routerLink]="['../edit',customer.id]">Edit</button>
+    <td class=" ">{{customer.email}}</td> <button [routerLink]="['../edit',customer.id]"
+      [queryParams]="{name:customer.name}" [fragment]="customer.email" class="m-1">Edit</button>
   </tr>
 
 </table>
 <br>
-<button routerLink="add" >Add Customer</button>
+<button routerLink='../add'>Add Customer</button>

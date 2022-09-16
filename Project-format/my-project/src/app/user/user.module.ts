@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ReferenceComponent } from './reference/reference.component';
+import { ContactMeComponent } from './contact-us/contact-me/contact-me.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 
 
@@ -12,7 +14,9 @@ import { ReferenceComponent } from './reference/reference.component';
     HomeComponent,
     AboutComponent,
     ContactUsComponent,
-    ReferenceComponent
+    ReferenceComponent,
+    ContactMeComponent,
+    UserFormComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +25,8 @@ import { ReferenceComponent } from './reference/reference.component';
     HomeComponent,
     AboutComponent,
     ContactUsComponent,
-    ReferenceComponent
+    ReferenceComponent,
+    UserFormComponent
   ]
 })
 export class UserModule { }

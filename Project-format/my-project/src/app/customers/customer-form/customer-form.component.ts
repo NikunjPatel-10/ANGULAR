@@ -9,15 +9,29 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class CustomerFormComponent implements OnInit {
 
   title:string
-  constructor(private activeroute:ActivatedRoute) { 
-  this.title='add customer'
+  id:any
 
+  constructor(private route: Router, private activated:ActivatedRoute) { 
+  this.title='add customer'
   }
 
   ngOnInit(): void {
-console.log(this.activeroute);
+console.log(this.activated);
+this.id=this.activated.snapshot.params['id']
+// this.id = this.route.navigate([], {
+//   relativeTo:this.activated,
+//   queryParams:{name:'nikunj'},
+//   queryParamsHandling:'merge',
+// })
+console.log(this.id);
+this.title = (this.id) ? 'edit customer' : 'add customer';
+
 
     
   }
+  getpage(){
+this.route.navigate(['customers'])
+  }
+  
 
 }

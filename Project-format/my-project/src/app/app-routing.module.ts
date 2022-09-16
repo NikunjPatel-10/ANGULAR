@@ -5,6 +5,7 @@ import { AboutComponent } from './user/about/about.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
 import { HomeComponent } from './user/home/home.component';
 import { ReferenceComponent } from './user/reference/reference.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
 
 
 
@@ -31,6 +32,11 @@ const routes: Routes = [
   {
     path:'reference',
     component:ReferenceComponent
+  },
+  {
+    path:'user-form',
+    component:UserFormComponent
+
   },
   
   
