@@ -16,7 +16,7 @@ export class CustomerFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-console.log(this.activated);
+// console.log(this.activated);
 this.id=this.activated.snapshot.params['id']
 // this.id = this.route.navigate([], {
 //   relativeTo:this.activated,

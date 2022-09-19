@@ -1,7 +1,10 @@
-<div>
-    <input type="text" #ref>
-    <button  >parent </button>
-</div>
-
-
-<app-contact-me ></app-contact-me>
+<div class="parent">
+    <input type="text" #ref >
+    <button (click)="getchild(ref.value)">Parent button</button>
+    <h1>Child to parent data</h1>
+    <ul *ngFor="let childdata of newarr">
+        <li>{{childdata}}</li>
+    </ul>
+    
+    <app-contact-me   [myInput] = "newchild"     (myOutput)="getValue($event)"></app-contact-me>
+    </div>

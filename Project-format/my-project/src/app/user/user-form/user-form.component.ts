@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { user } from '../user.modal';
 
 @Component({
   selector: 'app-user-form',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements OnInit {
+  @ViewChild('loginForm') login?: NgForm;
 
-  constructor() { }
+user:user
+  constructor( ) { 
+    this.user = new user
+
+    
+  }
 
   ngOnInit(): void {
+  }
+  getform(data: any) {
+console.log(this.login);
+
+    console.log(data)
   }
 
 }

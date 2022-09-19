@@ -1,4 +1,7 @@
-<p>contact-me works!</p>
-<input type="text" #ref>
-<button >child-button</button>
-
+<input type = "text" #blank >
+<button (click)="myData(blank.value)">childbutton</button>
+<h1>parent to child data</h1>
+<ul *ngFor="let parentdata of myInput">
+   
+    <li>{{parentdata}}</li>
+</ul>

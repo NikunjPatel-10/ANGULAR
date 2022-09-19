@@ -1,21 +1,29 @@
-<div class="container" style="height:200px;">
-<form >
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">First Name</label>
-        <input type="text" class="form-control">
+
+<div class="container mt-5 border">
+    <form #loginForm="ngForm" (ngSubmit)="getform(loginForm.value)">
+       
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" >First Name</label>
+            <input type="text" class="form-control" name="firstname" [(ngModel)]="user.firstname" #firstName="ngModel" required=""  pattern="[a-zA-Z]+$">
+            <p *ngIf="firstName.touched &&  firstName.invalid" class="text-danger" >This field is required</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" >Last Name</label>
+            <input type="text" class="form-control" name="lastname"  [(ngModel)]="user.lastname"  #lastName="ngModel"  required="" minlength="3">
+            <p *ngIf="lastName.touched && lastName.invalid" class="text-danger"> This field is required</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" >Email</label>
+            <input type="text" class="form-control" name="email"  [(ngModel)]="user.email"  #Email="ngModel"  required="">
+            <p *ngIf="Email.touched && Email.invalid" class="text-danger">This field is required</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"  >Contact number</label>
+            <input type="text" class="form-control" name="contact-number" [(ngModel)]="user.contactnumber" #Contactnumber="ngModel" required="" >
+            <p *ngIf="Contactnumber.touched && Contactnumber.invalid" class="text-danger">This field is required</p>
+          </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+       
+      </form>
+    
     </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Last Name</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Contact Number</label>
-        <input type="text" class="form-control" >
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>

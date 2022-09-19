@@ -6,6 +6,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { ContactMeComponent } from './contact-us/contact-me/contact-me.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomDirectivesDirective } from '../Directive/custom-directives.directive';
+import { CustomPipePipe } from '../Pipe/custom-pipe.pipe';
+import { filter } from 'rxjs';
+import { FilterPipe } from '../Pipe/filter.pipe';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+
 
 
 
@@ -16,17 +23,33 @@ import { UserFormComponent } from './user-form/user-form.component';
     ContactUsComponent,
     ReferenceComponent,
     ContactMeComponent,
-    UserFormComponent
+    UserFormComponent,
+    CustomDirectivesDirective,
+    CustomPipePipe,
+    FilterPipe,
+    ReactiveFormComponent
+ 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     HomeComponent,
     AboutComponent,
     ContactUsComponent,
     ReferenceComponent,
-    UserFormComponent
+    UserFormComponent,
+    CustomDirectivesDirective,
+    ReactiveFormComponent
+    
+
+  ],
+  providers:[
+    CustomPipePipe,
+    FilterPipe
   ]
+
 })
 export class UserModule { }

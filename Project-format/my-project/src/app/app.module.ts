@@ -8,12 +8,18 @@ import { CustomersModule } from './customers/customers.module';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomDirectivesDirective } from './Directive/custom-directives.directive';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+   
+  
+    
    
   ],
   imports: [

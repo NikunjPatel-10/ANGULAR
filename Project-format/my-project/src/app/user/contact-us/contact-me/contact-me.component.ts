@@ -7,14 +7,18 @@ import { Component, OnInit, Input ,Output, EventEmitter} from '@angular/core';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
-@Input() name:any;
-@Output() newItemEvent = new EventEmitter<string>;
-  constructor() { }
-
-  ngOnInit(): void {
-    
+  @Input() myInput: any;
+  @Output() myOutput: EventEmitter<string>;
+  constructor() {
+    this.myOutput = new EventEmitter();
   }
 
+  ngOnInit(): void {
+    // console.log(this.myInput);
+  }
+  myData(data: any) {
+    this.myOutput.emit(data);
+  }
   
 
 }

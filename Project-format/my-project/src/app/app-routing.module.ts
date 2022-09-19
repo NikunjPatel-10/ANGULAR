@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutComponent } from './user/about/about.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
 import { HomeComponent } from './user/home/home.component';
+import { ReactiveFormComponent } from './user/reactive-form/reactive-form.component';
 import { ReferenceComponent } from './user/reference/reference.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 
@@ -37,6 +38,11 @@ const routes: Routes = [
     path:'user-form',
     component:UserFormComponent
 
+  },
+
+  {
+    path:'reactive-form',
+    component:ReactiveFormComponent
   },
   
   

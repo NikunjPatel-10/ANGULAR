@@ -8,10 +8,23 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
-
+  public newarr = ['nikunj', 'parth']
+  public child: string[];
+  public newchild = ['abc', 'efg']
+  constructor() {
+    this.child = [];
+   
+  }
   ngOnInit(): void {
   }
 
+
+  getchild(data: string) {
+   this.newchild.push(data);
+  }
+  getValue(data: string) {
+    this.newarr.push(data);
+    // console.log(data)
+  }
 
 }
