@@ -1,29 +1,101 @@
-
-<div class="container mt-5 border">
-    <form [formGroup]="userForm"  (ngSubmit)="getformData()">
-       
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" >First Name</label>
-            <input type="text" class="form-control" formControlName="firstname" >
-            <p  class="text-danger" >This field is required</p>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" >Last Name</label>
-            <input type="text" class="form-control" for  >
-            <p  class="text-danger"> This field is required</p>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" >Email</label>
-            <input type="text" class="form-control"  formControlName="email" >
-            <p  class="text-danger">This field is required</p>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"  >Contact number</label>
-            <input type="text" class="form-control" formControlName="contactnumber"  >
-            <p  class="text-danger">This field is required</p>
-          </div>
-        <button type="submit" class="btn btn-primary" >Submit</button>
-       
-      </form>
-    
+<div class="container border mt-5 p-3" >
+  <form class="row g-3" [formGroup]="userForm">
+<!-- firstname started here -->
+    <div class="col-md-4">
+      <label for="validationServer01" class="form-label">First name</label>
+      <input type="text" class="form-control " id="validationServer01" formControlName="firstname"
+        [ngClass]="{'is-valid': userFormControl['firstname'].valid, 'is-invalid': userFormControl['firstname'].invalid && userFormControl['firstname'].touched }">
+      <div class="text-danger"
+        *ngIf="userFormControl['firstname'].invalid && (isSubmitted || userFormControl['firstname'].touched || userFormControl['firstname'].dirty)">
+        <div *ngIf="userFormControl['firstname'].errors?.['required']">Firstname is required</div>
+        <div *ngIf="userFormControl['firstname'].errors?.['pattern']">Only Characters are allowed </div>
+      </div>
     </div>
+<!-- lastname started here -->
+    <div class="col-md-4">
+      <label for="validationServer02" class="form-label">Last name</label>
+      <input type="text" class="form-control " id="validationServer02" formControlName="lastname"
+        [ngClass]="{'is-valid': userFormControl['lastname'].valid , 'is-invalid': userFormControl['lastname'].invalid && userFormControl['lastname'].touched}">
+      <div class="text-danger"
+        *ngIf="userFormControl['lastname'].invalid  && (isSubmitted || userFormControl['lastname'].touched || userFormControl['lastname'].dirty)">
+        <div *ngIf="userFormControl['lastname'].errors?.['required']">Lastname is required</div>
+        <div *ngIf="userFormControl['lastname'].errors?.['pattern']">Only Characters are allowed</div>
+      </div>
+    </div>
+<!-- username started here -->
+    <div class="col-md-4">
+      <label for="validationServerUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+       
+        <input type="text" class="form-control is-invalid" id="validationServerUsername" formControlName="username"
+          [ngClass]="{'is-valid': userFormControl['username'].valid , 'is-invalid': userFormControl['username'].invalid && userFormControl['username'].touched}">
+
+      </div>
+      <div class="text-danger"
+        *ngIf="userFormControl['username'].invalid && (isSubmitted || userFormControl['username'].touched || userFormControl['username'].dirty)">
+        <div *ngIf="userFormControl['username'].errors?.['required']">E-mail is required</div>
+        <div *ngIf="userFormControl['username'].errors?.['pattern']">Invalid email has been taken</div>
+        
+      </div>  
+    </div>
+
+<!-- email started here -->
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">City</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03"
+        aria-describedby="validationServer03Feedback" formControlName="city"
+        [ngClass]="{'is-valid':userFormControl['city'].valid, 'is-invalid': userFormControl['city'].invalid  && userFormControl['city'].touched}">
+      <div class="text-danger"
+        *ngIf="userFormControl['city'].invalid && (isSubmitted || userFormControl['city'].touched || userFormControl['city'].dirty)">
+        <div *ngIf="userFormControl['city'].errors?.['required']"> Pleae enter the city name</div>
+        <div *ngIf="userFormControl['city'].errors?.['pattern']">Only Characters are allowed</div>
+      </div>
+    </div>
+
+<!-- state started here -->
+    <div class="col-md-3">
+      <label for="validationServer04" class="form-label">State</label>
+      <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback"
+        formControlName="state"
+        [ngClass]="{'is-valid':userFormControl['state'].valid, 'is-invalid': userFormControl['state'].invalid  && userFormControl['city'].touched}">
+        <option selected disabled value="">Choose...</option>
+        <option>Gujarat</option>
+        <option>Delhi</option>
+        <option>Maharastra</option>
+      </select>
+      <div class="text-danger"
+        *ngIf="userFormControl['state'].invalid && (isSubmitted  || userFormControl['state'].touched  || userFormControl['state'].dirty)">
+        <div *ngIf="userFormControl['state'].errors?.['required']">state name is required</div>
+
+      </div>
+    </div>
+<!-- zip started here -->
+    <div class="col-md-3">
+      <label for="validationServer05" class="form-label">Zip</label>
+      <input type="text" class="form-control is-invalid" id="validationServer05" formControlName="zip"
+        [ngClass]="{'is-valid': userFormControl['zip'].valid , 'is-invalid': userFormControl['zip'].invalid  && userFormControl['zip'].touched}">
+      <div class="text-danger"
+        *ngIf="userFormControl['zip'].invalid  && (isSubmitted  || userFormControl['zip'].touched || userFormControl['zip'].dirty)">
+
+        <div *ngIf="userFormControl['zip'].errors?.['required']">zip code is required</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+          aria-describedby="invalidCheck3Feedback">
+        <label class="form-check-label" for="invalidCheck3">
+          Agree to terms and conditions
+        </label>
+        <!-- <div id="invalidCheck3Feedback" class="invalid-feedback">
+          You must agree before submitting.
+        </div> -->
+      </div>
+    </div>
+
+    <div class="col-12 d-flex align-item-center w-100">
+      <button class="btn btn-primary mb-2  " type="submit" (click)="getFormData()">Submit form</button>
+    </div>
+  </form>
+</div>
