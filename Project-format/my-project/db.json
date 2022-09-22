@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "firstname": "Nikunj",
+      "lastname": "patel",
+      "username": "nikunj123@gmail.com",
+      "city": "Navsari",
+      "state": "Delhi",
+      "zip": "396325",
+      "id": 2
+    },
+    {
+      "firstname": "parth",
+      "lastname": "patel",
+      "username": "parth@gmail.com",
+      "city": "Navsari",
+      "state": "Delhi",
+      "zip": "396325",
+      "id": 3
+    },
+    {
+      "firstname": "kkdf",
+      "lastname": "fgfg",
+      "username": "nikunj123@gmail.com",
+      "city": "Navsari",
+      "state": "Delhi",
+      "zip": "396325",
+      "id": 4
+    },
+    {
+      "firstname": "jay",
+      "lastname": "rathod",
+      "username": "jay@gmail.com",
+      "city": "valsad",
+      "state": "Maharastra",
+      "zip": "333333",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

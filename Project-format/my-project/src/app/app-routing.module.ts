@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './user/about/about.component';
+import { ApiDataComponent } from './user/api-data/api-data.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
 import { HomeComponent } from './user/home/home.component';
 import { ReactiveFormComponent } from './user/reactive-form/reactive-form.component';
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path:'reactive-form',
     component:ReactiveFormComponent
+  },
+  {
+path:'api-data',
+component:ApiDataComponent
   },
   
   

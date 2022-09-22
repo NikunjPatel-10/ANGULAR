@@ -98,4 +98,29 @@
       <button class="btn btn-primary mb-2  " type="submit" (click)="getFormData()">Submit form</button>
     </div>
   </form>
+
+
+  <div class="container">
+    <table class="table border">
+      <thead>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>UserName</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of FormData">
+          <td>{{item.firstname}}</td>
+          <td>{{item.lastname}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.city}}</td>
+          <td>{{item.state}}</td>
+          <td>{{item.zip}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 </div>

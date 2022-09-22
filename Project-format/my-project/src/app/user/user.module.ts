@@ -15,6 +15,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 import { PipeModule } from '../Pipe/pipe/pipe.module';
 import { DirectiveModule } from '../Directive/directive/directive.module';
+import { ApiDataComponent } from './api-data/api-data.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -27,9 +29,8 @@ import { DirectiveModule } from '../Directive/directive/directive.module';
     ReferenceComponent,
     ContactMeComponent,
     UserFormComponent,
-  
- 
     ReactiveFormComponent,
+    ApiDataComponent,
 
   
   ],
@@ -46,7 +47,9 @@ import { DirectiveModule } from '../Directive/directive/directive.module';
     ContactUsComponent,
     ReferenceComponent,
     UserFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ApiDataComponent,
+    HttpClientModule
     
 
   ],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, } from '@angular/forms';
+import { ApiServiceService } from 'src/app/services/api-service.service';
 
 
 @Component({
@@ -10,11 +11,11 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, } fro
 export class ReactiveFormComponent implements OnInit {
   public userForm: FormGroup;
   public isSubmitted: boolean;
-  
- 
+  public employeemodelObj: any;
+  public FormData: any;
 
-  constructor(private formbuilder: FormBuilder) {
-    
+  constructor(private formbuilder: FormBuilder, private api: ApiServiceService) {
+    this.employeemodelObj = [],
       this.isSubmitted = false
     this.userForm = this.formbuilder.group({
       firstname: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*")]],
@@ -27,17 +28,45 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    
+    this.GetApiData();
   }
   get userFormControl() {
     return this.userForm.controls;
   }
 
   getFormData() {
-    this.isSubmitted = true;
-    this.userForm.value;
-    console.log(this.userForm);
-    this.userForm.reset();
+    // this.isSubmitted = true;
+    // this.userForm.value;
+    // console.log(this.userForm);
+    // this.userForm.reset();
+    // this.employeemodelObj.push(
+    //   {
+    //     firstname: this.userForm.value.firstname,
+    //     lastname: this.userForm.value.lastname,
+    //     username: this.userForm.value.username,
+    //     city: this.userForm.value.city,
+    //     state: this.userForm.value.state,
+    //     zip: this.userForm.value.zip
 
+    //   }
+    // )
+    this.api.postdata(this.userForm.value).subscribe(res => {
+      // console.log(res);
+      alert("data added successfully");
+      this.userForm.reset();
+    },
+      err => {
+        alert("somthing went wrong from server side")
+      });
+      this.GetApiData();
+  }
+
+  public GetApiData(): void {
+    this.api.getdata().subscribe(res => {
+      this.FormData = res;
+      console.log(this.FormData);
+      
+    })
   }
 }

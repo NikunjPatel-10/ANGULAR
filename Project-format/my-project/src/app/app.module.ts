@@ -8,7 +8,7 @@ import { CustomersModule } from './customers/customers.module';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,11 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    
-   
-  
-    
-   
+     
   ],
   imports: [
     BrowserModule,
@@ -29,7 +25,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CoredModule,
     SharedModule,
     CustomersModule,
-    UserModule
+    UserModule,
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
