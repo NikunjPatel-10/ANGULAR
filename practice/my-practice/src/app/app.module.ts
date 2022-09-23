@@ -6,14 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { UxPipePipe } from './app-pipe/ux-pipe.pipe';
-import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
+import { CustomPipeComponent } from './Shared/custom-pipe/custom-pipe.component';
+import { CustomDirectiveComponent } from './Shared/custom-directive/custom-directive.component';
+import { CustomDirective } from './directive/custom.directive';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ParentComponent,
     UxPipePipe,
-    CustomPipesComponent
+    CustomPipeComponent,
+    CustomDirectiveComponent,
+    CustomDirective,
+
+   
+  
   ],
   imports: [
     BrowserModule,

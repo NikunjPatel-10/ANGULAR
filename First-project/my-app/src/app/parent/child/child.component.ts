@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-  @Input() myinputMsg!: string;
+  @Input() myinputMsg!: string ;
   @Output()  myOutput:EventEmitter<string> = new EventEmitter();
   // outputMessage:string= "i am child component."
   constructor() {
@@ -20,14 +20,17 @@ export class ChildComponent implements OnInit {
   // list:any=[]
   getData:any=''
 
-  input(e:any){
-    this.getData=(e.target.value);
+  // input(e:any){
+  //   this.getData=(e.target.value);
    
    
-  }
+  // }
 
-  sendValues(){
-    this.myOutput.emit(this.getData)
+  sendValues(blank:any){
+    console.log(blank)
+    if(blank){
+    this.myOutput.emit(blank)
+    }
     // this.myOutput.emit(this.outputMessage);
   }
 

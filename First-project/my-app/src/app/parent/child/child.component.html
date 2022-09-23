@@ -1,3 +1,3 @@
-<input type="text" placeholder="enter text here" (input)="input($event)" #blank> &nbsp;
+<input type="text" placeholder="enter text here" #blank> &nbsp;
 
-<button (click)="sendValues(); blank.value=''"> Send Data </button>  
+<button (click)="sendValues(blank.value); blank.value=''"> Send Data </button>  

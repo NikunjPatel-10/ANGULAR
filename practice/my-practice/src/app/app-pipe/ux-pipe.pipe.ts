@@ -5,15 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class UxPipePipe implements PipeTransform {
 
-  transform(value:any,limit:number) {
+  transform(user:any) {
 
-    if(value.length > limit){
-       return value.substr(0,10) + '...' 
-    }
-    else{
-      return value;
-    }
-
+    return user.substr(0,10)+ "...";
    
   }
 
