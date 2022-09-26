@@ -1,0 +1,23 @@
+<div class="container mt-5 p-3">
+    <table class="table border">
+        <thead>
+            <th class="tableHead">Name</th>
+            <th class="tableHead">Gender</th>
+            <th class="tableHead">DOB</th>
+            <th class="tableHead">Salary</th>
+            <th class="tableHead">Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employeeList">
+                <td>{{employee.name | titlecase}}</td>
+                <td>{{employee.gender | uppercase}}</td>
+                <td>{{employee.DOB | date:'MMMM d, y'}}</td>
+                <td>{{employee.salary | currencyPipe}}</td>
+                <td><button class=" btn btn-success me-2"  (click)="displayDetails(employee)">Details</button>
+                    <button class=" btn btn-primary me-2" (click)="EditData(employee)" >Edit</button>
+                    <button class=" btn btn-danger"  (click)="deleteRow(employee.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

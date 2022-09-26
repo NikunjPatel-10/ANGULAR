@@ -1,0 +1,42 @@
+{
+  "employee": [
+    {
+      "name": "Nikunj patel",
+      "gender": "male",
+      "DOB": "2022-09-01",
+      "salary": "13233",
+      "id": 1
+    },
+    {
+      "name": "rttyty",
+      "gender": "female",
+      "DOB": "2022-09-28",
+      "salary": "23434",
+      "id": 2
+    },
+    {
+      "name": "gfhg",
+      "gender": "dgdj",
+      "DOB": "2022-09-24",
+      "salary": "135456767677777",
+      "id": 3
+    },
+    {
+      "name": "jay",
+      "gender": "male",
+      "DOB": "2022-09-23",
+      "salary": "233",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
