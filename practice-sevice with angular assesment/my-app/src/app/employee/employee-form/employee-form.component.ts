@@ -15,12 +15,13 @@ export class EmployeeFormComponent implements OnInit {
   public employeeData: employee[];
   public id: any
   public showbtn: boolean;
-
+  title: string
   // public Getdata: any
   constructor(private formbuilder: FormBuilder, private router: Router, private api: ApiService, private activated: ActivatedRoute) {
     this.isSubmitted = false;
     this.employeeData = [];
     this.showbtn = true;
+    this.title = ''
     this.userForm = this.formbuilder.group({
       name: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*"), Validators.minLength(3)]],
       gender: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*")]],
@@ -29,16 +30,21 @@ export class EmployeeFormComponent implements OnInit {
       id: ['']
 
     })
-    this.getApiData();
+
+
+    // this.getApiData();
     this.activated.params.subscribe(params => {
       this.id = params['id'];
-      this.GetEmployeebyId();
+      if (this.id) {
+        this.GetEmployeebyId();
+      }
     })
 
   }
 
   ngOnInit(): void {
     this.getApiData()
+    this.title = this.id ? 'Edit employee' : 'Add employee'
   }
   get userFormControl() {
     return this.userForm.controls;
@@ -51,14 +57,15 @@ export class EmployeeFormComponent implements OnInit {
       this.isSubmitted = false;
 
       if (this.id) {
-        this.showbtn = false;
         this.GetEditValue();
+
       }
       else {
-        this.showbtn = true;
+    
         this.api.PostData(this.userForm.value).subscribe(res => {
           console.log(res);
           this.getApiData();
+          this.userForm.reset();
         })
 
       }
@@ -83,13 +90,14 @@ export class EmployeeFormComponent implements OnInit {
   }
 
 
-  public reset(): void {
+  // public reset(): void {
 
-    this.userForm.reset();
-    // this.userForm.clearValidators();
-    this.isSubmitted = false
+  //   this.userForm.reset();
+  //   // this.userForm.clearValidators();
+  //   this.isSubmitted = false;
+  //   this.showbtn = true;
 
-  }
+  // }
 
   public getApiData(): void {
     this.api.GetData().subscribe((employee: employee[]) => {

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { outputAst } from '@angular/compiler';
+import { DeclarationListEmitMode, outputAst } from '@angular/compiler';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router, TitleStrategy } from '@angular/router';
 import { ApiService } from 'src/app/Services/api.service';
@@ -13,11 +13,11 @@ import { employee } from '../employee.modal';
 export class EmployeeListComponent implements OnInit {
   @Input() employeeList: employee[]
   @Output() myOutput: EventEmitter<string>;
-
-
-  constructor(private router: Router, private api: ApiService) {
+ id:any
+  constructor(private router: Router, private api: ApiService,public actRouter:ActivatedRoute) {
     this.myOutput = new EventEmitter();
     this.employeeList = [];
+
   }
 
   ngOnInit(): void {
@@ -31,13 +31,15 @@ export class EmployeeListComponent implements OnInit {
 
   }
   displayDetails(data: any) {
+
     console.log(data, 'sssssss')
     this.router.navigate(['employee', 'employee-detail'], { queryParams: data });
+    // this.router.navigate(['employee/employee-details', id])
   }
 
   EditData(employee:employee) {
     //  this.myOutput.emit(data);
-    this.router.navigate(['employee/edit', employee.id]);
+    this.router.navigate(['employee/employee-form', employee.id]);
   }
 
   public GetApiData(): void {

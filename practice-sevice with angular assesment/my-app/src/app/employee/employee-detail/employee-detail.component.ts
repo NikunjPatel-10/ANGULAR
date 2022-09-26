@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
   selector: 'app-employee-detail',
@@ -8,11 +9,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EmployeeDetailComponent implements OnInit {
   public displaydata: any
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private api:ApiService) { }
 
   ngOnInit(): void {
     this.displaydata = this.route.snapshot.queryParams
     console.log(this.route.snapshot.queryParams);
+
   }
 
 }

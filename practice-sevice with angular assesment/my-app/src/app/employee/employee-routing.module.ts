@@ -19,7 +19,7 @@ const routes: Routes = [{
       component: EmployeeFormComponent
     },
     {
-      path: 'edit/:id',
+      path: 'employee-form/:id',
       component: EmployeeFormComponent,
     },
     {
@@ -29,7 +29,11 @@ const routes: Routes = [{
     {
       path: 'employee-detail',
       component: EmployeeDetailComponent
-    }
+    },
+    // {
+    //   path:'employee-detail/:id',
+    //   component:EmployeeDetailComponent
+    // }
   ]
 
 }];

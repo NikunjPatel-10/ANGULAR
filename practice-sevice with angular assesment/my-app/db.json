@@ -1,32 +1,32 @@
 {
   "employee": [
     {
-      "name": "Nikunj patel",
-      "gender": "male",
-      "DOB": "2022-09-01",
+      "name": "Nikunj patel ccc",
+      "gender": "kdknfn",
+      "DOB": "2022-09-23",
       "salary": "13233",
       "id": 1
     },
     {
       "name": "rttyty",
-      "gender": "female",
+      "gender": "degvdvddv",
       "DOB": "2022-09-28",
       "salary": "23434",
       "id": 2
     },
     {
-      "name": "gfhg",
-      "gender": "dgdj",
-      "DOB": "2022-09-24",
-      "salary": "135456767677777",
-      "id": 3
-    },
-    {
       "name": "jay",
       "gender": "male",
       "DOB": "2022-09-23",
-      "salary": "233",
+      "salary": "3000",
       "id": 6
+    },
+    {
+      "name": "abcs",
+      "gender": "female",
+      "DOB": "2022-09-16",
+      "salary": "233445",
+      "id": 7
     }
   ],
   "comments": [
