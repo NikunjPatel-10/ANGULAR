@@ -5,7 +5,7 @@ export class employee {
         DOB?: string;
         salary?: any;
         id?: any
-  static id: any;
+ 
 
     }
 

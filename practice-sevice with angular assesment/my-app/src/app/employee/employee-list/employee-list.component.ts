@@ -30,11 +30,11 @@ export class EmployeeListComponent implements OnInit {
     })
 
   }
-  displayDetails(data: any) {
+  displayDetails(employee:employee) {
 
-    console.log(data, 'sssssss')
-    this.router.navigate(['employee', 'employee-detail'], { queryParams: data });
-    // this.router.navigate(['employee/employee-details', id])
+    // console.log(data, 'sssssss')
+    // this.router.navigate(['employee', 'employee-detail'], { queryParams: data });
+    this.router.navigate(['employee/employee-detail', employee.id])
   }
 
   EditData(employee:employee) {
