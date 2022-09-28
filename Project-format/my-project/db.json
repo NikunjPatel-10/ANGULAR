@@ -40,6 +40,15 @@
       "state": "Maharastra",
       "zip": "333333",
       "id": 5
+    },
+    {
+      "firstname": "Nikunj",
+      "lastname": "patel",
+      "username": "nikunj123@gmail.com",
+      "city": "Navsari",
+      "state": "Delhi",
+      "zip": "396325",
+      "id": 6
     }
   ],
   "comments": [

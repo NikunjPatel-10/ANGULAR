@@ -10,17 +10,17 @@ import { user } from '../user.modal';
 export class UserFormComponent implements OnInit {
   @ViewChild('loginForm') login?: NgForm;
 
-user:user
-  constructor( ) { 
+  user: user
+  constructor() {
     this.user = new user
 
-    
+
   }
 
   ngOnInit(): void {
   }
   getform(data: any) {
-console.log(this.login);
+    console.log(this.login);
 
     console.log(data)
   }

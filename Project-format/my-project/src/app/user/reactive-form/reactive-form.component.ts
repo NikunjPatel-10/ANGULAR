@@ -36,6 +36,8 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   getFormData() {
+    console.log(this.userForm);
+    
     // this.isSubmitted = true;
     // this.userForm.value;
     // console.log(this.userForm);
