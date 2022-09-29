@@ -17,6 +17,7 @@ import { PipeModule } from '../Pipe/pipe/pipe.module';
 import { DirectiveModule } from '../Directive/directive/directive.module';
 import { ApiDataComponent } from './api-data/api-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OperatorsComponent } from './operators/operators.component';
 
 
 
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserFormComponent,
     ReactiveFormComponent,
     ApiDataComponent,
+    OperatorsComponent,
 
   
   ],
@@ -49,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserFormComponent,
     ReactiveFormComponent,
     ApiDataComponent,
-    HttpClientModule
+    HttpClientModule,
+    OperatorsComponent
     
 
   ],

@@ -8,34 +8,55 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
   styleUrls: ['./api-data.component.scss']
 })
 export class ApiDataComponent implements OnInit {
-  public observable = new Observable();
-  public subscriber1: any
-  public subscriber2: any
+  public observable: Observable<any>
+  public user1: any
+  public user2: any
   constructor(private api: ApiServiceService) {
+    this.observable = new Observable((subscriber) => {
 
+      subscriber.next(1);
+      subscriber.next(2);
+      subscriber.next(3);
+      subscriber.next(4);
+      subscriber.next(5);
+      setTimeout(() => {
+        subscriber.next(6)
+      }, 2000);
+
+    })
   }
 
+
+
   ngOnInit(): void {
-    this.subscriber1 = this.observable.subscribe({
+    this.observable.subscribe({
       next: (v) => {
-        console.log(`data A :${v}`);
+        console.log(` data A :${v}`);
 
       },
-      error: (v) => {
+      error: () => {
 
       },
       complete: () => {
 
       }
+    });
+
+    this.user1 = this.observable.subscribe({
+      next: (v) => {
+        console.log(` data B :${v}`);
+
+      }
+    });
+
+    this.user2 = this.observable.subscribe({
+      next: (v) => {
+        console.log(` data c :${v}`);
+
+      }
     })
 
-    this.subscriber1.next(1);
-    this.subscriber1.next(2);
-    // this.subscriber1.complete();
-    this.subscriber1.next(3);
-    this.subscriber2 = this.subscriber1.next(4)
 
-    
   }
 
 }
