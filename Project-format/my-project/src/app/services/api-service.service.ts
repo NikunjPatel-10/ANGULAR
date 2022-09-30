@@ -21,5 +21,11 @@ export class ApiServiceService {
     }))
   }
 
+  print(val: any, _containerId: string) {
+    let el = document.createElement('li');
+    el.innerText = val;
+    document.getElementById(_containerId)?.appendChild(el)
+  }
+
 
 }
