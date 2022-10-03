@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { concat, filter, first, forkJoin, from, fromEvent, interval, map, merge, of, take, timer } from 'rxjs';
+import { concat, debounceTime, distinctUntilChanged, filter, first, forkJoin, from, fromEvent, interval, map, merge, of, pipe, take, takeLast, takeUntil, timer } from 'rxjs';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
 @Component({
@@ -16,6 +16,12 @@ export class OperatorsComponent implements OnInit {
   public obs6: any;
   public obs7: any;
   public obs8: any;
+  public obs9: any;
+  public obs10: any;
+  public obs11: any;
+  public obs12: any;
+  public obs13: any;
+  public obs14: any;
   public objectdata: any;
   public fromeventData: any;
   constructor(public Data: ApiServiceService) { }
@@ -104,14 +110,51 @@ export class OperatorsComponent implements OnInit {
 
     // filter
 
-    const a = [1, 2, 3, 4, 5, 6]
+    //  this.obs8 = of(1,2,3,4,5,6).pipe(filter(val=> val % 2 === 0)).subscribe(res=>{
+    //   console.log(res);
 
-    this.obs8 = filter((a: any) => a % 2 === 0)
+    //  })
 
-    this.obs8.subscribe((x: any) => {
-      console.log(x);
+    // different types of operators
 
-    })
+    // this.obs9 = of(1, 2, 3, 4, 5, 6, 7, 8, 9).pipe(take(4)).subscribe(res=>{
+    //   console.log(res);
+
+    // })
+
+    // takeLast opearators
+
+    // this.obs10 = of(1,2,3,4,5,6,7,8,9,10).pipe(takeLast(5)).subscribe(res=>{
+    //   console.log(res);
+
+    // })
+
+    // takeUntil operators
+    // this.obs11 = from([1,2,3,4,5,6,7,8]).pipe(takeUntil(timer(4))).subscribe(res=>{
+    //   console.log(res);
+
+    // })
+
+    // debounceTime operators
+
+    // this.obs12 = fromEvent(document, 'click').pipe(debounceTime(1000)).subscribe(res => {
+    //   console.log(res);
+
+    // })
+
+    // distinctUntilChanged operators
+
+    // this.obs13 = of(1 ,1,1,2,2,2,1,1,3,3).pipe(distinctUntilChanged()).subscribe(res=>{
+    //   console.log(res);
+
+    // })
+
+    // map operator
+
+    // this.obs14 = fromEvent(document, 'click').pipe(map((ev:any)=>ev.clientX)).subscribe(res => {
+    //   console.log(res);
+
+    // })
 
 
   }
