@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { concat, debounceTime, distinctUntilChanged, filter, first, forkJoin, from, fromEvent, interval, map, merge, of, pipe, take, takeLast, takeUntil, timer } from 'rxjs';
+import { concat, concatMap, debounceTime, distinctUntilChanged, filter, first, forkJoin, from, fromEvent, interval, map, merge, mergeMap, of, pipe, switchMap, take, takeLast, takeUntil, tap, timer } from 'rxjs';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
 @Component({
@@ -22,6 +22,11 @@ export class OperatorsComponent implements OnInit {
   public obs12: any;
   public obs13: any;
   public obs14: any;
+  public obs15: any;
+  public obs16: any;
+  public obs17: any;
+  public obs18: any;
+  public obs19: any;
   public objectdata: any;
   public fromeventData: any;
   constructor(public Data: ApiServiceService) { }
@@ -156,9 +161,38 @@ export class OperatorsComponent implements OnInit {
 
     // })
 
+    //  merge-map operator 
+
+    // this.obs15 = from(['nikunj', 'patel', 'data']).pipe(mergeMap(x => interval(1000).pipe(map(i => x + i)))).subscribe(res => {
+    //   console.log(res);
+
+    // })
+
+    // concatMap operator
+
+    // this.obs16 = from(['nikunj', 'patel', 'data']).pipe(concatMap(x => interval(1000).pipe(take(5)).pipe(map(i => x + i)))).subscribe(res => {
+    //   console.log(res);
+
+    // })
+
+    // switchMap operator
+
+    // this.obs17 = from(['nikunj', 'patel', 'data']).pipe(switchMap(x=>interval(1000).pipe(map(i=> i + x)))).subscribe(res=>{
+    //   console.log(res);
+
+    // })
+
+    // tap operators
+
+    // setInterval(() => {
+
+    //   this.obs18 = of(Math.random()).pipe(tap(console.log), map(n => n > 0.5 ? 'big' : 'small')).subscribe(res => console.log(res));
+
+    // }, 1000)
+
+
 
   }
-
 
 
 
