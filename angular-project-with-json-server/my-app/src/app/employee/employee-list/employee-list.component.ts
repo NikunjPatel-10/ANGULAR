@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Employee } from '../employee.modal';
 
 @Component({
   selector: 'app-employee-list',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
+  @Input() employeeList:Employee[]
 
-  constructor() { }
+  constructor() {
+  this.employeeList = []
+  }
 
   ngOnInit(): void {
   }

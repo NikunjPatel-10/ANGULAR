@@ -8,14 +8,14 @@ import { Employee } from '../employee.modal';
 })
 export class ApiService {
   public baseUrl: string;
-
+  public employee: Employee[];
   constructor(private http: HttpClient) {
-
+    this.employee = [];
     this.baseUrl = "http://localhost:3000/"
   }
 
   public getData(): Observable<any> {
-    const url = this.baseUrl
+    const url = this.baseUrl + 'employee'
     return this.http.get(url)
   }
 

@@ -1,1 +1,23 @@
-<p>employee-list works!</p>
+<div class="container border mt-3">
+    <table class="table">
+        <thead>
+            <th class="tableHead">Name</th>
+            <th class="tableHead">Gender</th>
+            <th class="tableHead">DOB</th>
+            <th class="tableHead">Salary</th>
+            <th class="tableHead">Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employeeData of employeeList">
+                <td>{{employeeData.name}}</td>
+                <td>{{employeeData.gender}}</td>
+                <td>{{employeeData.DOB}}</td>
+                <td>{{employeeData.salary}}</td>
+                <td><button class=" btn btn-primary me-2">Edit</button>
+                 <button class=" btn btn-danger me-2">Delete</button>
+                 <button class=" btn btn-success">Details</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

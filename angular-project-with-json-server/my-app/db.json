@@ -11,6 +11,13 @@
       "DOB": "2022-10-09",
       "salary": "23",
       "id": 2
+    },
+    {
+      "name": "alvin",
+      "gender": "male",
+      "DOB": "2022-10-24",
+      "salary": "32445",
+      "id": 3
     }
   ],
   "comments": [
