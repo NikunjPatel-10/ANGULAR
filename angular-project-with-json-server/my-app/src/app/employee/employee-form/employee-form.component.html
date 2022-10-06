@@ -1,0 +1,77 @@
+<h1 class='d-flex justify-content-center mt-3'>Employee-form page</h1>
+<div class="container border mt-5">
+    <h1 class="text-center"></h1>
+    <form class="row g-3" [formGroup]="userForm">
+        <!-- firstname started here -->
+        <div>
+            <label for="validationServer01" class="form-label">Name :</label>
+            <input type="text" class="form-control " id="validationServer01" formControlName="name">
+            <div
+                *ngIf="userFormControl['name'].invalid && (isSubmitted || (userFormControl['name'].touched || userFormControl['name'].dirty) )">
+                <span class="text-danger" *ngIf="userFormControl['name'].errors?.['required']">This field is
+                    required</span>
+                <span class="text-danger" *ngIf="userFormControl['name'].errors?.['pattern']">only characters are
+                    allowed</span>
+                <span class="text-danger" *ngIf="userFormControl['name'].errors?.['minlength']">Minimum 3 characters are
+                    required</span>
+            </div>
+        </div>
+        <!-- gender -->
+        <div>
+            <div>
+                <label for="validationServer01" class="form-label" for="">Gender
+                    :</label>
+            </div>
+            <span class="me-3">
+                <input class="form-check-input me-1" type="radio" id="flexRadioDefault1" formControlName="gender"
+                    value="male"
+                    [ngClass]="{'is-invalid':(userFormControl['gender'].errors?.['required']&& isSubmitted)}">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Male
+                </label>
+            </span>
+            <span class="">
+                <input class="form-check-input me-1" type="radio" id="flexRadioDefault2" checked
+                    formControlName="gender" value="female"
+                    [ngClass]="{'is-invalid':(userFormControl['gender'].errors?.['required']&& isSubmitted)}">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Female
+                </label>
+            </span>
+            <div>
+                <span class="text-danger" *ngIf="(userFormControl['gender'].errors?.['required']&& isSubmitted)">This
+                    field is required</span>
+            </div>
+        </div>
+
+
+        <!-- DOB -->
+        <div>
+            <label for="validationServer01" class="form-label">DOB :</label>
+            <input type="date" class="form-control " id="validationServer01" formControlName="DOB">
+            <div>
+                <span class="text-danger"
+                    *ngIf="(userFormControl['DOB'].errors?.['required'] && (isSubmitted || userFormControl['DOB'].touched) )">This
+                    field is required</span>
+            </div>
+        </div>
+
+        <!-- salary -->
+        <div>
+            <label for="validationServer01" class="form-label">Salary :</label>
+            <input type="text" class="form-control " id="validationServer01" formControlName="salary">
+            <div class="text-danger"
+                *ngIf="userFormControl['salary'].invalid && (isSubmitted || userFormControl['salary'].touched || userFormControl['salary'].dirty)">
+                <span class="text-danger" *ngIf="userFormControl['salary'].errors?.['required']">This field is
+                    required</span>
+                <span class="text-danger" *ngIf="userFormControl['salary'].errors?.['pattern']">Only numbers are
+                    allowed</span>
+
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary me-3  " type="submit" (click)="getFormValue()">Add</button>
+        </div>
+
+    </form>
+</div>
