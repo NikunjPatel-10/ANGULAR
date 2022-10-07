@@ -3,5 +3,5 @@ export class Employee {
         public gender?: string;
         public DOB?: string;
         public salary?: string;
-        public id?:number
+        public id?: any
 }

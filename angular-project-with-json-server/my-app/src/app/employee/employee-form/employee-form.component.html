@@ -1,6 +1,6 @@
 <h1 class='d-flex justify-content-center mt-3'>Employee-form page</h1>
 <div class="container border mt-5">
-    <h1 class="text-center"></h1>
+    <h1 class="text-center">{{title}}</h1>
     <form class="row g-3" [formGroup]="userForm">
         <!-- firstname started here -->
         <div>
@@ -70,10 +70,12 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="btn btn-primary me-3  " type="submit" (click)="getFormValue()">Add</button>
+            <button class="btn btn-primary me-3 " type="submit" (click)="getFormValue()" *ngIf="!id"> Add</button>
+            <button class="btn btn-primary me-3 " type="submit" (click)="UpdateValue()" *ngIf="id">Update</button>
+            <button class="btn btn-primary me-3 " type="submit" (click)="CancelButton()">Cancel</button>
         </div>
 
     </form>
 </div>
 
-<app-employee-list  [employeeList] = "employee">    </app-employee-list>
+<app-employee-list [employeeList]="employee"> </app-employee-list>

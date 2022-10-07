@@ -12,10 +12,14 @@ const routes: Routes = [{
     {
       path: '',
       pathMatch: 'full',
-      redirectTo: 'form'
+      redirectTo: 'add'
     },
     {
-      path: 'form',
+      path: 'add',
+      component: EmployeeFormComponent
+    },
+    {
+      path: 'edit/:id',
       component: EmployeeFormComponent
     },
     {
@@ -24,6 +28,10 @@ const routes: Routes = [{
     },
     {
       path: 'detail',
+      component: EmployeeDetailComponent
+    },
+    {
+      path: 'detail/:id',
       component: EmployeeDetailComponent
     }
   ]

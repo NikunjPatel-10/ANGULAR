@@ -14,6 +14,11 @@ export class ApiService {
     this.baseUrl = "http://localhost:3000/"
   }
 
+  public getDataById(id: number): Observable<any> {
+    const url = this.baseUrl + 'employee/' + id
+    return this.http.get(url);
+  }
+
   public getData(): Observable<any> {
     const url = this.baseUrl + 'employee'
     return this.http.get(url)
@@ -22,6 +27,16 @@ export class ApiService {
   public postData(employee: Employee): Observable<any> {
     const url = this.baseUrl + 'employee'
     return this.http.post(url, employee)
+  }
+
+  public DeleteData(id: number): Observable<any> {
+    const url = this.baseUrl + 'employee/' + id
+    return this.http.delete(url)
+  }
+
+  public UpdateData(employee: Employee, id: number): Observable<any> {
+    const url = this.baseUrl + 'employee/' + id;
+    return this.http.put(url, employee)
   }
 
 

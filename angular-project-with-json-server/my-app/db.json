@@ -1,23 +1,25 @@
 {
   "employee": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "name": "Nikunj",
+      "name": "nikunjpatel",
       "gender": "male",
-      "DOB": "2022-10-09",
-      "salary": "23",
-      "id": 2
-    },
-    {
-      "name": "alvin",
-      "gender": "male",
-      "DOB": "2022-10-24",
-      "salary": "32445",
+      "DOB": "2022-10-05",
+      "salary": "47344",
       "id": 3
+    },
+    {
+      "name": "jay",
+      "gender": "male",
+      "DOB": "2022-06-10",
+      "salary": "23",
+      "id": 5
+    },
+    {
+      "name": "parth",
+      "gender": "male",
+      "DOB": "2022-02-23",
+      "salary": "34455",
+      "id": 6
     }
   ],
   "comments": [
