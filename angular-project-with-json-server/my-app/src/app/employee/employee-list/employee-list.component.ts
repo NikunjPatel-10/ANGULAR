@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from '../employee.modal';
 import { ApiService } from '../service/api.service';
@@ -10,10 +10,11 @@ import { ApiService } from '../service/api.service';
 })
 export class EmployeeListComponent implements OnInit {
   @Input() employeeList: Employee[]
-
+  @Output() myOutput: EventEmitter<Employee>
 
   constructor(public apiservice: ApiService, private router: Router) {
     this.employeeList = []
+    this.myOutput = new EventEmitter();
   }
 
   ngOnInit(): void {
@@ -27,9 +28,15 @@ export class EmployeeListComponent implements OnInit {
 
   }
 
-  public EditEmployee(employeeId: number): void {
-    this.router.navigate(['employee/edit', employeeId])
+  // public EditEmployee(employeeId: number): void {
+  //   this.router.navigate(['employee/edit', employeeId])
+  // }
+
+  public EditEmployee(employee: Employee): void {
+    this.myOutput.emit(employee)
+    this.router.navigate(['employee/edit', employee.id]);
   }
+
 
   public employeeDetail(employeeId: number): void {
     this.router.navigate(['employee/detail', employeeId])

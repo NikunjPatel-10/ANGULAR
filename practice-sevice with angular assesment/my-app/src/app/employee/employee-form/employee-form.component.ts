@@ -61,7 +61,7 @@ export class EmployeeFormComponent implements OnInit {
 
       }
       else {
-    
+
         this.api.PostData(this.userForm.value).subscribe(res => {
           console.log(res);
           this.getApiData();

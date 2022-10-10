@@ -52,7 +52,7 @@
                 <button class="btn btn-primary me-3  " type="submit" (click)="getFormData()" *ngIf="!id">Add</button>
                 <!-- <button class="btn btn-primary me-3" type="button" (click)="reset()">Reset</button> -->
                 <button class="btn btn-primary me-3" (click)="getFormData()" *ngIf="id">Update</button>
-                <button class="btn btn-primary"  (click)="CancelData()">Cancel</button>
+                <button class="btn btn-primary" (click)="CancelData()">Cancel</button>
             </div>
         </div>
     </form>
@@ -60,5 +60,4 @@
 
 
 
-    <app-employee-list  [employeeList] = "employeeData"  ></app-employee-list>
-  
+<app-employee-list [employeeList]="employeeData"></app-employee-list>

@@ -78,4 +78,4 @@
     </form>
 </div>
 
-<app-employee-list [employeeList]="employee"> </app-employee-list>
+<app-employee-list [employeeList]="employee" (myOutput)="GetEditValue($event)"> </app-employee-list>

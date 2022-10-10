@@ -29,7 +29,7 @@ export class EmployeeFormComponent implements OnInit {
 
     this.activatedroute.params.subscribe((params) => {
       this.id = params['id'];
-      this.getEmployeeIdData(this.id)
+
     })
 
 
@@ -40,6 +40,7 @@ export class EmployeeFormComponent implements OnInit {
   ngOnInit(): void {
     this.title = (this.id) ? "Edit Employeee" : "Add employee"
     this.GetFormData();
+    // this.GetEditValue(this.id)
   }
 
 
@@ -67,14 +68,18 @@ export class EmployeeFormComponent implements OnInit {
     return this.userForm.controls
   }
 
-  public getEmployeeIdData(employeeId: number): void {
-    this.apiservice.getDataById(employeeId).subscribe(employee => {
-      this.userForm.patchValue(employee);
-    })
+  // public getEmployeeIdData(employeeId: number): void {
+  //   this.apiservice.getDataById(employeeId).subscribe(employee => {
+  //     this.userForm.patchValue(employee);
+  //   })
+  // }
+
+  public GetEditValue(employee: Employee): void {
+    this.userForm.patchValue(employee)
   }
 
   public UpdateValue(): void {
-    this.apiservice.UpdateData(this.userForm.value, this.id).subscribe(res => {
+    this.apiservice.UpdateData(this.userForm.value, this.id).subscribe((employee: Employee) => {
       this.GetFormData();
     })
   }

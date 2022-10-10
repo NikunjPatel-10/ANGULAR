@@ -14,7 +14,7 @@
                 <td>{{employeeData.DOB | date:'MMMM d, y'}}</td>
                 <td>{{employeeData.salary | custompipe}}</td>
                 <td><button class=" btn btn-success me-2" (click)="employeeDetail(employeeData.id)">Details</button>
-                    <button class=" btn btn-primary me-2" (click)="EditEmployee(employeeData.id)">Edit</button>
+                    <button class=" btn btn-primary me-2" (click)="EditEmployee(employeeData)">Edit</button>
                     <button class=" btn btn-danger" (click)="DeleteEmployee(employeeData.id)">Delete</button>
                 </td>
             </tr>
