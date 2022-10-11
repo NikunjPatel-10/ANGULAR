@@ -1,0 +1,35 @@
+{
+  "employee": [
+    {
+      "name": "parth patel",
+      "gender": "male",
+      "DOB": "2022-09-04",
+      "salary": "23344",
+      "id": 6
+    },
+    {
+      "name": "dbnf",
+      "gender": "male",
+      "DOB": "2022-09-10",
+      "salary": "2000",
+      "id": 7
+    },
+    {
+      "name": "jay",
+      "gender": "male",
+      "DOB": "2022-10-14",
+      "salary": "2344",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
