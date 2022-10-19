@@ -1,0 +1,148 @@
+{
+  "posts": [
+    {
+      "id": 10,
+      "name": "nikunj",
+      "email": "nikunj199842@gmail.com",
+      "mobile": 9712131810,
+      "address": "AT  POST:NANDARKHA,UGAMNA FALIYA",
+      "services": "mba chai wala 1-3"
+    },
+    {
+      "id": 12,
+      "name": "vatsal",
+      "email": "vatsal123@gmail.com",
+      "mobile": 1234456865,
+      "address": "rankuva",
+      "services": "not a good leader"
+    },
+    {
+      "id": 13,
+      "name": "nevil",
+      "email": "nevil2132@gmail.com",
+      "mobile": 9860976976,
+      "address": "kesli,pati",
+      "services": "gov job"
+    },
+    {
+      "id": 15,
+      "name": "jaydon",
+      "email": "jay@1234gmail.com",
+      "mobile": 95789848579,
+      "address": "AT  POST:NANDARKHA,UGAMNA FALIYA",
+      "services": "gaanja"
+    },
+    {
+      "id": 16,
+      "name": "meet patel",
+      "email": "meet4567@gmail.com",
+      "mobile": 4784687348,
+      "address": "AT  POST:NANDARKHA,UGAMNA FALIYA",
+      "services": "karamchand"
+    }
+  ],
+  "signup": [
+    {
+      "name": "nikunj",
+      "mobile": 9712131810,
+      "email": "nikunj199842@gmail.com",
+      "password": "nikunj7452",
+      "id": 1
+    },
+    {
+      "name": "nikunj",
+      "mobile": 9712131810,
+      "email": "nikunj123@gmail.com",
+      "password": "nikunj7452",
+      "id": 2
+    },
+    {
+      "name": "",
+      "mobile": "",
+      "email": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "name": "parth",
+      "mobile": 12345678,
+      "email": "parth1233@gmail.com",
+      "password": "parth1234",
+      "id": 4
+    },
+    {
+      "name": "",
+      "mobile": "",
+      "email": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "mobile": "",
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "mobile": "",
+      "email": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "name": "nikunj",
+      "mobile": 9712131810,
+      "email": "nikunj199842@gmail.com",
+      "password": "nikunj7452",
+      "id": 8
+    },
+    {
+      "name": "nikunj",
+      "mobile": 253476357,
+      "email": "nikunj199842@gmail.com",
+      "password": "nikunj7452",
+      "id": 9
+    },
+    {
+      "name": "",
+      "mobile": "",
+      "email": "nikunj199842@gmail.com",
+      "password": "nikunj7452",
+      "id": 10
+    },
+    {
+      "name": "nikunj",
+      "mobile": 9712131810,
+      "email": "nikunj199842@gmail.com",
+      "password": "nikunj7452",
+      "id": 11
+    },
+    {
+      "name": "nikunj patel",
+      "mobile": 6355575596,
+      "email": "nikunj123@gmail.com",
+      "password": "nikun j123",
+      "id": 12
+    },
+    {
+      "name": "shiv patel",
+      "mobile": 46734734733,
+      "email": "shiv1234@gmail.com",
+      "password": "shiv1234",
+      "id": 13
+    },
+    {
+      "name": "jay",
+      "mobile": 2333333334,
+      "email": "jay@gmail.com",
+      "password": "1234",
+      "id": 14
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
