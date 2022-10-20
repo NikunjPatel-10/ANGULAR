@@ -10,10 +10,8 @@
                 *ngIf="userFormControl['name'].invalid && (isSubmitted || (userFormControl['name'].touched || userFormControl['name'].dirty) )">
                 <span class="text-danger" *ngIf="userFormControl['name'].errors?.['required']">This field is
                     required</span>
-                <span class="text-danger" *ngIf="userFormControl['name'].errors?.['pattern']">only characters are
+                <span class="text-danger" *ngIf="userFormControl['name'].errors?.['pattern']"> Only chracters are
                     allowed</span>
-                <span class="text-danger" *ngIf="userFormControl['name'].errors?.['minlength']">Minimum 3 characters are
-                    required</span>
             </div>
         </div>
         <!-- gender -->

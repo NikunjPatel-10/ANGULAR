@@ -1,0 +1,62 @@
+{
+  "employee": [
+    {
+      "name": "nikunjpate",
+      "gender": "male",
+      "DOB": "2022-10-05",
+      "salary": "47344",
+      "id": 3
+    },
+    {
+      "name": "jay patel",
+      "gender": "male",
+      "DOB": "2022-06-10",
+      "salary": "23",
+      "id": 5
+    },
+    {
+      "name": "nikunj patel",
+      "gender": "male",
+      "DOB": "2022-10-05",
+      "salary": "47344",
+      "id": 6
+    }
+  ],
+  "signup": [
+    {
+      "firstname": "nikunj",
+      "lastname": "patel",
+      "username": "nikunj199842@gmail.com",
+      "password": "nikunj123",
+      "id": 1
+    },
+    {
+      "firstname": "Nikunj",
+      "lastname": "tfjt",
+      "username": "egdg@dhfh",
+      "password": "sfsfsf5353",
+      "id": 2
+    },
+    {
+      "firstname": "parth",
+      "lastname": "patel",
+      "username": "parth@123.com",
+      "password": "parth123",
+      "id": 3
+    },
+    {
+      "firstname": "jay",
+      "lastname": "patel",
+      "username": "jay123@gmail.com",
+      "password": "jay123",
+      "id": 6
+    },
+    {
+      "firstname": "abc",
+      "lastname": "abc",
+      "username": "abc@gmail.com",
+      "password": "abc123",
+      "id": 9
+    }
+  ]
+}

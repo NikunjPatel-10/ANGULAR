@@ -1,0 +1,66 @@
+<div class=" h-100 w-100 d-flex justify-content-center align-items-center bg-color">
+
+    <div
+        class=" d-flex flex-column justify-content-center align-items-center border border-dark p-2 loginpage bg-secondary">
+        <h1 class="text-center">Register-Form</h1>
+        <form class="row g-3" [formGroup]="registerForm">
+            <!-- firstname -->
+            <div>
+                <label for="validationServer01" class="form-label">Firstname :</label>
+                <input type="text" class="form-control " id="validationServer01" formControlName="firstname">
+                <div
+                    *ngIf="registerFormControl['firstname'].invalid && (isSubmitted || (registerFormControl['firstname'].touched || registerFormControl['firstname'].dirty) )">
+                    <span class="text-danger" *ngIf="registerFormControl['firstname'].errors?.['required']">This field
+                        is
+                        required</span>
+                </div>
+            </div>
+
+            <!-- lastname -->
+            <div>
+                <label for="validationServer01" class="form-label">Lastname :</label>
+                <input type="text" class="form-control " id="validationServer01" formControlName="lastname">
+                <div
+                    *ngIf="registerFormControl['lastname'].invalid && (isSubmitted || (registerFormControl['lastname'].touched || registerFormControl['lastname'].dirty) )">
+                    <span class="text-danger" *ngIf="registerFormControl['lastname'].errors?.['required']">This field is
+                        required</span>
+                </div>
+            </div>
+
+            <!-- username -->
+            <div>
+                <label for="validationServer01" class="form-label">Username :</label>
+                <input type="text" class="form-control " id="validationServer01" formControlName="username">
+                <div
+                    *ngIf="registerFormControl['username'].invalid && (isSubmitted || (registerFormControl['username'].touched || registerFormControl['username'].dirty) )">
+                    <span class="text-danger" *ngIf="registerFormControl['username'].errors?.['required']">This field is
+                        required</span>
+                    <span class="text-danger" *ngIf="registerFormControl['username'].errors?.['pattern']">Invalid email
+                        is written</span>
+                </div>
+            </div>
+
+            <!-- password -->
+            <div>
+                <label for="validationServer01" class="form-label">Password :</label>
+                <input type="text" class="form-control " id="validationServer01" formControlName="password">
+                <div
+                    *ngIf="registerFormControl['password'].invalid && (isSubmitted || (registerFormControl['password'].touched || registerFormControl['password'].dirty) )">
+                    <span class="text-danger" *ngIf="registerFormControl['password'].errors?.['required']">This field is
+                        required</span>
+                    <span class="text-danger" *ngIf="registerFormControl['password'].errors?.['minlength']">Invalid
+                        email
+                        is written</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary me-3 " type="submit" (click)="registerFormData()"> Register</button>
+            </div>
+
+        </form>
+        <a [routerLink]="['../login']" class="text-center text-white mt-2">if you are already a member click here for go
+            to login
+            page </a>
+    </div>
+</div>

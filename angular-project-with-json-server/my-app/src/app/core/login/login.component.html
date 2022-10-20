@@ -1,0 +1,40 @@
+<div class=" h-100 w-100 d-flex justify-content-center align-items-center bg-color ">
+
+    <div
+        class=" d-flex flex-column justify-content-center align-items-center border border-dark p-2 loginpage bg-secondary">
+        <h1 class="text-center text">Login Page</h1>
+        <form class="row g-3" [formGroup]="loginForm">
+            <!-- username -->
+            <div>
+                <label for="validationServer01" class="form-label ">username :</label>
+                <input type="text" class="form-control " id="validationServer01" formControlName="username">
+                <div
+                    *ngIf="loginFormControl['username'].invalid && (isSubmitted || (loginFormControl['username'].touched || loginFormControl['username'].dirty) )">
+                    <span class="text-danger" *ngIf="loginFormControl['username'].errors?.['required']">This field is
+                        required</span>
+                    <span class="text-danger" *ngIf="loginFormControl['username'].errors?.['pattern']">email is not
+                        valid</span>
+                </div>
+            </div>
+            <!-- password -->
+            <div>
+                <label for="validationServer01" class="form-label  ">password :</label>
+                <input type="text" class="form-control b " id="validationServer01 " formControlName="password">
+                <div
+                    *ngIf="loginFormControl['password'].invalid && (isSubmitted || (loginFormControl['password'].touched || loginFormControl['password'].dirty) )">
+                    <span class="text-danger" *ngIf="loginFormControl['password'].errors?.['required']">This field is
+                        required</span>
+                    <span class="text-danger" *ngIf="loginFormControl['password'].errors?.['minlength']">Minimum 6
+                        chracters are required</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary me-3 " type="submit" (click)="userLogin()"> Login</button>
+            </div>
+
+        </form>
+        <a [routerLink]="['../register']" class="text-center text-white mt-2">if you are not a member then click here to
+            register</a>
+    </div>
+</div>
