@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from '../guard/auth.guard';
 
 
 
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [HeaderComponent,
     RegisterComponent,
-    LoginComponent]
+    LoginComponent,
+  ]
 })
 export class CoreModule { }

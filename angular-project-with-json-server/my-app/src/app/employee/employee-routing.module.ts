@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../guard/auth.guard';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
@@ -16,7 +17,7 @@ const routes: Routes = [{
     },
     {
       path: 'add',
-      component: EmployeeFormComponent
+      component: EmployeeFormComponent,
     },
     {
       path: 'edit/:id',

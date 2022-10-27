@@ -8,6 +8,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CustompipePipe } from './pipe/custompipe.pipe';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -23,6 +24,7 @@ import { CustompipePipe } from './pipe/custompipe.pipe';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
+    CoreModule
   ]
 })
 export class EmployeeModule { }

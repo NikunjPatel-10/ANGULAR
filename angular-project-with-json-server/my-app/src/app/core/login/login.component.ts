@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../service/auth.service';
+import { AuthService } from '../../service/auth.service';
 import { SignUpService } from '../sign-up.service';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-login',
@@ -32,14 +33,17 @@ export class LoginComponent implements OnInit {
   userLogin() {
     this.signupservice.getSignUpData().subscribe(res => {
 
-      const user = res.find((info: any) => ((info.username === this.loginForm.value.username) && (info.password === this.loginForm.value.password)));
+      const user = res.find((user: User) => ((user.username === this.loginForm.value.username) && (user.password === this.loginForm.value.password)));
+
+      console.log(user);
+
       if (user) {
         alert("login successfully")
         localStorage.setItem('isAuth', 'true')
-        this.router.navigate(['master'])
+        this.router.navigate(['home'])
       }
       else {
-        alert("error from the server side")
+        alert("incorrect Username or Password has been written")
       }
     })
 
