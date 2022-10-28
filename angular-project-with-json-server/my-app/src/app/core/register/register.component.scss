@@ -1,8 +1,17 @@
-.loginpage {
+.registerpage {
     height: 600px;
     width: 500px;
+    background-color: #FDFDF6;
 }
 
-.bg-color {
-    background-color: #5F6F94;
+
+.bg-img {
+    /* The image used */
+    background-image: url("../../../assets/Images/background.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }

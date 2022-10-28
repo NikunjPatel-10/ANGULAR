@@ -9,6 +9,7 @@ import { RegisterComponent } from './core/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginGuard } from './guard/login.guard';
+import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,10 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
     canActivate: [LoginGuard]
+  },
+  {
+    path: 'reset-password',
+    component: ResetPasswordComponent
   },
   {
     path: 'header',

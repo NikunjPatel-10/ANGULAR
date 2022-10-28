@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     this.isAuth = false
   }
   ngOnInit(): void {
-    let isAuth = this.authService.isUserlogin.subscribe((res) => {
+    this.authService.isUserlogin.subscribe((res) => {
       this.isAuth = res
     })
 

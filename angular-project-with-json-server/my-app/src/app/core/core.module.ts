@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from '../guard/auth.guard';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 
@@ -14,7 +15,8 @@ import { AuthGuard } from '../guard/auth.guard';
   declarations: [
     HeaderComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,
