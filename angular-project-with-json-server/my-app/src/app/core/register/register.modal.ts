@@ -3,4 +3,5 @@ export class register {
     public lastname?: string
     public username?: string
     public password?: string
+    public id?:number
 }

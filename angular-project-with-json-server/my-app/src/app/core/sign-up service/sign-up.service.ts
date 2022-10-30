@@ -21,4 +21,9 @@ export class SignUpService {
     const url = this.baseurl + 'signup';
     return this.http.get<register[]>(url)
   }
+
+  public updateSignUpData(data:register,id:number):Observable<register>{
+    const url = this.baseurl + 'signup/' + id;
+    return this.http.put<register>(url,data)
+  }
 }
