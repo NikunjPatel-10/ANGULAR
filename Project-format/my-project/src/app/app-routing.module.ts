@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RegisterFromComponent } from './register-from/register-from.component';
 import { AboutComponent } from './user/about/about.component';
 import { ApiDataComponent } from './user/api-data/api-data.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
@@ -55,6 +56,11 @@ const routes: Routes = [
   {
     path: 'api-data',
     component: ApiDataComponent
+  },
+
+  {
+    path:'register-form',
+    component:RegisterFromComponent
   },
 
 

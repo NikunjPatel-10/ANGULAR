@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, } from '@angular/forms';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
@@ -13,7 +13,12 @@ export class ReactiveFormComponent implements OnInit {
   public isSubmitted: boolean;
   public employeemodelObj: any;
   public FormData: any;
-
+  @ViewChild('fileInput') el!: ElementRef;
+  imageUrl: any = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+  editFile: boolean = true;
+  removeUpload: boolean = false;
+  cd: any;
+  
   constructor(private formbuilder: FormBuilder, private api: ApiServiceService) {
     this.employeemodelObj = [],
       this.isSubmitted = false
@@ -23,21 +28,54 @@ export class ReactiveFormComponent implements OnInit {
       username: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       city: ['', [Validators.required, Validators.pattern("[a-zA-Z]*")]],
       state: ['', [Validators.required]],
-      zip: ['', [Validators.required]]
+      zip: ['', [Validators.required]],
+      file: [null]
     })
+   
+
   }
 
   ngOnInit(): void {
     
+
     this.GetApiData();
   }
   get userFormControl() {
     return this.userForm.controls;
   }
+  uploadFile(event:any) {
+    let reader = new FileReader(); // HTML5 FileReader API
+    let file = event.target.files[0];
+    if (event.target.files && event.target.files[0]) {
+      reader.readAsDataURL(file);
 
+      // When file uploads set it to file formcontrol
+      reader.onload = () => {
+        this.imageUrl = reader.result;
+        this.userForm.patchValue({
+          file: reader.result
+        });
+        this.editFile = false;
+        this.removeUpload = true;
+      }
+      // ChangeDetectorRef since file is loading outside the zone
+      this.cd.markForCheck();        
+    }
+  }
+
+  removeUploadedFile() {
+    let newFileList = Array.from(this.el.nativeElement.files);
+    this.imageUrl = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+    this.editFile = true;
+    this.removeUpload = false;
+    this.userForm.patchValue({
+      file: [null]
+    });
+  }
+  
   getFormData() {
-    console.log(this.userForm);
-    
+    console.log(this.userForm.value);
+
     // this.isSubmitted = true;
     // this.userForm.value;
     // console.log(this.userForm);
@@ -61,14 +99,14 @@ export class ReactiveFormComponent implements OnInit {
       err => {
         alert("somthing went wrong from server side")
       });
-      this.GetApiData();
+    this.GetApiData();
   }
 
   public GetApiData(): void {
     this.api.getdata().subscribe(res => {
       this.FormData = res;
       console.log(this.FormData);
-      
+
     })
   }
 }

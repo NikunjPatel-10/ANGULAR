@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterFromComponent } from './register-from/register-from.component';
 
 
 
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    RegisterFromComponent,
      
   ],
   imports: [
