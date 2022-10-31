@@ -1,6 +1,6 @@
-<div class="container border mt-5 p-3" >
+<div class="container border mt-5 p-3">
   <form class="row g-3" [formGroup]="userForm">
-<!-- firstname started here -->
+    <!-- firstname started here -->
     <div class="col-md-4">
       <label for="validationServer01" class="form-label">First name</label>
       <input type="text" class="form-control " id="validationServer01" formControlName="firstname"
@@ -11,7 +11,7 @@
         <div *ngIf="userFormControl['firstname'].errors?.['pattern']">Only Characters are allowed </div>
       </div>
     </div>
-<!-- lastname started here -->
+    <!-- lastname started here -->
     <div class="col-md-4">
       <label for="validationServer02" class="form-label">Last name</label>
       <input type="text" class="form-control " id="validationServer02" formControlName="lastname"
@@ -22,11 +22,11 @@
         <div *ngIf="userFormControl['lastname'].errors?.['pattern']">Only Characters are allowed</div>
       </div>
     </div>
-<!-- username started here -->
+    <!-- username started here -->
     <div class="col-md-4">
       <label for="validationServerUsername" class="form-label">Username</label>
       <div class="input-group has-validation">
-       
+
         <input type="text" class="form-control is-invalid" id="validationServerUsername" formControlName="username"
           [ngClass]="{'is-valid': userFormControl['username'].valid , 'is-invalid': userFormControl['username'].invalid && userFormControl['username'].touched}">
 
@@ -35,11 +35,11 @@
         *ngIf="userFormControl['username'].invalid && (isSubmitted || userFormControl['username'].touched || userFormControl['username'].dirty)">
         <div *ngIf="userFormControl['username'].errors?.['required']">E-mail is required</div>
         <div *ngIf="userFormControl['username'].errors?.['pattern']">Invalid email has been taken</div>
-        
-      </div>  
+
+      </div>
     </div>
 
-<!-- email started here -->
+    <!-- email started here -->
     <div class="col-md-6">
       <label for="validationServer03" class="form-label">City</label>
       <input type="text" class="form-control is-invalid" id="validationServer03"
@@ -52,7 +52,7 @@
       </div>
     </div>
 
-<!-- state started here -->
+    <!-- state started here -->
     <div class="col-md-3">
       <label for="validationServer04" class="form-label">State</label>
       <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback"
@@ -69,7 +69,7 @@
 
       </div>
     </div>
-<!-- zip started here -->
+    <!-- zip started here -->
     <div class="col-md-3">
       <label for="validationServer05" class="form-label">Zip</label>
       <input type="text" class="form-control is-invalid" id="validationServer05" formControlName="zip"
@@ -84,7 +84,8 @@
     <!-- for images uploads -->
     <div class="avatar-upload">
       <div class="avatar-edit">
-        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" formControlName="file" />
+        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)"
+          formControlName="file" />
       </div>
       <div class="avatar-preview">
         <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
@@ -133,6 +134,8 @@
           <td>{{item.city}}</td>
           <td>{{item.state}}</td>
           <td>{{item.zip}}</td>
+          <td>{{item.file}}</td>
+
         </tr>
       </tbody>
     </table>
