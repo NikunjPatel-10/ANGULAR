@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterFromComponent } from './register-from/register-from.component';
 import { AboutComponent } from './user/about/about.component';
@@ -59,8 +60,12 @@ const routes: Routes = [
   },
 
   {
-    path:'register-form',
-    component:RegisterFromComponent
+    path: 'register-form',
+    component: RegisterFromComponent
+  },
+  {
+    path: 'image-upload',
+    component: ImageUploadComponent
   },
 
 

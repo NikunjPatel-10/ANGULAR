@@ -10,6 +10,8 @@ import { UserModule } from './user/user.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterFromComponent } from './register-from/register-from.component';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +21,8 @@ import { RegisterFromComponent } from './register-from/register-from.component';
     AppComponent,
     PageNotFoundComponent,
     RegisterFromComponent,
-     
+    ImageUploadComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,8 +31,10 @@ import { RegisterFromComponent } from './register-from/register-from.component';
     SharedModule,
     CustomersModule,
     UserModule,
-   
-   
+    ReactiveFormsModule,
+    HttpClientModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

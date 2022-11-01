@@ -1,58 +1,62 @@
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink=" ">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="home">Subject</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="contact-us">Contact-us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="reference">Reference</a>
-          </li>
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink=" ">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">Subject</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="contact-us">Contact-us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="reference">Reference</a>
+        </li>
 
-          <button routerLink="customers" class="ms-3"> customers</button>
+        <button routerLink="customers" class="ms-3"> customers</button>
 
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="user-form">User-form</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="reactive-form">Reactive-form</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" routerLink="api-data">Observable</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" routerLink="operators">Operators</a>
-          </li>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" 
-            data-bs-toggle="dropdown" aria-expanded="false" [routerLink]="['shop']">
-              Shop
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" [routerLink]="[ 'shop','shop-item']">shop-item</a></li>
-              <li><a class="dropdown-item" [routerLink]="['shop', 'shop-list']">shop-list</a></li>
-        
-            </ul>
-          </div>
-          <li class="nav-item">
-            <a class="nav-link active me-3" aria-current="page" routerLink="register-form">Registration-Form</a>
-          </li>
-         
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="user-form">User-form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="reactive-form">Reactive-form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active me-3" aria-current="page" routerLink="api-data">Observable</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active me-3" aria-current="page" routerLink="operators">Operators</a>
+        </li>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false" [routerLink]="['shop']">
+            Shop
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="[ 'shop','shop-item']">shop-item</a></li>
+            <li><a class="dropdown-item" [routerLink]="['shop', 'shop-list']">shop-list</a></li>
+
+          </ul>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link active me-3" aria-current="page" routerLink="register-form">Registration-Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active me-3" aria-current="page" routerLink="image-upload">image-upload</a>
+        </li>
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>

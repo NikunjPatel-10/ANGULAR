@@ -87,10 +87,6 @@
         <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)"
           formControlName="file" />
       </div>
-      <div class="avatar-preview">
-        <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
-        </div>
-      </div>
     </div>
     <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput.click()">Upload Image</button>
 
@@ -134,7 +130,7 @@
           <td>{{item.city}}</td>
           <td>{{item.state}}</td>
           <td>{{item.zip}}</td>
-          <td>{{item.file}}</td>
+
 
         </tr>
       </tbody>

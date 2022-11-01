@@ -1,0 +1,7 @@
+<form [formGroup]="imageForm" (ngSubmit)="SaveForm()">
+    <input type="file" formControlName='filename' (change)="uploadFile($event)" formControlName="">
+    <img [src]="imgResult" alt="logo">
+    <button type="submit">Submit</button>
+</form>
+
+<!-- (change)="uploadFile($event) -->
