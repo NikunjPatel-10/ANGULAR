@@ -1,3 +1,5 @@
+
+// import '../node_modules/bootstrap/dist/js/boo'
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
