@@ -13,6 +13,7 @@ export class ImageUploadComponent implements OnInit {
   public imgResult: any
   public img: any
   public imageForm: FormGroup
+  public imageData: any
   constructor(private formbuilder: FormBuilder, private imageservice: ImageUploadService) {
     this.imageForm = this.formbuilder.group({
       filename: [''],
@@ -21,11 +22,12 @@ export class ImageUploadComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getImageData()
   }
   uploadFile(event: any) {
 
     this.imageFile = event.target.files[0]
-    console.log(this.imageFile);
+    // console.log(this.imageFile);
 
     let reader = new FileReader();
     reader.readAsDataURL(this.imageFile);
@@ -39,10 +41,14 @@ export class ImageUploadComponent implements OnInit {
   SaveForm() {
     this.imageForm.controls['filepath'].setValue(this.imgResult);
     this.imageservice.postImageData(this.imageForm.value).subscribe(res => {
-      console.log(res);
+      this.getImageData()
     })
     // console.log(this.imageForm.value);
+  }
 
-
+  getImageData() {
+    this.imageservice.getImageData().subscribe(res => {
+      this.imageData = res
+    })
   }
 }

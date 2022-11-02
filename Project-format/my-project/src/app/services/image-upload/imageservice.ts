@@ -11,10 +11,10 @@ export class ImageUploadService {
 
 
   postImageData(data: image) {
-    this.http.post("http://localhost:3000/image", data)
+    return this.http.post("http://localhost:3000/image", data)
   }
 
   getImageData() {
-    this.http.get("http://localhost:3000/image")
+    return this.http.get("http://localhost:3000/image")
   }
 }
