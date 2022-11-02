@@ -4,6 +4,7 @@ import { LoginFormComponent } from './core/login-form/login-form.component';
 import { RegisterFormComponent } from './core/register-form/register-form.component';
 
 const routes: Routes = [
+
   {
     path: 'register-form',
     component: RegisterFormComponent
@@ -11,7 +12,8 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginFormComponent
-  }
+  },
+  { path: 'artist', loadChildren: () => import('./artist/artist.module').then(m => m.ArtistModule) }
 ];
 
 @NgModule({

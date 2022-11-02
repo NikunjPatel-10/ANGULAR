@@ -1,0 +1,39 @@
+{
+    "register": [
+        {
+            "id": 1,
+            "state": "gujarat",
+            "city": "valsad",
+            "description": "Lady with a red umbrella",
+            "image": "https://i.imgur.com/pwpWaWu.jpg"
+        },
+        {
+            "id": 2,
+            "state": "gujarat",
+            "city": "vapi",
+            "description": "Flowers and some fruits",
+            "image": "https://i.imgur.com/KIPtISY.jpg"
+        },
+        {
+            "id": 3,
+            "state": "maharastra",
+            "city": "mumbai",
+            "description": "Beautiful scenery",
+            "image": "https://i.imgur.com/2jMCqQ2.jpg"
+        },
+        {
+            "id": 4,
+            "state": "maharastra",
+            "city": "pune",
+            "description": "Some kind of bird",
+            "image": "https://i.imgur.com/QFDRuAh.jpg"
+        },
+        {
+            "id": "5",
+            "state": "up",
+            "city": "agra",
+            "description": "The attack of dragons",
+            "image": "https://i.imgur.com/8yIIokW.jpg"
+        }
+    ]
+}
