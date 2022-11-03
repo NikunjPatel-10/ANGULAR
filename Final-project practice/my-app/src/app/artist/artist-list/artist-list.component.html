@@ -14,24 +14,35 @@
             </select>
         </span>
         <span class="m-1">
-            <select class="form-select" id="select">
-                <option class="dropdown-item" disabled selected> State
+            <select class="form-select" id="select" (change)="populateCity($event)" [(ngModel)]="selectedState">
+                <!-- <option class="dropdown-item" disabled selected> State
                 </option>
                 <option class="dropdown-item" value="valsad">gujarat</option>
                 <option class="dropdown-item" value="mumbai">maharastra</option>
-                <option class="dropdown-item" value="agra">up</option>
+                <option class="dropdown-item" value="agra">up</option> -->
+                <option value="" disabled>Select state</option>
+                <option *ngFor="let  data of State" [value]="data.id">{{data.name}}</option>
+
             </select>
         </span>
         <span class="m-1">
-            <select class="form-select" id="select">
-                <option class="dropdown-item" disabled selected>city
+            <select class="form-select" id="select" [(ngModel)]="selectedCity">
+                <!-- <option class="dropdown-item" disabled selected>city
                 </option>
                 <option class="dropdown-item" value="valsad">valsad</option>
                 <option class="dropdown-item" value="mumbai">mumbai</option>
                 <option class="dropdown-item" value="agra">agra</option>
                 <option class="dropdown-item" value="agra">vapi</option>
-                <option class="dropdown-item" value="agra">pune</option>
+                <option class="dropdown-item" value="agra">pune</option> -->
+
+                <option value=""> Select City</option>
+                <option *ngFor="let citydata of dropdownCity" [value]="citydata.id">{{citydata.name}}</option>
+
             </select>
+            <!-- <select [(ngModel)]="selectedCity" class="form-select">
+                <option value="">Select City</option>
+                <option *ngFor="let c of dropdownCity" [value]="c.id">{{c.name}}</option>
+            </select> -->
         </span>
     </div>
     <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -61,12 +72,60 @@
         </a>
     </div> -->
 
-    <div *ngFor="let data  of artistinfo" class="">
-        <div>{{data.description}}</div>
-        <div><img [src]="data.image"></div>
-        <div>{{data.state}}</div>
-        <div>{{data.city}}</div>
-    </div>
+    <!-- <div *ngFor="let data  of artistinfo" class="">
+        <div>{{data.name}}</div>
+    </div> -->
 
+    <!-- <div>
+        <div class="container">
+            <div class="text-center"> -->
+    <!-- <h1>Angular 2 - Pagination Example with logic like Google</h1> -->
 
+    <!-- items being paged -->
+    <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
+
+    <!-- pager -->
+    <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                    <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+                        <a (click)="setPage(1)" class="page-link">First</a>
+                    </li>
+                    <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+                        <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+                    </li>
+                    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}"
+                        class="page-item">
+                        <a (click)="setPage(page)" class="page-link">{{page}}</a>
+                    </li>
+                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+                        <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+                    </li>
+                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+                        <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+                    </li>
+                </ul> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <hr />
+    <!-- <div class="credits text-center">
+            <p>
+                <a href="http://jasonwatmore.com/post/2016/08/23/angular-2-pagination-example-with-logic-like-google"
+                    target="_top">Angular 2 - Pagination Example with logic like Google</a>
+            </p>
+            <p>
+                <a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+            </p>
+        </div> -->
+    <!-- </div> -->
+
+    <!-- for infinite scroll -->
+
+    <ul infiniteScroll [infiniteScrollDistance]="0.1" (scrolled)="onScroll()">
+
+        <li *ngFor="let post of posts">
+            {{post}}
+        </li>
+
+    </ul>
+
+    <p>Loading...</p>
 </div>
