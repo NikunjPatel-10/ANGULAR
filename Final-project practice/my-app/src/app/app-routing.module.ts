@@ -13,7 +13,9 @@ const routes: Routes = [
     path: 'login',
     component: LoginFormComponent
   },
-  { path: 'artist', loadChildren: () => import('./artist/artist.module').then(m => m.ArtistModule) }
+  { path: 'artist', loadChildren: () => import('./artist/artist.module').then(m => m.ArtistModule) },
+
+  { path: 'studio', loadChildren: () => import('./studio/studio.module').then(m => m.StudioModule) }
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { ArtistFormComponent } from './artist-form/artist-form.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { FormsModule } from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,8 +18,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   imports: [
     CommonModule,
     ArtistRoutingModule,
-    FormsModule,
-    InfiniteScrollModule
+
+    InfiniteScrollModule,
+    RouterModule
 
 
   ]

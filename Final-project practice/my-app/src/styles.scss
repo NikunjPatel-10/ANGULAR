@@ -5,10 +5,14 @@
 
 // for base file
 @import '../src/assets/scss/Base/index';
- 
+
 // for component file
 
 @import '../src/assets/scss/Vendors/index';
 
 /* Importing Bootstrap SCSS file. */
 // @import '~bootstrap/scss/bootstrap';
+
+
+// for cdk overlay
+@import '@angular/cdk/overlay-prebuilt.css';

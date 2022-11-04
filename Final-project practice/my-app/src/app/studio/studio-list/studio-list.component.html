@@ -1,0 +1,48 @@
+<div class="h-100 w-100 d-flex flex-column align-items-center mt-3">
+    <div>
+        <span class="fs-4"> Studios </span><span class="fs-4">| </span><span class="fs-4"> Artist </span>
+    </div>
+    <div class="d-flex">
+        <span class="m-1 d-flex align-items-center text-dark">Filter By :</span>
+        <span class="m-1">
+            <select class="form-select" id="select">
+                <option class="dropdown-item" disabled selected> studio-type
+                </option>
+                <option class="dropdown-item" value="valsad">hall</option>
+                <option class="dropdown-item" value="mumbai">room</option>
+                <option class="dropdown-item" value="agra">recording</option>
+            </select>
+        </span>
+        <span class="m-1">
+            <select class="form-select" id="select" (change)="populateCity($event)" [(ngModel)]="selectedState">
+                <!-- <option class="dropdown-item" disabled selected> State
+                </option>
+                <option class="dropdown-item" value="valsad">gujarat</option>
+                <option class="dropdown-item" value="mumbai">maharastra</option>
+                <option class="dropdown-item" value="agra">up</option> -->
+                <option value="" disabled>Select state</option>
+                <option *ngFor="let  data of State" [value]="data.id">{{data.name}}</option>
+
+            </select>
+        </span>
+        <span class="m-1">
+            <select class="form-select" id="select" [(ngModel)]="selectedCity">
+                <!-- <option class="dropdown-item" disabled selected>city
+                </option>
+                <option class="dropdown-item" value="valsad">valsad</option>
+                <option class="dropdown-item" value="mumbai">mumbai</option>
+                <option class="dropdown-item" value="agra">agra</option>
+                <option class="dropdown-item" value="agra">vapi</option>
+                <option class="dropdown-item" value="agra">pune</option> -->
+
+                <option value=""> Select City</option>
+                <option *ngFor="let citydata of dropdownCity" [value]="citydata.id">{{citydata.name}}</option>
+
+            </select>
+            <!-- <select [(ngModel)]="selectedCity" class="form-select">
+                <option value="">Select City</option>
+                <option *ngFor="let c of dropdownCity" [value]="c.id">{{c.name}}</option>
+            </select> -->
+        </span>
+    </div>
+</div>

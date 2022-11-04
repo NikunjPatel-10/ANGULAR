@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ApiService } from './api.service';
+import { CdkOverlayService } from './cdk-overlay.service';
 
-describe('ApiService', () => {
-  let service: ApiService;
+describe('CdkOverlayService', () => {
+  let service: CdkOverlayService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ApiService);
+    service = TestBed.inject(CdkOverlayService);
   });
 
   it('should be created', () => {

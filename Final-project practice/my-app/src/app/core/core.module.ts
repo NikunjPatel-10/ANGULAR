@@ -5,22 +5,27 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { StudioModule } from '../studio/studio.module';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     RegisterFormComponent,
-
-    LoginFormComponent
+    LoginFormComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OverlayModule,
+    StudioModule
   ],
   exports: [HeaderComponent,
+
   ]
 })
 export class CoreModule { }
