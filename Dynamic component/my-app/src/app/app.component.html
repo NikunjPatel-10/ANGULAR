@@ -1,4 +1,8 @@
-<button  (click)="add()">Add Components</button>
-<ng-container #container></ng-container>
+<!-- <button (click)="add()">Add Components</button>
+<ng-container #container></ng-container> -->
+<button mat-raised-button id='btn' style="margin: 50px" color="primary" (click)="displayOverlay()">Display
+    overlay</button>
 
+<!-- second method -->
+<button (click)="openDialog()">OpenDialog</button>
 <router-outlet></router-outlet>
