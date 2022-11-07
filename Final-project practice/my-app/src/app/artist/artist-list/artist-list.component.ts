@@ -10,29 +10,32 @@ const nisPackage = require("../../../../package.json");
   styleUrls: ['./artist-list.component.scss']
 })
 export class ArtistListComponent implements OnInit {
-
+  public datalist:any=[];
+  public pageNumber = 20;
+  public distance = 2;
+  public pageSize = 1;
 
   // state data
   public Statename: any
   public Cityname: any
   public artistinfo: any
   public scrollData: any
-  // array of all items to be paged
-  private allItems!: any[];
-
-  // pager object
-  pager: any = {};
-
-  // paged items
-  pagedItems!: any[];
+  
+  /**
+   * 
+   * @param apiservice 
+   * @param http 
+   */
   constructor(private apiservice: ApiService, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getStatename()
     this.getCityname()
-    this.DataList()
-
+    this.DataList() 
+    this.onScrolllist()
   }
+
+  
 
   getStatename() {
     this.apiservice.getStateData().subscribe(res => {
@@ -51,7 +54,10 @@ export class ArtistListComponent implements OnInit {
 
   public dropdownCity: any = [];
 
-
+/**
+ * 
+ * @param event 
+ */
   populateCity(event: any) {
     // console.log(event);
     const data = event.target.value
@@ -61,13 +67,25 @@ export class ArtistListComponent implements OnInit {
   }
 
 
-
+/**
+ * 
+ */
   DataList() {
-    this.apiservice.getjsonData().subscribe(res => {
-      this.scrollData = res
+    this.apiservice.getjsonData(this.pageSize, this.pageNumber).subscribe({
+      next: (value) => {
+        this.datalist = this.datalist.concat(value);
+        console.log(value);
+      },
     })
   }
 
+  /**
+   * 
+   */
+  onScrolllist() {
+    this.pageSize++;
+    this.DataList();
+  }
 
 
 

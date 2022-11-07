@@ -23,9 +23,10 @@ export class ApiService {
     return this.http.get(url)
   }
 
-  getjsonData() {
+  getjsonData(pageNumber:number, pageSize:number) {
     const url = this.baseurl + "posts"
-    return this.http.get(url)
+    return this.http.get(`${url}?_page=${pageNumber}&_limit=${pageSize}`)
+    
   }
 
 
