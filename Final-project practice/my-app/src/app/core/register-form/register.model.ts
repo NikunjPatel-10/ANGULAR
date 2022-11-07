@@ -1,5 +1,6 @@
 export class Register {
 
+    id?: number;
     firstname?: string;
     lastname?: string;
     email?: string;
@@ -7,4 +8,6 @@ export class Register {
     phonenumber?: string;
     state?: string;
     city?: string;
+    filepath?: string;
+
 }

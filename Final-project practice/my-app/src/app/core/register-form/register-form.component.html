@@ -11,12 +11,35 @@
                         <div class="mb-3">
                             <label for="validationServer01" class="form-label">FirstName</label>
                             <input type="text" placeholder="firstname" id="validationServer01" class="form-control"
-                                formControlName="firstname">
+                                formControlName="firstname"
+                                [ngClass]="{'is-valid': registerFormControl['firstname'].valid, 'is-invalid': registerFormControl['firstname'].invalid && registerFormControl['firstname'].touched }">
+
+                            <div
+                                *ngIf="registerFormControl['firstname'].invalid && (isSubmitted || (registerFormControl['firstname'].touched || registerFormControl['firstname'].dirty) )">
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['firstname'].errors?.['required']">Please Enter your
+                                    firstname
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['firstname'].errors?.['pattern']">Only alphabets are
+                                    allowed to be return
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['firstname'].errors?.['minlength']">Minimum 3 characters
+                                    are allowed
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['firstname'].errors?.['maxlength']">Maximum 25 characters
+                                    are allowed
+                                </span>
+
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="validationServer02" class="form-label">Email Address</label>
                             <input type="text" placeholder="enter email" id="validationServer02" class="form-control"
                                 formControlName="email">
+
                         </div>
                         <div class="mb-3">
                             <label for="validationServer03" class="form-label">Phone Number</label>
@@ -40,7 +63,28 @@
                         <div class="mb-3">
                             <label for="validationServer04" class="form-label">LastName</label>
                             <input type="text" placeholder="lastname" id="validationServer04" class="form-control"
-                                formControlName="lastname">
+                                formControlName="lastname"
+                                [ngClass]="{'is-valid': registerFormControl['lastname'].valid, 'is-invalid': registerFormControl['lastname'].invalid && registerFormControl['firstname'].touched }">
+                            <div
+                                *ngIf="registerFormControl['lastname'].invalid && (isSubmitted || (registerFormControl['lastname'].touched || registerFormControl['lastname'].dirty) )">
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['lastname'].errors?.['required']">Please Enter your
+                                    lastname
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['lastname'].errors?.['pattern']">Only alphabets are
+                                    allowed to be return
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['lastname'].errors?.['minlength']">Minimum 3 characters
+                                    are allowed
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="registerFormControl['lastname'].errors?.['maxlength']">Maximum 25 characters
+                                    are allowed
+                                </span>
+
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="validationServer05" class="form-label">Password</label>

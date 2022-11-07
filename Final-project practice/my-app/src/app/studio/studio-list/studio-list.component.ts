@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-studio-list',
@@ -8,31 +10,32 @@ import { Component, OnInit } from '@angular/core';
 export class StudioListComponent implements OnInit {
 
   // state data
-  State: any = [
-    { id: 1, name: "Gujarat" },
-    { id: 2, name: "Maharastra" },
-    { id: 3, name: "Rajasthan" }
-  ]
+  public Statename: any
+  public Cityname: any
 
   // city data
-  City: any = [
-    { id: 1, name: "Ahmedabad", state: 1 },
-    { id: 2, name: "Rajkot", state: 1 },
-    { id: 3, name: "Gandhinagar", state: 1 },
-    { id: 4, name: "Mumbai", state: 2 },
-    { id: 5, name: "Pune", state: 2 },
-    { id: 6, name: "Udaipur", state: 3 },
-    { id: 7, name: "Jaipur", state: 3 }
-  ]
 
-  constructor() { }
+
+  constructor(private apiservice: ApiService, private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getStatename()
+    this.getCityname()
   }
 
-  // to show city for selected state
-  public selectedState: any = "";
-  public selectedCity: any = "";
+  getStatename() {
+    this.apiservice.getStateData().subscribe(res => {
+      this.Statename = res
+    })
+  }
+
+  getCityname() {
+    this.apiservice.getCityData().subscribe(res => {
+      this.Cityname = res
+    })
+  }
+
+
   public dropdownCity: any = [];
 
 
@@ -40,7 +43,7 @@ export class StudioListComponent implements OnInit {
     // console.log(event);
     const data = event.target.value
     console.log(data);
-    this.dropdownCity = this.City.filter((i: any) => i.state == data);
+    this.dropdownCity = this.Cityname.filter((i: any) => i.state == data);
     console.log(this.dropdownCity);
   }
 

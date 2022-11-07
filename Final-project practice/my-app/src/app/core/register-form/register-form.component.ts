@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register-form',
@@ -7,11 +7,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./register-form.component.scss']
 })
 export class RegisterFormComponent implements OnInit {
+  public isSubmitted: boolean
   public registerForm: FormGroup
   constructor(private formBuilder: FormBuilder) {
+    this.isSubmitted = false
     this.registerForm = this.formBuilder.group({
-      firstname: [''],
-      lastname: [''],
+      firstname: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$'), Validators.minLength(3), Validators.maxLength(25)]],
+      lastname: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$'), Validators.minLength(3), Validators.maxLength(25)]],
       email: [''],
       password: [''],
       phonenumber: [''],
@@ -23,6 +25,10 @@ export class RegisterFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  get registerFormControl() {
+    return this.registerForm.controls
   }
 
   registerData() {

@@ -14,8 +14,35 @@
                 <div class="mx-3"><span class="bi bi-calendar2-fill fs-2 "></span></div>
                 <div class="mx-3"><span class="bi bi-calendar3 fs-2 "></span></div>
                 <div class=" logo border border-dark d-flex align-items-center justify-content-center mx-3">
-                    <span class="bi bi-person fs-2 " (click)="displayOverlay()" id='btn'></span>
+                    <span class="bi bi-person fs-2 " id='btn' (click)="isOpen = !isOpen" cdkOverlayOrigin
+                        #trigger="cdkOverlayOrigin">
+                    </span>
                 </div>
+                <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger"
+                    [cdkConnectedOverlayOpen]="isOpen" (backdropClick)="isOpen = !isOpen"
+                    [cdkConnectedOverlayHasBackdrop]="true" cdkConnectedOverlayBackdropClass="any">
+
+                    <div class="overlay-model m-2 " (click)="isOpen = !isOpen">
+                        <div class="bg-secondary  px-3 ">
+                            <span class="d-flex"><span class="mb-2 ">Status(available) </span> <span
+                                    class="bi bi-toggle-on fs-5"></span></span>
+                            <div class="mb-2 " [routerLink]="['../register-form']">Manage profile</div>
+                            <div class="mb-2" [routerLink]="['studio/form']">Manage Studio</div>
+                            <div [routerLink]="['../login']">Logout</div>
+                        </div>
+                        <div class=" bg-secondary  px-3">
+                            <span class="d-flex"><span class="mb-2 ">Status(available) </span> <span
+                                    class="bi bi-toggle-on fs-5"></span></span>
+                            <div class="mb-2 " [routerLink]="['../register-form']">Manage profile</div>
+                            <div class="mb-2 " [routerLink]="['artist/form']">Manage-Artist-profile</div>
+                            <div [routerLink]="['../login']">Logout</div>
+                        </div>
+                        <div class="bg-secondary  px-3">
+                            <div class="mb-2" [routerLink]="['artist/form']">Manage profile</div>
+                            <div [routerLink]="['../login']">Logout</div>
+                        </div>
+                    </div>
+                </ng-template>
 
             </div>
         </div>

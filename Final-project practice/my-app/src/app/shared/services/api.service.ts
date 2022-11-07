@@ -23,6 +23,11 @@ export class ApiService {
     return this.http.get(url)
   }
 
+  getjsonData() {
+    const url = this.baseurl + "posts"
+    return this.http.get(url)
+  }
+
 
 
 

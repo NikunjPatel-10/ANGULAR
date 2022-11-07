@@ -16,6 +16,7 @@ export class ArtistListComponent implements OnInit {
   public Statename: any
   public Cityname: any
   public artistinfo: any
+  public scrollData: any
   // array of all items to be paged
   private allItems!: any[];
 
@@ -29,6 +30,7 @@ export class ArtistListComponent implements OnInit {
   ngOnInit(): void {
     this.getStatename()
     this.getCityname()
+    this.DataList()
 
   }
 
@@ -54,8 +56,16 @@ export class ArtistListComponent implements OnInit {
     // console.log(event);
     const data = event.target.value
     console.log(data);
-    this.dropdownCity = this.Cityname.filter((i: any) => i.stateId == data);
+    this.dropdownCity = this.Cityname.filter((res: any) => res.stateId == data);
     console.log(this.dropdownCity);
+  }
+
+
+
+  DataList() {
+    this.apiservice.getjsonData().subscribe(res => {
+      this.scrollData = res
+    })
   }
 
 

@@ -14,19 +14,19 @@
             </select>
         </span>
         <span class="m-1">
-            <select class="form-select" id="select" (change)="populateCity($event)" [(ngModel)]="selectedState">
+            <select class="form-select" id="select" (change)="populateCity($event)">
                 <!-- <option class="dropdown-item" disabled selected> State
                 </option>
                 <option class="dropdown-item" value="valsad">gujarat</option>
                 <option class="dropdown-item" value="mumbai">maharastra</option>
                 <option class="dropdown-item" value="agra">up</option> -->
-                <option value="" disabled>Select state</option>
-                <option *ngFor="let  data of State" [value]="data.id">{{data.name}}</option>
+                <option value="" selected>Select state</option>
+                <option *ngFor="let  data of Statename" [value]="data.id">{{data.name}}</option>
 
             </select>
         </span>
         <span class="m-1">
-            <select class="form-select" id="select" [(ngModel)]="selectedCity">
+            <select class="form-select" id="select">
                 <!-- <option class="dropdown-item" disabled selected>city
                 </option>
                 <option class="dropdown-item" value="valsad">valsad</option>
@@ -35,7 +35,7 @@
                 <option class="dropdown-item" value="agra">vapi</option>
                 <option class="dropdown-item" value="agra">pune</option> -->
 
-                <option value=""> Select City</option>
+                <option value="" selected> Select City</option>
                 <option *ngFor="let citydata of dropdownCity" [value]="citydata.id">{{citydata.name}}</option>
 
             </select>

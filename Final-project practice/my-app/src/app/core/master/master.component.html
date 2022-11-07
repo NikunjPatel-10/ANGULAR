@@ -1,6 +1,6 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
-<div class="h-100 w-100 d-flex flex-column align-items-center mt-3">
+<!-- <div class="h-100 w-100 d-flex flex-column align-items-center mt-3">
     <div>
         <span class="fs-4"> Studios </span><span class="fs-4">| </span><span class="fs-4"> Artist </span>
     </div>
@@ -18,7 +18,7 @@
         <span class="m-1">
             <select class="form-select" id="select" (change)="populateCity($event)">
 
-                <option value="" disabled selected>Select state</option>
+                <option selected>Select state</option>
                 <option *ngFor="let  data of Statename " [value]="data.id">{{data.state}}</option>
 
             </select>
@@ -26,15 +26,12 @@
         <span class="m-1">
             <select class="form-select" id="select">
 
-                <option value="" disabled selected> Select City</option>
-                <option *ngFor="let citydata of dropdownCity" [value]="citydata.id">{{citydata.city}}</option>
+                <option selected> Select City</option>
+                <option *ngFor="let citydata of dropdownCity">{{citydata.city}}</option>
 
             </select>
 
         </span>
+
     </div>
-
-
-</div>
-
-
+</div> -->

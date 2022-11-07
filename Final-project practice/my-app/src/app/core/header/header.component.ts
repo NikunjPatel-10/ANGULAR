@@ -10,44 +10,11 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private overlayservice: CdkOverlayService, private overlay: Overlay) { }
+  isOpen = false
+  constructor(private overlayservice: CdkOverlayService) { }
 
   ngOnInit(): void {
   }
 
-  displayOverlay() {
-    const target = document.querySelector("#btn") as HTMLElement;
-    const overlayRef = this.overlay.create({
-      hasBackdrop: true,
-      // backdropClass: 'bg',
-      backdropClass: 'bgdigh',
-      panelClass: "overlaySize",
-      positionStrategy: this.overlay
 
-        .position()
-        .flexibleConnectedTo(target)
-        .withPositions([
-          {
-            originX: "start",
-            originY: "bottom",
-            overlayX: "start",
-            overlayY: "top",
-
-          }
-
-
-        ])
-    });
-
-    const component = new ComponentPortal(DashboardComponent);
-    const componentRef = overlayRef.attach(component);
-    overlayRef.backdropClick().subscribe(() => overlayRef.detach());
-
-  }
-
-
-  onClick() {
-    this.overlayservice.displayOverlay(DashboardComponent)
-  }
 }
