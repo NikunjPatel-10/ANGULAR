@@ -25,10 +25,41 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="mb-3">
-
+                        <div class="mb-3 d-flex  w-100">
+                            <div>image here</div>
+                            <div class="w-100"><button class="w-100">Add artist image</button></div>
                         </div>
-                        <div class=" mb-3">
+                        <div class=" mb-3  w-100">
+                            <span class="w-100">
+                                Available for events ?
+                                <span class="mx-2"> <input class="form-check-input me-2" type="radio"
+                                        name="flexRadioDefault" id="flexRadioDefault1"><span class="">Yes</span></span>
+                                <span class="mx-2"> <input class="form-check-input me-2" type="radio"
+                                        name="flexRadioDefault" id="flexRadioDefault1"> <span>No</span>
+                                </span>
+                            </span>
+                            <div class="mb-3">
+                                <div>Event Days :</div>
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <div>From</div>
+                                        <select>
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <div>To</div>
+                                        <select>
+                                            <option>Friday</option>
+                                            <option>saturday</option>
+                                            <option>sunday  </option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
@@ -55,7 +86,7 @@
                             <div class="d-flex flex-column">
                                 <label for="validationServer05" class="form-label">Select State</label>
                                 <div class="dropdown me-4">
-                                    <select class="form-select" id="select" formControlName="state">
+                                    <select class="form-select" id="select" >
                                         <option value="" class="dropdown-item" disabled selected> -- select-state--
                                         </option>
                                         <option value="" class="dropdown-item" value="gujarat">Gujarat</option>
@@ -67,15 +98,13 @@
                             <div class="d-flex flex-column">
                                 <label for="validationServer05" class="form-label">Select City</label>
                                 <div class="dropdown">
-                                    <select class="form-select" id="select" formControlName="city">
+                                    <select class="form-select" id="select" >
                                         <option value="" class="dropdown-item" disabled selected> -- select-city --
                                         </option>
                                         <option value="" class="dropdown-item" value="valsad">valsad</option>
                                         <option value="" class="dropdown-item" value="mumbai">mumbai</option>
                                         <option value="" class="dropdown-item" value="agra">agra</option>
                                     </select>
-
-
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,13 @@
-<div class="pop-up bg-secondary p-1 m-2">
+<div class="pop-up bg-secondary p-1 m-2 ">
     <span class="d-flex"><span class="mb-2 ">Status(available) </span> <span class="bi bi-toggle-on fs-5"></span></span>
     <div class="mb-2 " [routerLink]="['../register-form']">Manage profile</div>
     <div class="mb-2" [routerLink]="['studio/form']">Manage Studio</div>
+    <div [routerLink]="['../login']">Logout</div>
+</div>
+
+<div class="pop-up bg-secondary p-1 m-2">
+    <span class="d-flex"><span class="mb-2 ">Status(available) </span> <span class="bi bi-toggle-on fs-5"></span></span>
+    <div class="mb-2 " [routerLink]="['../register-form']">Manage profile</div>
+    <div class="mb-2" [routerLink]="['artist/form']">Manage Artist profile</div>
     <div [routerLink]="['../login']">Logout</div>
 </div>

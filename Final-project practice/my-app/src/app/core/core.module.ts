@@ -8,6 +8,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { StudioModule } from '../studio/studio.module';
+import { MasterComponent } from './master/master.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,16 +18,19 @@ import { StudioModule } from '../studio/studio.module';
     HeaderComponent,
     RegisterFormComponent,
     LoginFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    MasterComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
     OverlayModule,
-    StudioModule
+    StudioModule,
+    // HttpClientModule,
+    // SharedModule
   ],
-  exports: [HeaderComponent,
+  exports: [MasterComponent,
 
   ]
 })
