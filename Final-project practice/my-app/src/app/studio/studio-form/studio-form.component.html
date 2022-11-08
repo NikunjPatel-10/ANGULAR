@@ -34,7 +34,7 @@
                                     <div class="content">
                                         <div class="d-flex">
                                             <span class="bi bi-cloud-plus fs-3"></span>
-                                            <span class="bi bi-trash2 fs-3" (click)="deleteImg()"></span>
+                                            <span class="bi bi-trash2 fs-3" (click)="deleteImg()" *ngIf="imageData"></span>
                                         </div>
 
 

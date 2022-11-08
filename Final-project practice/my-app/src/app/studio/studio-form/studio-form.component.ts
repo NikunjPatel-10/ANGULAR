@@ -66,8 +66,11 @@ export class StudioFormComponent implements OnInit {
 
   }
   // delete image 
-  deleteImg(id: any) {
-    console.log(id);
+  deleteImg() {
+    // console.log(id);
+    // console.log(this.imageData);
+    this.imageData = null
+    
 
 
   }
