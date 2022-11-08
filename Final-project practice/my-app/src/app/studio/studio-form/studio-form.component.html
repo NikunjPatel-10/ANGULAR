@@ -1,0 +1,147 @@
+<div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center ">
+    <div class="shadow">
+        <div class=" py-2 text-center ">
+            <h1>Manage studio</h1>
+        </div>
+
+        <div class=" ">
+            <form class="  g-3  form-size p-3" [formGroup]="studioForm">
+                <div class="row ">
+                    <div class="col-12 d-flex flex-column ">
+                        <!-- <div class="mb-3">
+                            <label for="validationServer01" class="form-label">Artist Name</label>
+                            <input type="text" placeholder="firstname" id="validationServer01" class="form-control"
+                                formControlName="firstname">
+                        </div> -->
+                        <!-- <div class="mb-3">
+                            <div><label for="validationServer03" class="form-label me-4">Artist-Type</label></div>
+                            <div class="dropdown">
+                                <select class="form-select" id="select" formControlName="usertype">
+                                    <option value="" class="dropdown-item" disabled selected> -- select-user --
+                                    </option>
+                                    <option value="" class="dropdown-item" value="Studio-owner">Studio-owner</option>
+                                    <option value="" class="dropdown-item" value="artist">Artist</option>
+                                    <option value="" class="dropdown-item" value="general">General</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="mb-3 d-flex flex-column w-100">
+                            <input type="file" formControlName='filename' (change)="uploadFile($event)" id="file"
+                                [multiple]="true">
+                            <ul class="w-100 d-flex">
+                                <li *ngFor="let data of base64" class="zoom m-2 position-relative">
+                                    <img [src]="data" alt="logo">
+                                    <div class="content">
+                                        <div class="d-flex">
+                                            <span class="bi bi-cloud-plus fs-3"></span>
+                                            <span class="bi bi-trash2 fs-3" (click)="deleteImg()"></span>
+                                        </div>
+
+
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="w-100"><button type="submit" class="w-100" (click)=" SaveForm()">Add artist
+                                    image</button></div>
+                        </div>
+
+                        <!-- <div class=" mb-3  w-100">
+                            <span class="w-100">
+                                Available for events ?
+                                <span class="mx-2"> <input class="form-check-input me-2" type="radio"
+                                        name="flexRadioDefault" id="flexRadioDefault1"><span class="">Yes</span></span>
+                                <span class="mx-2"> <input class="form-check-input me-2" type="radio"
+                                        name="flexRadioDefault" id="flexRadioDefault1"> <span>No</span>
+                                </span>
+                            </span>
+                            <div class="mb-3">
+                                <div>Event Days :</div>
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <div>From</div>
+                                        <select>
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <div>To</div>
+                                        <select>
+                                            <option>Friday</option>
+                                            <option>saturday</option>
+                                            <option>sunday  </option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div> -->
+
+
+
+                        <!-- </div> -->
+                        <!-- <div class="col-6 d-flex flex-column">
+                        <div class="mb-3">
+                            <label for="validationServer04" class="form-label">Artist Description</label>
+                            <input type="text" placeholder="lastname" id="validationServer04" class="form-control"
+                                formControlName="lastname">
+                        </div>
+                        <div class="mb-3">
+                            <div><label for="validationServer03" class="form-label me-4">Artist-Type</label></div>
+                            <div class="dropdown">
+                                <select class="form-select" id="select" formControlName="usertype">
+                                    <option value="" class="dropdown-item" disabled selected> --Select-performance-Type
+                                        --
+                                    </option>
+                                    <option value="" class="dropdown-item" value="Studio-owner">Studio-owner</option>
+                                    <option value="" class="dropdown-item" value="artist">Artist</option>
+                                    <option value="" class="dropdown-item" value="general">General</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="d-flex flex-column">
+                                <label for="validationServer05" class="form-label">Select State</label>
+                                <div class="dropdown me-4">
+                                    <select class="form-select" id="select" >
+                                        <option value="" class="dropdown-item" disabled selected> -- select-state--
+                                        </option>
+                                        <option value="" class="dropdown-item" value="gujarat">Gujarat</option>
+                                        <option value="" class="dropdown-item" value="maharastra">maharastra</option>
+                                        <option value="" class="dropdown-item" value="up">up</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <label for="validationServer05" class="form-label">Select City</label>
+                                <div class="dropdown">
+                                    <select class="form-select" id="select" >
+                                        <option value="" class="dropdown-item" disabled selected> -- select-city --
+                                        </option>
+                                        <option value="" class="dropdown-item" value="valsad">valsad</option>
+                                        <option value="" class="dropdown-item" value="mumbai">mumbai</option>
+                                        <option value="" class="dropdown-item" value="agra">agra</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="  text-start w-100 mb-3">
+                            <button class="btn btn-secondary w-100">Add Display Picture</button>
+                        </div>
+                    </div> -->
+                    </div>
+                    <div class=" text-center w-100 mt-2">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Agree terms & Condition </label>
+                    </div>
+                    <div class="w-100 text-center mt-3">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+
+                    <div class="text-center mt-2">Already memeber <a [routerLink]="['../login']">Click here</a></div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>

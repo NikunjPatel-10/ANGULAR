@@ -31,8 +31,10 @@
 
         </span>
     </div>
+
+    <!-- for infinite scrolling data -->
     <div class="container" infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="0"
-    [scrollWindow]="false" (scrolled)=" onScrolllist()" style="height: 700px; overflow-y: scroll;">
+        [scrollWindow]="false" (scrolled)=" onScrolllist()" style="height: 700px; overflow-y: scroll;">
         <ul>
             <li *ngFor="let data of datalist">{{data.body}}</li>
         </ul>

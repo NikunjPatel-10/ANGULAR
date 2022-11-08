@@ -5,7 +5,7 @@ import { StudioRoutingModule } from './studio-routing.module';
 import { StudioComponent } from './studio.component';
 import { StudioFormComponent } from './studio-form/studio-form.component';
 import { StudioListComponent } from './studio-list/studio-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 
@@ -19,7 +19,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     StudioRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class StudioModule { }

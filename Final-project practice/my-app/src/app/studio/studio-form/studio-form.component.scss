@@ -1,0 +1,48 @@
+.image-size {
+
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: auto;
+        background-position: center;
+    }
+}
+
+img {
+    height: 100px;
+    width: 100px;
+
+    background-position: center;
+    transition: all 1s linear;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.zoom:hover {
+    img {
+
+        // height: 200px;
+        // width: 200px;
+    }
+
+    .content {
+        display: block;
+
+    }
+
+}
