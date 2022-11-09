@@ -7,10 +7,12 @@ import { CoreModule } from './core/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     NgbModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
