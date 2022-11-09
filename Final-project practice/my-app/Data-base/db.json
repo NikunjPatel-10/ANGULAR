@@ -25,29 +25,29 @@
       "city": "Rajkot"
     },
     {
-      "id": 1,
+      "id": 3,
       "stateId": 1,
       "city": "Gandhinagar"
     },
     {
-      "id": 2,
+      "id": 4,
       "stateId": 2,
       "city": "Mumbai"
     },
     {
-      "id": 2,
+      "id": 5,
       "stateId": 2,
       "city": "Pune"
     },
     {
-      "id": 3,
+      "id": 5,
       "stateId": 3,
       "city": "Udaipur"
     },
     {
-      "id": 3,
+      "id": 6,
       "stateId": 3,
-      "name": "Jaipur"
+      "city": "Jaipur"
     }
   ],
   "posts": [

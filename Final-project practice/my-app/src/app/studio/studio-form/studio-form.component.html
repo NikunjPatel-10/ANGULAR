@@ -26,22 +26,20 @@
                             </div>
                         </div> -->
                         <div class="mb-3 d-flex flex-column w-100">
-                            <input type="file" formControlName='filename' (change)="uploadFile($event)" id="file"
-                                [multiple]="true">
+                            <input type="file" (change)="uploadFile($event)" id="file" [multiple]="true">
                             <ul class="w-100 d-flex">
-                                <li *ngFor="let data of base64" class="zoom m-2 position-relative">
+                                <li *ngFor="let data of base64 ;let index = index" class="zoom m-2 position-relative">
                                     <img [src]="data" alt="logo">
                                     <div class="content">
                                         <div class="d-flex">
                                             <span class="bi bi-cloud-plus fs-3"></span>
-                                            <span class="bi bi-trash2 fs-3" (click)="deleteImg()" *ngIf="imageData"></span>
+                                            <span class="bi bi-trash2 fs-3" (click)="deleteImg(index)"></span>
                                         </div>
-
-
                                     </div>
                                 </li>
                             </ul>
-                            <div class="w-100"><button type="submit" class="w-100" (click)=" SaveForm()">Add artist
+                            <div class="w-100"><button type="submit" class="w-100" (click)=" SaveForm()"
+                                    [routerLink]="['../list']">Add artist
                                     image</button></div>
                         </div>
 

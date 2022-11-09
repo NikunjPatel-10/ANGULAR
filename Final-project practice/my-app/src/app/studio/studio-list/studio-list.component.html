@@ -39,10 +39,19 @@
                 <option *ngFor="let citydata of dropdownCity" [value]="citydata.id">{{citydata.name}}</option>
 
             </select>
-            <!-- <select [(ngModel)]="selectedCity" class="form-select">
-                <option value="">Select City</option>
-                <option *ngFor="let c of dropdownCity" [value]="c.id">{{c.name}}</option>
-            </select> -->
+
         </span>
     </div>
+
+
+    <!-- to city the studiolist from data-base -->
+    <div>
+        <ul>
+            <li *ngFor="let  data of imageData[0]">
+                <img src="{{data}}" alt="logo">
+            </li>
+        </ul>
+    </div>
+
+
 </div>

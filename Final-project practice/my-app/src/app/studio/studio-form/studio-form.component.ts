@@ -13,6 +13,7 @@ export class StudioFormComponent implements OnInit {
   public img: any
   public imageData!: any
   public base64: any = []
+  public totalImgLength: any
   // public a!: any
   public studioForm: FormGroup
   constructor(private formbuilder: FormBuilder, private imageservice: ImageService) {
@@ -41,18 +42,21 @@ export class StudioFormComponent implements OnInit {
     // }
 
     for (var i = 0; i < event.target.files.length; i++) {
-      var b = this.imgResult.push(event.target.files[i]);
+      this.totalImgLength = this.imgResult.push(event.target.files[i]);
     }
-    var fileL = b - 1
-    console.log(fileL);
 
-    // console.log(this.imgResult[fileL])
+    // for total-length of file
+    var fileLength = this.totalImgLength - 1
+    console.log(fileLength);
+    // console.log(this.imgResult[fileLength])
+
+
     this.imageFile = this.imgResult
-    console.log(this.imageFile[fileL]);
-    var img = this.imageFile[fileL]
+    console.log(this.imageFile[fileLength]);
+    this.img = this.imageFile[fileLength]
 
     let reader = new FileReader();
-    reader.readAsDataURL(img);
+    reader.readAsDataURL(this.img);
     reader.onload = () => {
       this.imageData = reader.result;
       console.log(this.imageData);
@@ -66,23 +70,33 @@ export class StudioFormComponent implements OnInit {
 
   }
   // delete image 
-  deleteImg() {
+  deleteImg(index: any) {
     // console.log(id);
     // console.log(this.imageData);
-    this.imageData = null
-    
+    // this.imageData = null
+
+    // Delete the item from fileNames list
+    this.base64.splice(index, 1);
+    // delete file from FileList
+    // this.fileList.splice(index, 1);
 
 
   }
 
-  SaveForm() {
-    this.studioForm.controls['filepath'].setValue(this.imgResult);
-    this.imageservice.postImageData(this.base64).subscribe(res => {
-      console.log(res);
+  // to post imageData
 
+  SaveForm() {
+    this.studioForm.controls['filepath'].setValue(this.base64);
+    // const b = this.studioForm.controls['filename'].setValue(this.base64.filename);
+    this.imageservice.postImageData(this.studioForm.value).subscribe(res => {
+      // console.log(res);
       // this.getImageData()
     })
     // console.log(this.imageForm.value);
+    console.log(this.base64, 'hello');
+    // console.log(b, 'world');
+
+
   }
 
   // getImageData() {
