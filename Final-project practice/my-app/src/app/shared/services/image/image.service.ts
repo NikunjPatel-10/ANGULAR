@@ -16,4 +16,13 @@ export class ImageService {
   getImageData(): Observable<image[]> {
     return this.http.get<image[]>("http://localhost:3000/image")
   }
+
+  getCarouselData() {
+    return this.http.get("http://localhost:3000/carosuel")
+  }
+
+  getArtistData() {
+    return this.http.get("http://localhost:3000/artist")
+  }
+
 }

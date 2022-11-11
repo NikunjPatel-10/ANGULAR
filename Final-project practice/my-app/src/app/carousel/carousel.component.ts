@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { merge } from 'rxjs';
+import { ImageService } from '../shared/services/image/image.service';
 
 @Component({
   selector: 'app-carousel',
@@ -6,71 +8,69 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  event_list = [
-    {
-      event: ' Event 1',
-      eventLocation: 'Bangalore',
-      eventDescription: 'In bangalore, first event is going to happen. Please be careful about it',
-      img: 'https://picsum.photos/900/500?random&t=1',
-      eventStartDate: new Date('2019/05/20'),
-      eventEndingDate: new Date('2019/05/24')
-    },
-    {
-      event: ' Event 2',
-      eventLocation: 'Dubai',
-      eventDescription: 'Dubai is another place to host so,e, first event is going to happen. Please be careful about it',
-      img: 'https://picsum.photos/900/500?random&t=3',
-      eventStartDate: new Date('2019/07/28'),
-      eventEndingDate: new Date('2019/07/30')
-    },
-    {
-      event: ' Event 3',
-      eventLocation: 'New York',
-      eventDescription: 'NewYork sits on top of event hosting',
-      img: 'https://picsum.photos/900/500?random&t=4',
-      eventStartDate: new Date('2020/05/20'),
-      eventEndingDate: new Date('2020/05/24')
-    },
-    {
-      event: ' Event 4',
-      eventLocation: 'Singapore',
-      eventDescription: 'Singapore is another great hosting city',
-      img: 'https://picsum.photos/900/500?random&t=6',
-      eventStartDate: new Date('2018/05/20'),
-      eventEndingDate: new Date('2018/05/24')
-    },
-    {
-      event: ' Event 5',
-      eventLocation: 'Berlin',
-      eventDescription: 'Berlin is best place to hang on',
-      img: 'https://picsum.photos/900/500?random&t=7',
-      eventStartDate: new Date('2017/07/10'),
-      eventEndingDate: new Date('2017/08/14')
-    },
-    {
-      event: ' Event 6',
-      eventLocation: 'Mumbai',
-      eventDescription: 'Mumbai is hub of startups',
-      img: 'https://picsum.photos/900/500?random&t=8',
-      eventStartDate: new Date(),
-      eventEndingDate: new Date()
-    },
-    {
-      event: ' Event 7',
-      eventLocation: 'Barcelona',
-      eventDescription: 'Barcelona is another good city',
-      img: 'https://picsum.photos/900/500?random&t=6',
-      eventStartDate: new Date(),
-      eventEndingDate: new Date()
-    },
-  ]
-  constructor() { }
+  public carouselAllData: any = []
+  public lastTwoImage: any = []
+  public lastArtistImage: any = []
+  public mergeImage: any = []
+  public artistAllData: any = []
+  public lastFiveData: any = []
+  public artisFiveData: any = []
+  constructor(private imageservice: ImageService) { }
 
-  upcoming_events = this.event_list.filter(event => event.eventStartDate > new Date());
-  past_events = this.event_list.filter(event => event.eventEndingDate < new Date());
-  current_events = this.event_list.filter(event => (event.eventStartDate >= new Date() && (event.eventEndingDate <= new Date())))
+
 
   ngOnInit(): void {
+    this.CarouselData();
+    this.artistData()
+    // this.artistData();
+    // this.dhsjh()
+    // this.mergeImage = this.lastFourImage.concat(this.lastArtistImage)
   }
+
+  CarouselData() {
+    this.imageservice.getCarouselData().subscribe(res => {
+      this.carouselAllData = res;
+
+      // get last-two carouselData from Database
+
+      this.lastTwoImage = this.carouselAllData.slice((this.carouselAllData.length - 2), this.carouselAllData.length).reverse();
+      // console.log(this.lastFourImage);
+
+      this.imageservice.getArtistData().subscribe(res => {
+        this.artistAllData = res;
+
+        // get last-two ArtistData from Database
+        this.lastArtistImage = this.artistAllData.slice((this.artistAllData.length - 2), this.artistAllData.length).reverse();
+
+        // merge twoArray to show Both Data
+
+        this.mergeImage = this.lastTwoImage.concat(this.lastArtistImage)
+        // console.log(this.mergeImage);
+      })
+      // this.mergeImage = this.lastFourImage.concat(this.lastArtistImage)
+      // console.log(this.mergeImage);
+
+    })
+
+
+    // this.imageservice.getArtistData().subscribe(res => {
+    //   this.artistAllData = res;
+    //   this.lastArtistImage = this.artistAllData.slice((this.artistAllData.length - 2), this.artistAllData.length)
+    // })
+    // this.mergeImage = this.lastFourImage.concat(this.lastArtistImage)
+
+
+  }
+
+  artistData() {
+    this.imageservice.getArtistData().subscribe(res => {
+      this.artisFiveData = res;
+      this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
+    })
+    console.log(this.carouselAllData['img']);
+  }
+
+
+
 
 }
