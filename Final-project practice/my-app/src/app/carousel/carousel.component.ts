@@ -29,23 +29,26 @@ export class CarouselComponent implements OnInit {
 
   CarouselData() {
     this.imageservice.getCarouselData().subscribe(res => {
-      this.carouselAllData = res;
-
       // get last-two carouselData from Database
+      this.carouselAllData = res.slice((res.length-2),res.length).reverse();
 
-      this.lastTwoImage = this.carouselAllData.slice((this.carouselAllData.length - 2), this.carouselAllData.length).reverse();
+
+      // this.lastTwoImage = this.carouselAllData.slice((this.carouselAllData.length - 2), this.carouselAllData.length).reverse();
       // console.log(this.lastFourImage);
 
       this.imageservice.getArtistData().subscribe(res => {
-        this.artistAllData = res;
-
         // get last-two ArtistData from Database
-        this.lastArtistImage = this.artistAllData.slice((this.artistAllData.length - 2), this.artistAllData.length).reverse();
+        this.artistAllData = res.slice((res.length-2), res.length).reverse();
+
+        // this.lastArtistImage = this.artistAllData.slice((this.artistAllData.length - 2), this.artistAllData.length).reverse();
 
         // merge twoArray to show Both Data
 
-        this.mergeImage = this.lastTwoImage.concat(this.lastArtistImage)
+        this.mergeImage = this.carouselAllData.concat(this.artistAllData);
+        // this.mergeImage = this.lastTwoImage.concat(this.lastArtistImage)
         // console.log(this.mergeImage);
+
+        
       })
       // this.mergeImage = this.lastFourImage.concat(this.lastArtistImage)
       // console.log(this.mergeImage);

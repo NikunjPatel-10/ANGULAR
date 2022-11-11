@@ -17,12 +17,12 @@ export class ImageService {
     return this.http.get<image[]>("http://localhost:3000/image")
   }
 
-  getCarouselData() {
-    return this.http.get("http://localhost:3000/carosuel")
+  getCarouselData():Observable<any[]> {
+    return this.http.get<any[]>("http://localhost:3000/carosuel")
   }
 
-  getArtistData() {
-    return this.http.get("http://localhost:3000/artist")
+  getArtistData():Observable<any[]>{
+    return this.http.get<any[]>("http://localhost:3000/artist")
   }
 
 }
