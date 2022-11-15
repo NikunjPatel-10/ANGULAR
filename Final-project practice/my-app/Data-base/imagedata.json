@@ -21,7 +21,8 @@
   ],
   "carosuel": [
     {
-      "studioId": 1,
+      "id": 1,
+      "userTypeId": 1,
       "event": "Event 1",
       "eventLocation": "Bangalore",
       "eventDescription": "In bangalore, first event is going to happen. Please be careful about it",
@@ -30,7 +31,8 @@
       "eventEndingDate": " new Date('2019/05/24')"
     },
     {
-      "studioId": 2,
+      "id": 2,
+      "userTypeId": 1,
       "event": " Event 2'",
       "eventLocation": "Dubai'",
       "eventDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
@@ -39,7 +41,8 @@
       "eventEndingDate": "new Date('2019/07/30')"
     },
     {
-      "studioId": 3,
+      "id": 3,
+      "userTypeId": 1,
       "event": " Event 3",
       "eventLocation": "New York",
       "eventDescription": "NewYork sits on top of event hosting",
@@ -48,7 +51,8 @@
       "eventEndingDate": "new Date('2020/05/24')"
     },
     {
-      "studioId": 4,
+      "id": 4,
+      "userTypeId": 2,
       "event": " Event 4",
       "eventLocation": "Singapore",
       "eventDescription": "Singapore is another great hosting city",
@@ -57,7 +61,8 @@
       "eventEndingDate": "new Date('2018/05/24')"
     },
     {
-      "studioId": 5,
+      "id": 5,
+      "userTypeId": 2,
       "event": " Event 5",
       "eventLocation": "Berlin",
       "eventDescription": "Berlin is best place to hang on",
@@ -66,7 +71,8 @@
       "eventEndingDate": "new Date('2017/08/14')"
     },
     {
-      "studioId": 6,
+      "id": 6,
+      "userTypeId": 2,
       "event": " Event 6",
       "eventLocation": "Mumbai",
       "eventDescription": "Mumbai is hub of startups",
@@ -75,7 +81,8 @@
       "eventEndingDate": "new Date()"
     },
     {
-      "studioId": 7,
+      "id": 7,
+      "userTypeId": 2,
       "event": " Event 7",
       "eventLocation": "Barcelona",
       "eventDescription": "Barcelona is another good city",

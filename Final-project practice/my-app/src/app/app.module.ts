@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { CarouselComponent } from './carousel/carousel.component';
     NgbModule,
     SharedModule,
     HttpClientModule,
-    
-    
+    NgbDropdownModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

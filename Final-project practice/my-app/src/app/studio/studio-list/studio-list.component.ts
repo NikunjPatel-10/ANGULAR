@@ -51,7 +51,7 @@ export class StudioListComponent implements OnInit {
     // console.log(event);
     const data = event.target.value
     console.log(data);
-    this.dropdownCity = this.Cityname.filter((i: any) => i.state == data);
+    this.dropdownCity = this.Cityname.filter((i: any) => i.stateId == data);
     console.log(this.dropdownCity);
   }
 

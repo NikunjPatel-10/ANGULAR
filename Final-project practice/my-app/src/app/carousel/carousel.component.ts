@@ -15,61 +15,56 @@ export class CarouselComponent implements OnInit {
   public artistAllData: any = []
   public lastFiveData: any = []
   public artisFiveData: any = []
+  public studio: any = []
+  public userRole : any
 
-  public studioId!: number
   /**
    * 
    * @param imageservice 
    */
-  constructor(private imageservice: ImageService) {
-
-  }
+  constructor(private imageservice: ImageService) { }
 
 
 
   ngOnInit(): void {
     this.CarouselData();
-    this.artistData();
-    this.ProfileData();
+    this.artistData()
+    this.profileData()
 
   }
-
-
-
   /**
    * to show the lastest two data of artist and studio in carosuel 
    */
   CarouselData() {
     this.imageservice.getCarouselData().subscribe(res => {
       // get last-two carouselData from Database
-      // this.carouselAllData = res.slice((res.length - 2), res.length).reverse();
       this.carouselAllData = res.slice(-2).reverse();
-      console.log(this.carouselAllData);
+      // this.carouselAllData = res.slice((res.length - 2), res.length).reverse();
 
+
+      // this.lastTwoImage = this.carouselAllData.slice((this.carouselAllData.length - 2), this.carouselAllData.length).reverse();
+      // console.log(this.lastFourImage);
 
       this.imageservice.getArtistData().subscribe(res => {
         // get last-two ArtistData from Database
-        // this.artistAllData = res.slice((res.length - 2), res.length).reverse();
         this.artistAllData = res.slice(-2).reverse();
+        // this.artistAllData = res.slice((res.length - 2), res.length).reverse();
+
+        // this.lastArtistImage = this.artistAllData.slice((this.artistAllData.length - 2), this.artistAllData.length).reverse();
 
         // merge twoArray to show Both Data
 
         this.mergeImage = (this.carouselAllData.concat(this.artistAllData));
         console.log(this.mergeImage);
         this.shuffleArray(this.mergeImage)
-
       })
 
     })
 
-
   }
 
   // two show the data randomly in the carousel
-  /**
-   * 
-   * @param arr 
-   */
+
   shuffleArray(arr: any) {
     for (var i = arr.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -80,26 +75,36 @@ export class CarouselComponent implements OnInit {
   }
 
   /**
-   * two show the latest artist data
+   * two show the lastest artist data
    */
 
   artistData() {
     this.imageservice.getArtistData().subscribe(res => {
       this.artisFiveData = res.slice(-5).reverse();
-      // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
       // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
-      // console.log(this.lastFiveData);
+      // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
     })
-    console.log(this.carouselAllData['img']);
+    // console.log(this.carouselAllData['img']);
   }
+  
 
-
-
-  ProfileData() {
+  profileData() {
     this.imageservice.getCarouselData().subscribe(res => {
-      this.lastFiveData = res.find(x => x.id === this.studioId)
+      // console.log(res);
+      // this.studio = res[1];
+      // console.log(this.studio);
+
+      this.studio = res
+
+      this.lastFiveData = res.filter(x => x.studio == this.studio.userTypeId)      // this.lastFiveData = this.studio.
       console.log(this.lastFiveData);
 
+      if(this.studio.userTypeId == 1){
+
+      }
+      // console.log(this.studio.studioId);
+      // console.log(this.lastFiveData);
+      // this.lastFiveData = this.studio.find((x: any) => x.id == this.studio.studioId)
     })
   }
 
