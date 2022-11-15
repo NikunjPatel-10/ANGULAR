@@ -82,12 +82,13 @@
   </div>
 
   <!-- for studio section -->
-  <div class="w-100 row d-flex  justify-content-between mt-4 gx-0">
-    <div class="w-100 d-flex justify-content-between">
+  <div class="w-100 row d-flex flex-column justify-content-between mt-4 gx-0" *ngFor="let data of artistFiveData">
+    <!-- <div class="w-100 d-flex justify-content-between">
       <span class="fw-bold fs-4 p-2 d-flex align-item-center">Explore Studio</span>
       <span><a href="" class="fs-4 me-1 p-2 d-flex align-item-center">See All</a></span>
-    </div>
-    <div class="card col-sm-12 col-md-6 col-lg-6 " style="width: 18rem;" *ngFor="let event of artisFiveData">
+    </div> -->
+    <app-card  [artistData]="data"></app-card>
+    <!-- <div class="card col-sm-12 col-md-6 col-lg-6 " style="width: 18rem;" *ngFor="let event of artisFiveData">
       <div class="p-3 bg-light ">
         <img src="{{event.img}}" class="card-img-top image-wrap w-100" alt="...">
         <div class="card-body">
@@ -95,17 +96,19 @@
           <p class="text-truncate">{{event.eventDescription}}</p>
           <button href="#" class="btn btn-primary w-100 text-center"> Go somewhere</button>
         </div>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </div>
 
   <!-- for artist section  -->
-  <div class="w-100 row justify-content-between mt-4 gx-0">
-    <div class="w-100 d-flex justify-content-between">
+  <div class="w-100 row justify-content-between mt-4 gx-0"  *ngFor="let userData of carousellatestData">
+    <!-- <div class="w-100 d-flex justify-content-between">
       <span class="fw-bold fs-4 p-2 d-flex align-item-center">Explore Artists</span>
       <span><a href="" class="fs-4 p-2 me-1 d-flex align-item-center">See All</a></span>
-    </div>
-    <div class="card col-sm-12 col-md-6 col-lg-6" style="width: 18rem;" *ngFor="let event of artisFiveData">
+    </div> -->
+
+    <app-card [studioData]="userData"></app-card>
+    <!-- <div class="card col-sm-12 col-md-6 col-lg-6" style="width: 18rem;" *ngFor="let event of artisFiveData">
       <div class="p-3 bg-light ">
         <img src="{{event.img}}" class="card-img-top image-wrap w-100" alt="...">
         <div class="card-body">
@@ -114,6 +117,6 @@
           <a href="#" class="btn btn-primary w-100 text-center" disabled="true">Go somewhere</a>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

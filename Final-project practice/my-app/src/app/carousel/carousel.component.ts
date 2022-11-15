@@ -14,9 +14,10 @@ export class CarouselComponent implements OnInit {
   public mergeImage: any = []
   public artistAllData: any = []
   public lastFiveData: any = []
-  public artisFiveData: any = []
+  public artistFiveData: any = []
   public studio: any = []
   public userRole : any
+  public carousellatestData :any = []
 
   /**
    * 
@@ -30,6 +31,7 @@ export class CarouselComponent implements OnInit {
     this.CarouselData();
     this.artistData()
     this.profileData()
+    this.CarosuelFiveData()
 
   }
   /**
@@ -80,13 +82,18 @@ export class CarouselComponent implements OnInit {
 
   artistData() {
     this.imageservice.getArtistData().subscribe(res => {
-      this.artisFiveData = res.slice(-5).reverse();
+      this.artistFiveData = res.slice(-5).reverse();
       // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
       // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
     })
     // console.log(this.carouselAllData['img']);
   }
   
+  CarosuelFiveData(){
+    this.imageservice.getCarouselData().subscribe(res=>{
+      this.carousellatestData = res.slice(-5).reverse();
+    })
+  }
 
   profileData() {
     this.imageservice.getCarouselData().subscribe(res => {
