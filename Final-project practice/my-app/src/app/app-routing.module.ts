@@ -6,6 +6,11 @@ import { LoginFormComponent } from './core/login-form/login-form.component';
 import { RegisterFormComponent } from './core/register-form/register-form.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'carousel'
+  },
 
   {
     path: 'register-form',
