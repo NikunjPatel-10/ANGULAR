@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { artist } from 'src/app/Model/artist.model';
 
 @Component({
   selector: 'app-card',
@@ -6,13 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-@Input() Data:any;
+  @Input() cardData: any
+  public artist: boolean = true
+  constructor() {
 
-  constructor() { 
-    this.Data = []
   }
 
   ngOnInit(): void {
+    console.log(this.cardData);
+
   }
 
 }

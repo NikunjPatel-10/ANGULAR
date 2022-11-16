@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { merge } from 'rxjs';
+import { artist } from '../Model/artist.model';
+import { carousel } from '../Model/carousel.model';
 import { ImageService } from '../shared/services/image/image.service';
 
 @Component({
@@ -16,14 +18,19 @@ export class CarouselComponent implements OnInit {
   public lastFiveData: any = []
   public artistFiveData: any = []
   public studio: any = []
-  public userRole : any
-  public carousellatestData :any = []
+  public userRole: any
+  public carousellatestData: any = []
+  public showArtist: boolean
+
 
   /**
    * 
    * @param imageservice 
    */
-  constructor(private imageservice: ImageService) { }
+  constructor(private imageservice: ImageService) {
+    this.showArtist = true
+
+  }
 
 
 
@@ -57,7 +64,7 @@ export class CarouselComponent implements OnInit {
         // merge twoArray to show Both Data
 
         this.mergeImage = (this.carouselAllData.concat(this.artistAllData));
-        console.log(this.mergeImage);
+        // console.log(this.mergeImage);
         this.shuffleArray(this.mergeImage)
       })
 
@@ -81,33 +88,58 @@ export class CarouselComponent implements OnInit {
    */
 
   artistData() {
-    this.imageservice.getArtistData().subscribe(res => {
-      this.artistFiveData = res.slice(-5).reverse();
-      // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
-      // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
+    this.imageservice.getArtistData().subscribe((res: artist[]) => {
+      // console.log(res)
+      this.artistFiveData = res.map(item => {
+        // console.log(item)
+        return {
+          image: item.artistimg,
+          description: item.artistDescription,
+          title: item.artistLocation
+        }
+        // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
+        // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
+
+      }).slice(-5).reverse()
+      // console.log(this.artistFiveData);
+
+      // console.log(this.carouselAllData['img']);
     })
-    // console.log(this.carouselAllData['img']);
   }
-  
-  CarosuelFiveData(){
-    this.imageservice.getCarouselData().subscribe(res=>{
-      this.carousellatestData = res.slice(-5).reverse();
+
+  CarosuelFiveData() {
+    this.imageservice.getCarouselData().subscribe((res: carousel[]) => {
+      this.carousellatestData = res.map(item => {
+        return {
+          image: item.img,
+          description: item.eventDescription,
+          title: item.eventLocation
+        }
+      }).slice(-5).reverse()
     })
   }
 
   profileData() {
     this.imageservice.getCarouselData().subscribe(res => {
       // console.log(res);
-      // this.studio = res[1];
+      this.studio = res[1];
       // console.log(this.studio);
 
-      this.studio = res
+      // this.studio = res
 
       this.lastFiveData = res.filter(x => x.studio == this.studio.userTypeId)      // this.lastFiveData = this.studio.
-      console.log(this.lastFiveData);
+      // console.log(this.lastFiveData);
 
-      if(this.studio.userTypeId == 1){
-
+      if (this.studio.userTypeId == 1) {
+        this.userRole = 'Studio'
+        this.showArtist = true
+      }
+      else if (this.studio.userTypeId == 2) {
+        this.userRole = 'Artist'
+        this.showArtist = false
+      }
+      else {
+        this.userRole = 'General'
       }
       // console.log(this.studio.studioId);
       // console.log(this.lastFiveData);
