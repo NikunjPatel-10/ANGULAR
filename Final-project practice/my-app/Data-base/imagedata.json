@@ -19,170 +19,106 @@
       "id": 2
     }
   ],
-  "carosuel": [
+  "studio": [
     {
       "id": 1,
       "userTypeId": 1,
-      "event": "Event 1",
-      "eventLocation": "Bangalore",
-      "eventDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "img": "https://picsum.photos/900/500?random&t=1",
-      "eventStartDate": "new Date('2019/05/20')",
-      "eventEndingDate": " new Date('2019/05/24')"
+      "studioLocation": "Bangalore",
+      "studioDescription": "In bangalore, first event is going to happen. Please be careful about it",
+      "studioimg": "https://picsum.photos/900/500?random&t=1"
     },
     {
       "id": 2,
       "userTypeId": 1,
-      "event": " Event 2'",
-      "eventLocation": "Dubai'",
-      "eventDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
-      "img": "https://picsum.photos/900/500?random&t=3'",
-      "eventStartDate": "new Date('2019/07/28')",
-      "eventEndingDate": "new Date('2019/07/30')"
+      "studioLocation": "Dubai'",
+      "studioDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
+      "studioimg": "https://picsum.photos/900/500?random&t=3'"
     },
     {
       "id": 3,
       "userTypeId": 1,
-      "event": " Event 3",
-      "eventLocation": "New York",
-      "eventDescription": "NewYork sits on top of event hosting",
-      "img": "https://picsum.photos/900/500?random&t=4",
-      "eventStartDate": " new Date('2020/05/20')",
-      "eventEndingDate": "new Date('2020/05/24')"
+      "studioLocation": "New York",
+      "studioDescription": "NewYork sits on top of event hosting",
+      "studioimg": "https://picsum.photos/900/500?random&t=4"
     },
     {
       "id": 4,
       "userTypeId": 2,
-      "event": " Event 4",
-      "eventLocation": "Singapore",
-      "eventDescription": "Singapore is another great hosting city",
-      "img": "https://picsum.photos/900/500?random&t=6",
-      "eventStartDate": "new Date('2018/05/20')",
-      "eventEndingDate": "new Date('2018/05/24')"
+      "studioLocation": "Singapore",
+      "studioDescription": "Singapore is another great hosting city",
+      "studioimg": "https://picsum.photos/900/500?random&t=6"
     },
     {
       "id": 5,
       "userTypeId": 2,
-      "event": " Event 5",
-      "eventLocation": "Berlin",
-      "eventDescription": "Berlin is best place to hang on",
-      "img": "https://picsum.photos/900/500?random&t=7",
-      "eventStartDate": "new Date('2017/07/10')",
-      "eventEndingDate": "new Date('2017/08/14')"
+      "studioLocation": "Berlin",
+      "studioDescription": "Berlin is best place to hang on",
+      "studioimg": "https://picsum.photos/900/500?random&t=7"
     },
     {
       "id": 6,
       "userTypeId": 2,
-      "event": " Event 6",
-      "eventLocation": "Mumbai",
-      "eventDescription": "Mumbai is hub of startups",
-      "img": "https://picsum.photos/900/500?random&t=8",
-      "eventStartDate": "new Date()",
-      "eventEndingDate": "new Date()"
+      "studioLocation": "Mumbai",
+      "studioDescription": "Mumbai is hub of startups",
+      "studioimg": "https://picsum.photos/900/500?random&t=8"
     },
     {
       "id": 7,
       "userTypeId": 2,
-      "event": " Event 7",
-      "eventLocation": "Barcelona",
-      "eventDescription": "Barcelona is another good city",
-      "img": "https://picsum.photos/900/500?random&t=6",
-      "eventStartDate": "new Date()",
-      "eventEndingDate": "new Date()"
+      "studioLocation": "Barcelona",
+      "studioDescription": "Barcelona is another good city",
+      "studioimg": "https://picsum.photos/900/500?random&t=6"
     },
     {
       "id": 8,
       "userTypeId": 3,
-      "event": "Event 1",
-      "eventLocation": "Bangalore",
-      "eventDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "img": "https://picsum.photos/900/500?random&t=1",
-      "eventStartDate": "new Date('2019/05/20')",
-      "eventEndingDate": " new Date('2019/05/24')"
+      "studioLocation": "Bangalore",
+      "studioDescription": "In bangalore, first event is going to happen. Please be careful about it",
+      "studioimg": "https://picsum.photos/900/500?random&t=1"
     },
     {
       "id": 9,
       "userTypeId": 3,
-      "event": " Event 2'",
-      "eventLocation": "Dubai'",
-      "eventDescription": "Dubai is another place to host . Please be careful about it'",
-      "img": "https://picsum.photos/900/500?random&t=3'",
-      "eventStartDate": "new Date('2019/07/28')",
-      "eventEndingDate": "new Date('2019/07/30')"
+      "studioLocation": "Dubai'",
+      "studioDescription": "Dubai is another place to host . Please be careful about it'",
+      "studioimg": "https://picsum.photos/900/500?random&t=3'"
     }
   ],
   "artist": [
     {
-      "event": "Event 1",
-      "artistLocation": "Bangalore",
+      "id": 1,
+      "userTypeId": 1,
+      "artistLocation": "artist",
       "artistDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "artistimg": "https://picsum.photos/900/500?random&t=1",
-      "eventStartDate": "new Date('2019/05/20')",
-      "eventEndingDate": " new Date('2019/05/24')"
+      "artistimg": "https://picsum.photos/900/500?random&t=1"
     },
     {
-      "event": " Event 2'",
-      "artistLocation": "Dubai'",
+      "id": 2,
+      "userTypeId": 1,
+      "artistLocation": "artist'",
       "artistDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
-      "artistimg": "https://picsum.photos/900/500?random&t=3'",
-      "eventStartDate": "new Date('2019/07/28')",
-      "eventEndingDate": "new Date('2019/07/30')"
+      "artistimg": "https://picsum.photos/900/500?random&t=3'"
     },
     {
-      "event": " Event 3",
-      "artistLocation": "New York",
+      "id": 3,
+      "userTypeId": 1,
+      "artistLocation": "artist",
       "artistDescription": "NewYork sits on top of event hosting",
-      "artistimg": "https://picsum.photos/900/500?random&t=4",
-      "eventStartDate": " new Date('2020/05/20')",
-      "eventEndingDate": "new Date('2020/05/24')"
+      "artistimg": "https://picsum.photos/900/500?random&t=4"
     },
     {
-      "event": " Event 4",
-      "artistLocation": "Singapore",
+      "id": 4,
+      "userTypeId": 1,
+      "artistLocation": "artist",
       "artistDescription": "Singapore is another great hosting city",
-      "artistimg": "https://picsum.photos/900/500?random&t=6",
-      "eventStartDate": "new Date('2018/05/20')",
-      "eventEndingDate": "new Date('2018/05/24')"
+      "artistimg": "https://picsum.photos/900/500?random&t=6"
     },
     {
-      "event": " Event 5",
-      "artistLocation": "Berlin",
+      "id": 5,
+      "userTypeId": 1,
+      "artistLocation": "Artist",
       "artistDescription": "Berlin is best place to hang on",
-      "artistimg": "https://picsum.photos/900/500?random&t=7",
-      "eventStartDate": "new Date('2017/07/10')",
-      "eventEndingDate": "new Date('2017/08/14')"
-    },
-    {
-      "event": " Event 6",
-      "artistLocation": "Mumbai",
-      "artistDescription": "Mumbai is hub of startups",
-      "artistimg": "https://picsum.photos/900/500?random&t=8",
-      "eventStartDate": "new Date()",
-      "eventEndingDate": "new Date()"
-    },
-    {
-      "event": " Event 7",
-      "artistLocation": "Barcelona",
-      "artistDescription": "Barcelona is another good city",
-      "artistimg": "https://picsum.photos/900/500?random&t=6",
-      "eventStartDate": "new Date()",
-      "eventEndingDate": "new Date()"
-    },
-    {
-      "event": "Event 1",
-      "artistLocation": "Bangalore",
-      "artistDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "artistimg": "https://picsum.photos/900/500?random&t=1",
-      "eventStartDate": "new Date('2019/05/20')",
-      "eventEndingDate": " new Date('2019/05/24')"
-    },
-    {
-      "event": " Event 2'",
-      "artistLocation": "Dubai'",
-      "artistDescription": "Dubai is another place to host . Please be careful about it'",
-      "artistimg": "https://picsum.photos/900/500?random&t=3'",
-      "eventStartDate": "new Date('2019/07/28')",
-      "eventEndingDate": "new Date('2019/07/30')"
+      "artistimg": "https://picsum.photos/900/500?random&t=7"
     }
   ]
 }

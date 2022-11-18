@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { artist } from 'src/app/Model/artist.model';
+import { studio } from 'src/app/Model/studio.model';
 import { image } from 'src/app/studio/studio-form/studio.model';
 
 @Injectable({
@@ -18,8 +19,8 @@ export class ImageService {
     return this.http.get<image[]>("http://localhost:3000/image")
   }
 
-  getCarouselData(): Observable<any[]> {
-    return this.http.get<any[]>("http://localhost:3000/carosuel")
+  getStudioData(): Observable<studio[]> {
+    return this.http.get<studio[]>("http://localhost:3000/studio")
   }
 
   getArtistData(): Observable<artist[]> {

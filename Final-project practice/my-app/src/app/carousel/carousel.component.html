@@ -34,7 +34,7 @@
       <li class="nav-item list-unstyled" ngbDropdown display="dynamic" placement="bottom-end">
         <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
           <div class="profile-wrap me-2">
-            <img src="{{studio.img}}" alt="no-profile">
+            <img src="{{studiodata.img}}" alt="no-profile">
           </div>
         </a>
         <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu mx-2">
@@ -59,20 +59,19 @@
 </nav>
 
 <div class=" w-100 px-4">
-  for carosuel part
+  <!-- for carosuel part -->
   <div class="row">
     <div class=" col-md-12">
       <h2 class="pb-2">Past Events</h2>
       <ngb-carousel class="" [interval]="7000">
         <ng-template ngbSlide *ngFor="let event of mergeImage" class="border rounded rounded-pill">
-
-          <img src="{{event.img}}" alt="Random slide" class=" w-100" style="height: 400px;">
+          <img src="{{event.image}}" alt="Random slide" class=" w-100" style="height: 400px;">
           <div class="carousel-caption ">
             <div class="d-flex ">
-              <h3>{{ event.eventLocation }} </h3>
+              <h3>{{ event.title }} </h3>
             </div>
             <div class="d-flex ">
-              <p [innerText]="event.eventDescription"></p>
+              <p [innerText]="event.description"></p>
             </div>
           </div>
         </ng-template>
@@ -82,9 +81,9 @@
   </div>
 </div>
 
-<div class="d-flex  w-100 gx-0 ">
+<div class="d-flex  w-100 gx-0 " *ngIf="showArtist">
   <!-- for studio section -->
-  <div class="d-flex mt-4 gx-0 w-100   justify-content-around " *ngFor="let data of artistFiveData">
+  <div class="d-flex mt-4 gx-0 w-100   justify-content-around " *ngFor="let data of artistLastFiveData">
     <!-- <img src="{{data.image}}"> -->
     <app-card [cardData]="data"></app-card>
   </div>
@@ -95,10 +94,10 @@
 </div>
 <!-- </div> -->
 
-<div class="d-flex  w-100 gx-0">
+<div class="d-flex  w-100 gx-0" *ngIf="showStudio">
 
   <!-- for artist section   -->
-  <div class="mt-4 d-flex justify-content-around  w-100 gx-0" *ngFor="let userdata of carousellatestData">
+  <div class="mt-4 d-flex justify-content-around  w-100 gx-0" *ngFor="let userdata of studioLastFiveData">
     <app-card [cardData]="userdata"></app-card>
   </div>
 </div>

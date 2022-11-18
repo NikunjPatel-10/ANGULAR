@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { merge } from 'rxjs';
 import { artist } from '../Model/artist.model';
-import { carousel } from '../Model/carousel.model';
+import { studio } from '../Model/studio.model';
 import { ImageService } from '../shared/services/image/image.service';
 
 @Component({
@@ -10,26 +10,29 @@ import { ImageService } from '../shared/services/image/image.service';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  public carouselAllData: any = []
-  public lastTwoImage: any = []
-  public lastArtistImage: any = []
-  public mergeImage: any = []
-  public artistAllData: any = []
-  public lastFiveData: any = []
-  public artistFiveData: any = []
-  public studio: any = []
-  public userRole: any
-  public carousellatestData: any = []
-  public showArtist: boolean
 
+  //----variables----//
+  public artistTwoData: any = []
+  public studioTwoData: any = []
+  public artistLastFiveData: any = []
+  public studioLastFiveData: any = []
+  public mergeImage: any = []
+  public lastFiveData: any = []
+  public studiodata: any = []
+  public userRole: any
+  public artistLastFourData: any = [];
+  public studioLastFourData: any = [];
+  public userTypeId: any
+  public showStudio: boolean;
+  public showArtist: boolean;
 
   /**
    * 
    * @param imageservice 
    */
   constructor(private imageservice: ImageService) {
-    this.showArtist = true
-
+    this.showArtist = false
+    this.showStudio = false
   }
 
 
@@ -38,41 +41,95 @@ export class CarouselComponent implements OnInit {
     this.CarouselData();
     this.artistData()
     this.profileData()
-    this.CarosuelFiveData()
-
+    this.studioFiveData()
+    localStorage.setItem("userType", "3");
   }
+
+
   /**
    * to show the lastest two data of artist and studio in carosuel 
    */
   CarouselData() {
-    this.imageservice.getCarouselData().subscribe(res => {
-      // get last-two carouselData from Database
-      this.carouselAllData = res.slice(-2).reverse();
-      // this.carouselAllData = res.slice((res.length - 2), res.length).reverse();
+    // -----to get get studio last-twodata----
+    this.imageservice.getStudioData().subscribe((res: studio[]) => {
+      this.studioTwoData = res.map(item => {
+        return {
+          image: item.studioimg,
+          description: item.studioDescription,
+          title: item.studioLocation
+        }
+      }).slice(-2).reverse()
 
+      // ----- to get artist last-two data -------
+      this.imageservice.getArtistData().subscribe((res: artist[]) => {
+        // console.log(res)
+        this.artistTwoData = res.map(item => {
+          // console.log(item)
+          return {
+            image: item.artistimg,
+            description: item.artistDescription,
+            title: item.artistLocation
+          }
+          // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
+          // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
 
-      // this.lastTwoImage = this.carouselAllData.slice((this.carouselAllData.length - 2), this.carouselAllData.length).reverse();
-      // console.log(this.lastFourImage);
+        }).slice(-2).reverse()
 
-      this.imageservice.getArtistData().subscribe(res => {
-        // get last-two ArtistData from Database
-        this.artistAllData = res.slice(-2).reverse();
-        // this.artistAllData = res.slice((res.length - 2), res.length).reverse();
-
-        // this.lastArtistImage = this.artistAllData.slice((this.artistAllData.length - 2), this.artistAllData.length).reverse();
-
-        // merge twoArray to show Both Data
-
-        this.mergeImage = (this.carouselAllData.concat(this.artistAllData));
-        // console.log(this.mergeImage);
+        this.mergeImage = (this.studioTwoData.concat(this.artistTwoData));
         this.shuffleArray(this.mergeImage)
+
       })
 
     })
 
-  }
+    // ----- for practice to get in one data ----//
+    // this.imageservice.getStudioData().subscribe((res: studio[]) => {
+    //   this.studioTwoData = res.map(item => {
+    //     return {
+    //       image: item.studioimg,
+    //       description: item.studioDescription,
+    //       title: item.studioLocation
+    //     }
+    //   })
 
-  // two show the data randomly in the carousel
+
+    //   // ----- for practice to get in one data ----//
+
+    //   // this.imageservice.getArtistData().subscribe((res: artist[]) => {
+    //   //   // console.log(res)
+    //   //   this.artistTwoData = res.map(item => {
+    //   //     // console.log(item)
+    //   //     return {
+    //   //       image: item.artistimg,
+    //   //       description: item.artistDescription,
+    //   //       title: item.artistLocation
+    //   //     }
+    //   //     // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
+    //   //     // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
+
+    //   //   })
+
+    //   //   if (this.userTypeId == 1) {
+    //   //     this.mergeImage = this.studioTwoData.slice(-4).reverse()
+    //   //   }
+
+    //   //   else if (this.userTypeId == 2) {
+    //   //     this.mergeImage = this.artistTwoData.slice(-4).reverse()
+
+    //   //   }
+
+    //   //   else if (this.userTypeId == 3) {
+    //   //     this.mergeImage = ((this.studioTwoData.slice(-2).reverse()).concat(this.artistTwoData.slice(-2).reverse()))
+    //   //     console.log(this.mergeImage);
+    //   //   }
+
+
+    //   // })
+
+    // })
+
+  }
+  // ----two show the data randomly in the carousel----//
 
   shuffleArray(arr: any) {
     for (var i = arr.length - 1; i > 0; i--) {
@@ -90,62 +147,79 @@ export class CarouselComponent implements OnInit {
   artistData() {
     this.imageservice.getArtistData().subscribe((res: artist[]) => {
       // console.log(res)
-      this.artistFiveData = res.map(item => {
+      this.artistLastFiveData = res.map(item => {
         // console.log(item)
         return {
           image: item.artistimg,
           description: item.artistDescription,
           title: item.artistLocation
         }
-        // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
+
         // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
 
-      }).slice(-5).reverse()
+      }).slice(-5).reverse();
+
+
       // console.log(this.artistFiveData);
 
       // console.log(this.carouselAllData['img']);
     })
   }
 
-  CarosuelFiveData() {
-    this.imageservice.getCarouselData().subscribe((res: carousel[]) => {
-      this.carousellatestData = res.map(item => {
+  //---- Two show the latest studiodata---//
+  studioFiveData() {
+    this.imageservice.getStudioData().subscribe((res: studio[]) => {
+      this.studioLastFiveData = res.map(item => {
         return {
-          image: item.img,
-          description: item.eventDescription,
-          title: item.eventLocation
+          image: item.studioimg,
+          description: item.studioDescription,
+          title: item.studioLocation
         }
-      }).slice(-5).reverse()
+      }).slice(-5).reverse();
+
     })
+
+
+
+
   }
 
   profileData() {
-    this.imageservice.getCarouselData().subscribe(res => {
+    this.imageservice.getStudioData().subscribe(res => {
       // console.log(res);
-      this.studio = res[1];
-      // console.log(this.studio);
+      this.studiodata = res[1];
+      // console.log(this.studiodata);
 
-      // this.studio = res
+      // this.studiodata = res
 
-      this.lastFiveData = res.filter(x => x.studio == this.studio.userTypeId)      // this.lastFiveData = this.studio.
+      this.lastFiveData = res     // this.lastFiveData = this.studiodata.
+      console.log(this.lastFiveData);
+
+
+
+      this.userTypeId = localStorage.getItem("userType")
+
+      if (this.userTypeId == 1) {
+        this.showStudio = true;
+      }
+
+      else if (this.userTypeId == 2) {
+        this.showArtist = true;
+
+      }
+
+      else if (this.userTypeId == 3) {
+        this.showArtist = true;
+        this.showStudio = true
+      }
+      // console.log(this.studiodata.studiodataId);
       // console.log(this.lastFiveData);
-
-      if (this.studio.userTypeId == 1) {
-        this.userRole = 'Studio'
-        this.showArtist = true
-      }
-      else if (this.studio.userTypeId == 2) {
-        this.userRole = 'Artist'
-        this.showArtist = false
-      }
-      else {
-        this.userRole = 'General'
-      }
-      // console.log(this.studio.studioId);
-      // console.log(this.lastFiveData);
-      // this.lastFiveData = this.studio.find((x: any) => x.id == this.studio.studioId)
+      // this.lastFiveData = this.studiodata.find((x: any) => x.id == this.studiodata.studioId)
     })
   }
+
+
+
 
 
 

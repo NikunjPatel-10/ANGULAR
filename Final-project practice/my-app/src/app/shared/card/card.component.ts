@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { artist } from 'src/app/Model/artist.model';
+
+import { card } from './card.model';
 
 @Component({
   selector: 'app-card',
@@ -7,15 +8,14 @@ import { artist } from 'src/app/Model/artist.model';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() cardData: any
+  @Input() cardData!: card
   public artist: boolean = true
   constructor() {
 
   }
 
   ngOnInit(): void {
-    console.log(this.cardData);
-
+    // console.log(this.cardData);
   }
 
 }
