@@ -23,63 +23,63 @@
     {
       "id": 1,
       "userTypeId": 1,
-      "studioLocation": "Bangalore",
+      "studioLocation": "Studio1",
       "studioDescription": "In bangalore, first event is going to happen. Please be careful about it",
       "studioimg": "https://picsum.photos/900/500?random&t=1"
     },
     {
       "id": 2,
       "userTypeId": 1,
-      "studioLocation": "Dubai'",
+      "studioLocation": "Studio2'",
       "studioDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
       "studioimg": "https://picsum.photos/900/500?random&t=3'"
     },
     {
       "id": 3,
       "userTypeId": 1,
-      "studioLocation": "New York",
+      "studioLocation": "Studio3",
       "studioDescription": "NewYork sits on top of event hosting",
       "studioimg": "https://picsum.photos/900/500?random&t=4"
     },
     {
       "id": 4,
       "userTypeId": 2,
-      "studioLocation": "Singapore",
+      "studioLocation": "Studio4",
       "studioDescription": "Singapore is another great hosting city",
       "studioimg": "https://picsum.photos/900/500?random&t=6"
     },
     {
       "id": 5,
       "userTypeId": 2,
-      "studioLocation": "Berlin",
+      "studioLocation": "Studio5",
       "studioDescription": "Berlin is best place to hang on",
       "studioimg": "https://picsum.photos/900/500?random&t=7"
     },
     {
       "id": 6,
       "userTypeId": 2,
-      "studioLocation": "Mumbai",
+      "studioLocation": "Studio6",
       "studioDescription": "Mumbai is hub of startups",
       "studioimg": "https://picsum.photos/900/500?random&t=8"
     },
     {
       "id": 7,
       "userTypeId": 2,
-      "studioLocation": "Barcelona",
+      "studioLocation": "Studio7",
       "studioDescription": "Barcelona is another good city",
       "studioimg": "https://picsum.photos/900/500?random&t=6"
     },
     {
       "id": 8,
       "userTypeId": 3,
-      "studioLocation": "Bangalore",
+      "studioLocation": "Studio8",
       "studioDescription": "In bangalore, first event is going to happen. Please be careful about it",
       "studioimg": "https://picsum.photos/900/500?random&t=1"
     },
     {
       "id": 9,
       "userTypeId": 3,
-      "studioLocation": "Dubai'",
+      "studioLocation": "Studio9",
       "studioDescription": "Dubai is another place to host . Please be careful about it'",
       "studioimg": "https://picsum.photos/900/500?random&t=3'"
     }
@@ -88,37 +88,42 @@
     {
       "id": 1,
       "userTypeId": 1,
-      "artistLocation": "artist",
+      "artistLocation": "artist1",
       "artistDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "artistimg": "https://picsum.photos/900/500?random&t=1"
+      "artistimg": "https://picsum.photos/900/500?random&t=1",
+      "artistType": "singer"
     },
     {
       "id": 2,
       "userTypeId": 1,
-      "artistLocation": "artist'",
+      "artistLocation": "artist2",
       "artistDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
-      "artistimg": "https://picsum.photos/900/500?random&t=3'"
+      "artistimg": "https://picsum.photos/900/500?random&t=3'",
+      "artistType": "Dancer"
     },
     {
       "id": 3,
       "userTypeId": 1,
-      "artistLocation": "artist",
+      "artistLocation": "artist3",
       "artistDescription": "NewYork sits on top of event hosting",
-      "artistimg": "https://picsum.photos/900/500?random&t=4"
+      "artistimg": "https://picsum.photos/900/500?random&t=4",
+      "artistType": "Dancer"
     },
     {
       "id": 4,
       "userTypeId": 1,
-      "artistLocation": "artist",
+      "artistLocation": "artist4",
       "artistDescription": "Singapore is another great hosting city",
-      "artistimg": "https://picsum.photos/900/500?random&t=6"
+      "artistimg": "https://picsum.photos/900/500?random&t=6",
+      "artistType": "Dj"
     },
     {
       "id": 5,
       "userTypeId": 1,
-      "artistLocation": "Artist",
+      "artistLocation": "Artist5",
       "artistDescription": "Berlin is best place to hang on",
-      "artistimg": "https://picsum.photos/900/500?random&t=7"
+      "artistimg": "https://picsum.photos/900/500?random&t=7",
+      "artistType": "paino"
     }
   ]
 }

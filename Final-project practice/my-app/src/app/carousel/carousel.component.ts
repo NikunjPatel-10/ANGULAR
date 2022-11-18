@@ -25,6 +25,8 @@ export class CarouselComponent implements OnInit {
   public userTypeId: any
   public showStudio: boolean;
   public showArtist: boolean;
+  public user: string;
+  public text!: string
 
   /**
    * 
@@ -33,6 +35,7 @@ export class CarouselComponent implements OnInit {
   constructor(private imageservice: ImageService) {
     this.showArtist = false
     this.showStudio = false
+    this.user = ''
   }
 
 
@@ -43,6 +46,8 @@ export class CarouselComponent implements OnInit {
     this.profileData()
     this.studioFiveData()
     localStorage.setItem("userType", "3");
+
+
   }
 
 
@@ -51,6 +56,38 @@ export class CarouselComponent implements OnInit {
    */
   CarouselData() {
     // -----to get get studio last-twodata----
+    // this.imageservice.getStudioData().subscribe((res: studio[]) => {
+    //   this.studioTwoData = res.map(item => {
+    //     return {
+    //       image: item.studioimg,
+    //       description: item.studioDescription,
+    //       title: item.studioLocation
+    //     }
+    //   }).slice(-2).reverse()
+
+    //   // ----- to get artist last-two data -------
+    //   this.imageservice.getArtistData().subscribe((res: artist[]) => {
+    //     // console.log(res)
+    //     this.artistTwoData = res.map(item => {
+    //       // console.log(item)
+    //       return {
+    //         image: item.artistimg,
+    //         description: item.artistDescription,
+    //         title: item.artistLocation
+    //       }
+    //       // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
+    //       // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
+
+    //     }).slice(-2).reverse()
+
+    //     this.mergeImage = (this.studioTwoData.concat(this.artistTwoData));
+    //     this.shuffleArray(this.mergeImage)
+
+    //   })
+
+    // })
+
+    // ----- for practice to get in one data ----//
     this.imageservice.getStudioData().subscribe((res: studio[]) => {
       this.studioTwoData = res.map(item => {
         return {
@@ -58,9 +95,11 @@ export class CarouselComponent implements OnInit {
           description: item.studioDescription,
           title: item.studioLocation
         }
-      }).slice(-2).reverse()
+      })
 
-      // ----- to get artist last-two data -------
+
+      //   // ----- for practice to get in one data ----//
+
       this.imageservice.getArtistData().subscribe((res: artist[]) => {
         // console.log(res)
         this.artistTwoData = res.map(item => {
@@ -72,61 +111,26 @@ export class CarouselComponent implements OnInit {
           }
           // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
           // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
+        })
 
-        }).slice(-2).reverse()
+        if (this.userTypeId == 1) {
+          this.mergeImage = this.studioTwoData.slice(-4).reverse()
+        }
 
-        this.mergeImage = (this.studioTwoData.concat(this.artistTwoData));
-        this.shuffleArray(this.mergeImage)
+        else if (this.userTypeId == 2) {
+          this.mergeImage = this.artistTwoData.slice(-4).reverse()
+
+        }
+
+        else if (this.userTypeId == 3) {
+          this.mergeImage = ((this.studioTwoData.slice(-2).reverse()).concat(this.artistTwoData.slice(-2).reverse()))
+          console.log(this.mergeImage);
+        }
+
 
       })
 
     })
-
-    // ----- for practice to get in one data ----//
-    // this.imageservice.getStudioData().subscribe((res: studio[]) => {
-    //   this.studioTwoData = res.map(item => {
-    //     return {
-    //       image: item.studioimg,
-    //       description: item.studioDescription,
-    //       title: item.studioLocation
-    //     }
-    //   })
-
-
-    //   // ----- for practice to get in one data ----//
-
-    //   // this.imageservice.getArtistData().subscribe((res: artist[]) => {
-    //   //   // console.log(res)
-    //   //   this.artistTwoData = res.map(item => {
-    //   //     // console.log(item)
-    //   //     return {
-    //   //       image: item.artistimg,
-    //   //       description: item.artistDescription,
-    //   //       title: item.artistLocation
-    //   //     }
-    //   //     // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
-    //   //     // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
-
-    //   //   })
-
-    //   //   if (this.userTypeId == 1) {
-    //   //     this.mergeImage = this.studioTwoData.slice(-4).reverse()
-    //   //   }
-
-    //   //   else if (this.userTypeId == 2) {
-    //   //     this.mergeImage = this.artistTwoData.slice(-4).reverse()
-
-    //   //   }
-
-    //   //   else if (this.userTypeId == 3) {
-    //   //     this.mergeImage = ((this.studioTwoData.slice(-2).reverse()).concat(this.artistTwoData.slice(-2).reverse()))
-    //   //     console.log(this.mergeImage);
-    //   //   }
-
-
-    //   // })
-
-    // })
 
   }
   // ----two show the data randomly in the carousel----//
@@ -151,7 +155,7 @@ export class CarouselComponent implements OnInit {
         // console.log(item)
         return {
           image: item.artistimg,
-          description: item.artistDescription,
+          description: item.artistType,
           title: item.artistLocation
         }
 
@@ -187,17 +191,16 @@ export class CarouselComponent implements OnInit {
   profileData() {
     this.imageservice.getStudioData().subscribe(res => {
       // console.log(res);
-      this.studiodata = res[1];
+      // this.studiodata = res[1];
       // console.log(this.studiodata);
 
       // this.studiodata = res
 
-      this.lastFiveData = res     // this.lastFiveData = this.studiodata.
+      this.lastFiveData = res[0];    // this.lastFiveData = this.studiodata.
       console.log(this.lastFiveData);
 
-
-
       this.userTypeId = localStorage.getItem("userType")
+      this.text = (this.userTypeId == 1) ? "STUDIO" : "ARTIST"
 
       if (this.userTypeId == 1) {
         this.showStudio = true;
@@ -205,23 +208,19 @@ export class CarouselComponent implements OnInit {
 
       else if (this.userTypeId == 2) {
         this.showArtist = true;
-
       }
 
       else if (this.userTypeId == 3) {
         this.showArtist = true;
         this.showStudio = true
       }
+
+
       // console.log(this.studiodata.studiodataId);
       // console.log(this.lastFiveData);
       // this.lastFiveData = this.studiodata.find((x: any) => x.id == this.studiodata.studioId)
     })
   }
-
-
-
-
-
 
 
 }
