@@ -123,7 +123,24 @@
       "artistLocation": "Artist5",
       "artistDescription": "Berlin is best place to hang on",
       "artistimg": "https://picsum.photos/900/500?random&t=7",
-      "artistType": "paino"
+      "artistType": "drum-player"
+    },
+    {
+      "id": 6,
+      "userTypeId": 1,
+      "artistLocation": "Artist6",
+      "artistDescription": "Berlin is best place to hang on",
+      "artistimg": "https://picsum.photos/900/500?random&t=7",
+      "artistType": "musician"
+    },
+    {
+      "id": 7,
+      "userTypeId": 1,
+      "artistLocation": "Artist7",
+      "artistDescription": "Berlin is best place to hang on",
+      "artistimg": "https://picsum.photos/900/500?random&t=7",
+      "artistType": "street-dancer"
     }
+
   ]
 }

@@ -1,0 +1,17 @@
+.card {
+    box-shadow: $card-box-shadow;
+
+    .image-wrapper {
+        height: $card-img-height;
+        object-fit: cover;
+    }
+
+      .btn:hover {
+        color: $white;
+    }
+}
+   
+    // adding font-style of role title
+
+  
+   

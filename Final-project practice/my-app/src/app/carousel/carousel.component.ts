@@ -161,7 +161,7 @@ export class CarouselComponent implements OnInit {
 
         // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
 
-      }).slice(-5).reverse();
+      }).slice(-6).reverse();
 
 
       // console.log(this.artistFiveData);
@@ -179,7 +179,7 @@ export class CarouselComponent implements OnInit {
           description: item.studioDescription,
           title: item.studioLocation
         }
-      }).slice(-5).reverse();
+      }).slice(-6).reverse();
 
     })
 

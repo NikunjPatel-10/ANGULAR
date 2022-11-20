@@ -1,0 +1,37 @@
+.card-title-wrapper {
+    background: $card-wrapper-background;
+
+    .explore-text {
+        font-weight: $font-weight-medium;
+        font-size: 34px;
+    }
+
+    .see-all-text {
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+    }
+}
+
+
+@include media-breakpoint-down(xxl) {
+    // removing last card in smaller screen
+    .cards:nth-last-child(-n+2) {
+        display: none;
+    }
+}
+@include media-breakpoint-down(xl) {
+    // removing last card in smaller screen
+    .cards:nth-last-child(-n+3) {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    // change of carousel size for smaller screen
+    .carousel-wrapper {
+        .carousel-text-wrapper {
+            height: 100%;
+            width: 80%;
+        }
+    }
+}
