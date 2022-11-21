@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { merge } from 'rxjs';
 import { artist } from '../Model/artist.model';
 import { studio } from '../Model/studio.model';
+import { user } from '../Model/user.model';
 import { ImageService } from '../shared/services/image/image.service';
 
 @Component({
@@ -23,10 +24,16 @@ export class CarouselComponent implements OnInit {
   public artistLastFourData: any = [];
   public studioLastFourData: any = [];
   public userTypeId: any
+  public userTypeId1: any
+  public userTypeId2: any
   public showStudio: boolean;
   public showArtist: boolean;
   public user: string;
-  public text!: string
+  public text!: string;
+  public userType!: any;
+  public allUserData: any
+  public detail: any = [];
+  public data: any = []
 
   /**
    * 
@@ -45,8 +52,21 @@ export class CarouselComponent implements OnInit {
     this.artistData()
     this.profileData()
     this.studioFiveData()
-    localStorage.setItem("userType", "3");
+    this.userData()
+    localStorage.setItem("userTypeId", "3");
 
+
+
+  }
+
+  userData() {
+    this.imageservice.getUserData().subscribe((res: user[]) => {
+      this.userType = res.filter((c) => {
+        this.userTypeId = c.UserTypeId
+        console.log(this.userTypeId);
+
+      })
+    })
 
   }
 
@@ -88,12 +108,14 @@ export class CarouselComponent implements OnInit {
     // })
 
     // ----- for practice to get in one data ----//
+
+
     this.imageservice.getStudioData().subscribe((res: studio[]) => {
       this.studioTwoData = res.map(item => {
         return {
-          image: item.studioimg,
-          description: item.studioDescription,
-          title: item.studioLocation
+          image: item.StudioImages,
+          description: item.StudioAddress,
+          name: item.StudioName
         }
       })
 
@@ -102,23 +124,25 @@ export class CarouselComponent implements OnInit {
 
       this.imageservice.getArtistData().subscribe((res: artist[]) => {
         // console.log(res)
+
         this.artistTwoData = res.map(item => {
           // console.log(item)
           return {
-            image: item.artistimg,
-            description: item.artistDescription,
-            title: item.artistLocation
+            image: item.ArtistImages,
+            description: item.ArtistType,
+            name: item.ArtistName
           }
           // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
           // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
         })
 
+
         if (this.userTypeId == 1) {
-          this.mergeImage = this.studioTwoData.slice(-4).reverse()
+          this.mergeImage = this.artistTwoData.slice(-4).reverse()
         }
 
         else if (this.userTypeId == 2) {
-          this.mergeImage = this.artistTwoData.slice(-4).reverse()
+          this.mergeImage = this.studioTwoData.slice(-4).reverse()
 
         }
 
@@ -154,9 +178,9 @@ export class CarouselComponent implements OnInit {
       this.artistLastFiveData = res.map(item => {
         // console.log(item)
         return {
-          image: item.artistimg,
-          description: item.artistType,
-          title: item.artistLocation
+          image: item.ArtistImages,
+          description: item.ArtistType,
+          name: item.ArtistName
         }
 
         // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
@@ -175,9 +199,9 @@ export class CarouselComponent implements OnInit {
     this.imageservice.getStudioData().subscribe((res: studio[]) => {
       this.studioLastFiveData = res.map(item => {
         return {
-          image: item.studioimg,
-          description: item.studioDescription,
-          title: item.studioLocation
+          image: item.StudioImages,
+          description: item.StudioAddress,
+          name: item.StudioName
         }
       }).slice(-6).reverse();
 
@@ -199,15 +223,15 @@ export class CarouselComponent implements OnInit {
       this.lastFiveData = res[0];    // this.lastFiveData = this.studiodata.
       console.log(this.lastFiveData);
 
-      this.userTypeId = localStorage.getItem("userType")
-      this.text = (this.userTypeId == 1) ? "STUDIO" : "ARTIST"
+      // this.text = (this.userTypeId == 1) ? "STUDIO" : "ARTIST"
+      this.userTypeId = localStorage.getItem("userTypeId")
 
       if (this.userTypeId == 1) {
-        this.showStudio = true;
+        this.showArtist = true;
       }
 
       else if (this.userTypeId == 2) {
-        this.showArtist = true;
+        this.showStudio = true;
       }
 
       else if (this.userTypeId == 3) {

@@ -21,126 +21,416 @@
   ],
   "studio": [
     {
-      "id": 1,
-      "userTypeId": 1,
-      "studioLocation": "Studio1",
-      "studioDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "studioimg": "https://picsum.photos/900/500?random&t=1"
+      "StudioId": 1,
+      "StudioName": "Creative Studio",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=14",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=10",
+          "img4": "https://picsum.photos/900/500?random&t=4",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
     },
     {
-      "id": 2,
-      "userTypeId": 1,
-      "studioLocation": "Studio2'",
-      "studioDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
-      "studioimg": "https://picsum.photos/900/500?random&t=3'"
+      "StudioId": 1,
+      "StudioName": "Creative Studio -2",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-2, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=3",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=1",
+          "img4": "https://picsum.photos/900/500?random&t=7",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
     },
     {
-      "id": 3,
-      "userTypeId": 1,
-      "studioLocation": "Studio3",
-      "studioDescription": "NewYork sits on top of event hosting",
-      "studioimg": "https://picsum.photos/900/500?random&t=4"
+      "StudioId": 1,
+      "StudioName": "Creative Studio-3",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-3, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=5",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=3",
+          "img4": "https://picsum.photos/900/500?random&t=4",
+          "img5": "https://picsum.photos/900/500?random&t=1"
+        }
+      ]
     },
     {
-      "id": 4,
-      "userTypeId": 2,
-      "studioLocation": "Studio4",
-      "studioDescription": "Singapore is another great hosting city",
-      "studioimg": "https://picsum.photos/900/500?random&t=6"
+      "StudioId": 1,
+      "StudioName": "Creative Studio-4",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-4, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=13",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=3",
+          "img4": "https://picsum.photos/900/500?random&t=10",
+          "img5": "https://picsum.photos/900/500?random&t=9"
+        }
+      ]
     },
     {
-      "id": 5,
-      "userTypeId": 2,
-      "studioLocation": "Studio5",
-      "studioDescription": "Berlin is best place to hang on",
-      "studioimg": "https://picsum.photos/900/500?random&t=7"
+      "StudioId": 1,
+      "StudioName": "Creative Studio-5",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-5, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=3",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=10",
+          "img4": "https://picsum.photos/900/500?random&t=11",
+          "img5": "https://picsum.photos/900/500?random&t=12"
+        }
+      ]
     },
     {
-      "id": 6,
-      "userTypeId": 2,
-      "studioLocation": "Studio6",
-      "studioDescription": "Mumbai is hub of startups",
-      "studioimg": "https://picsum.photos/900/500?random&t=8"
-    },
-    {
-      "id": 7,
-      "userTypeId": 2,
-      "studioLocation": "Studio7",
-      "studioDescription": "Barcelona is another good city",
-      "studioimg": "https://picsum.photos/900/500?random&t=6"
-    },
-    {
-      "id": 8,
-      "userTypeId": 3,
-      "studioLocation": "Studio8",
-      "studioDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "studioimg": "https://picsum.photos/900/500?random&t=1"
-    },
-    {
-      "id": 9,
-      "userTypeId": 3,
-      "studioLocation": "Studio9",
-      "studioDescription": "Dubai is another place to host . Please be careful about it'",
-      "studioimg": "https://picsum.photos/900/500?random&t=3'"
+      "StudioId": 1,
+      "StudioName": "Creative Studio-6",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
     }
   ],
   "artist": [
     {
+      "ArtistId": 1,
+      "ArtistName": "Smith Dave",
+      "ArtistDescription": "Solo Performer",
+      "ArtistTypeId": 1,
+      "ArtistType": "Singer",
+      "PerformanceTypeId": 1,
+      "PerformanceType": "Solo",
+      "ArtistImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=1",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=3",
+          "img4": "https://picsum.photos/900/500?random&t=4",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ],
+      "StatusForEvent": "Yes",
+      "EventDays": "Monday to Friday",
+      "EventRates": "4000",
+      "StatusForClass": "Yes",
+      "ClassDays": "Monday to Friday",
+      "Duration": "10:00 to 8:00",
+      "ClassTypeId": 1,
+      "ClassType": "Guitar",
+      "ClassRates": [
+        "Guitar:2000, Tabla:4000"
+      ],
+      "ClassAddress": "Valsad, 396375"
+    },
+    {
+      "ArtistId": 1,
+      "ArtistName": "Smith Dave-2",
+      "ArtistDescription": "Solo Performer",
+      "ArtistTypeId": 1,
+      "ArtistType": "dancer",
+      "PerformanceTypeId": 1,
+      "PerformanceType": "Solo",
+      "ArtistImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=7",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=3",
+          "img4": "https://picsum.photos/900/500?random&t=6",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ],
+      "StatusForEvent": "Yes",
+      "EventDays": "Monday to Friday",
+      "EventRates": "4000",
+      "StatusForClass": "Yes",
+      "ClassDays": "Monday to Friday",
+      "Duration": "10:00 to 8:00",
+      "ClassTypeId": 1,
+      "ClassType": "Guitar",
+      "ClassRates": [
+        "Guitar:2000, Tabla:4000"
+      ],
+      "ClassAddress": "Valsad, 396375"
+    },
+    {
+      "ArtistId": 1,
+      "ArtistName": "Smith Dave-3",
+      "ArtistDescription": "Solo Performer",
+      "ArtistTypeId": 1,
+      "ArtistType": "DJ",
+      "PerformanceTypeId": 1,
+      "PerformanceType": "Solo",
+      "ArtistImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=8",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=3",
+          "img4": "https://picsum.photos/900/500?random&t=6",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ],
+      "StatusForEvent": "Yes",
+      "EventDays": "Monday to Friday",
+      "EventRates": "4000",
+      "StatusForClass": "Yes",
+      "ClassDays": "Monday to Friday",
+      "Duration": "10:00 to 8:00",
+      "ClassTypeId": 1,
+      "ClassType": "Guitar",
+      "ClassRates": [
+        "Guitar:2000, Tabla:4000"
+      ],
+      "ClassAddress": "Valsad, 396375"
+    },
+    {
+      "ArtistId": 1,
+      "ArtistName": "Smith Dave-4",
+      "ArtistDescription": "Solo Performer",
+      "ArtistTypeId": 1,
+      "ArtistType": "Singer-2",
+      "PerformanceTypeId": 1,
+      "PerformanceType": "Solo",
+      "ArtistImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=3",
+          "img4": "https://picsum.photos/900/500?random&t=1",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ],
+      "StatusForEvent": "Yes",
+      "EventDays": "Monday to Friday",
+      "EventRates": "4000",
+      "StatusForClass": "Yes",
+      "ClassDays": "Monday to Friday",
+      "Duration": "10:00 to 8:00",
+      "ClassTypeId": 1,
+      "ClassType": "Guitar",
+      "ClassRates": [
+        "Guitar:2000, Tabla:4000"
+      ],
+      "ClassAddress": "Valsad, 396375"
+    },
+    {
+      "ArtistId": 1,
+      "ArtistName": "Smith Dave-5",
+      "ArtistDescription": "Solo Performer",
+      "ArtistTypeId": 1,
+      "ArtistType": "musician",
+      "PerformanceTypeId": 1,
+      "PerformanceType": "Solo",
+      "ArtistImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=3",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=1",
+          "img4": "https://picsum.photos/900/500?random&t=4",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ],
+      "StatusForEvent": "Yes",
+      "EventDays": "Monday to Friday",
+      "EventRates": "4000",
+      "StatusForClass": "Yes",
+      "ClassDays": "Monday to Friday",
+      "Duration": "10:00 to 8:00",
+      "ClassTypeId": 1,
+      "ClassType": "Guitar",
+      "ClassRates": [
+        "Guitar:2000, Tabla:4000"
+      ],
+      "ClassAddress": "Valsad, 396375"
+    },
+    {
+      "ArtistId": 1,
+      "ArtistName": "Smith Dave-6",
+      "ArtistDescription": "Solo Performer",
+      "ArtistTypeId": 1,
+      "ArtistType": "piano",
+      "PerformanceTypeId": 1,
+      "PerformanceType": "Solo",
+      "ArtistImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=9",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=1",
+          "img4": "https://picsum.photos/900/500?random&t=4",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ],
+      "StatusForEvent": "Yes",
+      "EventDays": "Monday to Friday",
+      "EventRates": "4000",
+      "StatusForClass": "Yes",
+      "ClassDays": "Monday to Friday",
+      "Duration": "10:00 to 8:00",
+      "ClassTypeId": 1,
+      "ClassType": "Guitar",
+      "ClassRates": [
+        "Guitar:2000, Tabla:4000"
+      ],
+      "ClassAddress": "Valsad, 396375"
+    }
+  ],
+  "user": [
+    {
       "id": 1,
-      "userTypeId": 1,
-      "artistLocation": "artist1",
-      "artistDescription": "In bangalore, first event is going to happen. Please be careful about it",
-      "artistimg": "https://picsum.photos/900/500?random&t=1",
-      "artistType": "singer"
+      "FirstName": "John",
+      "LastName": "James",
+      "Email": "john@email.com",
+      "Phone": "9876543112",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "UserTypeId": 2,
+      "UserType": "Artist",
+      "DisplayPicture": "Picture"
     },
     {
       "id": 2,
-      "userTypeId": 1,
-      "artistLocation": "artist2",
-      "artistDescription": "Dubai is another place to host so,e, first event is going to happen. Please be careful about it'",
-      "artistimg": "https://picsum.photos/900/500?random&t=3'",
-      "artistType": "Dancer"
+      "FirstName": "Nikunj ",
+      "LastName": "Patel",
+      "Email": "john@email.com",
+      "Phone": "9876543112",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "UserTypeId": 1,
+      "UserType": "Studio-owner",
+      "DisplayPicture": "Picture"
     },
     {
       "id": 3,
-      "userTypeId": 1,
-      "artistLocation": "artist3",
-      "artistDescription": "NewYork sits on top of event hosting",
-      "artistimg": "https://picsum.photos/900/500?random&t=4",
-      "artistType": "Dancer"
-    },
-    {
-      "id": 4,
-      "userTypeId": 1,
-      "artistLocation": "artist4",
-      "artistDescription": "Singapore is another great hosting city",
-      "artistimg": "https://picsum.photos/900/500?random&t=6",
-      "artistType": "Dj"
-    },
-    {
-      "id": 5,
-      "userTypeId": 1,
-      "artistLocation": "Artist5",
-      "artistDescription": "Berlin is best place to hang on",
-      "artistimg": "https://picsum.photos/900/500?random&t=7",
-      "artistType": "drum-player"
-    },
-    {
-      "id": 6,
-      "userTypeId": 1,
-      "artistLocation": "Artist6",
-      "artistDescription": "Berlin is best place to hang on",
-      "artistimg": "https://picsum.photos/900/500?random&t=7",
-      "artistType": "musician"
-    },
-    {
-      "id": 7,
-      "userTypeId": 1,
-      "artistLocation": "Artist7",
-      "artistDescription": "Berlin is best place to hang on",
-      "artistimg": "https://picsum.photos/900/500?random&t=7",
-      "artistType": "street-dancer"
+      "FirstName": "Jay",
+      "LastName": "Patel",
+      "Email": "john@email.com",
+      "Phone": "9876543112",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "UserTypeId": 3,
+      "UserType": "General",
+      "DisplayPicture": "Picture"
     }
-
   ]
 }
