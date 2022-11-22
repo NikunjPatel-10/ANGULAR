@@ -3,6 +3,7 @@ import { merge } from 'rxjs';
 import { artist } from '../Model/artist.model';
 import { studio } from '../Model/studio.model';
 import { user } from '../Model/user.model';
+import { usertype } from '../Model/usertype.model';
 import { ImageService } from '../shared/services/image/image.service';
 
 @Component({
@@ -33,7 +34,8 @@ export class CarouselComponent implements OnInit {
   public userType!: any;
   public allUserData: any
   public detail: any = [];
-  public data: any = []
+  // public data: any = [];
+
 
   /**
    * 
@@ -56,17 +58,17 @@ export class CarouselComponent implements OnInit {
     localStorage.setItem("userTypeId", "3");
 
 
-
   }
 
   userData() {
-    this.imageservice.getUserData().subscribe((res: user[]) => {
+    this.imageservice.getalluser().subscribe((res: usertype[]) => {
       this.userType = res.filter((c) => {
-        this.userTypeId = c.UserTypeId
+        this.userTypeId = c.userTypeId
         console.log(this.userTypeId);
-
       })
     })
+
+
 
   }
 

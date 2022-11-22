@@ -9,11 +9,11 @@
                 <span class="bi bi-house-door fs-6 mx-2"></span>
                 <span class="fs-6">Home</span>
             </li>
-            <li class="me-3 nav-item">
+            <li class="me-3 nav-item" *ngIf="showStudio">
                 <span class="bi bi-vinyl fs-6 mx-2"></span>
                 <span class="fs-6">Studios</span>
             </li>
-            <li class="me-3 nav-item">
+            <li class="me-3 nav-item" *ngIf="showArtist">
                 <span class="bi bi-person-fill  fs-6 mx-2"></span>
                 <span class="fs-6">Artists</span>
             </li>
@@ -23,8 +23,7 @@
             </li>
         </ul>
         <div class="profile-wrap me-5 nav-item  d-flex justify-content-center align-items-center ">
-            <!-- <span class=""> -->
-            <!-- <img src="{{lastFiveData.studioimg}}"></span> -->
+            <img src="{{b.DisplayPicture}}">
         </div>
     </div>
 </nav>

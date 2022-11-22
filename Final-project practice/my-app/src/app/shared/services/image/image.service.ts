@@ -4,6 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { artist } from 'src/app/Model/artist.model';
 import { studio } from 'src/app/Model/studio.model';
 import { user } from 'src/app/Model/user.model';
+import { usertype } from 'src/app/Model/usertype.model';
 import { image } from 'src/app/studio/studio-form/studio.model';
 
 @Injectable({
@@ -38,7 +39,7 @@ export class ImageService {
     return this.http.get<user[]>("http://localhost:3000/user");
   }
 
-  getalluser(): Observable<any> {
-    return this.http.get<any>("http://localhost:3000/userType");
+  getalluser(): Observable<usertype[]> {
+    return this.http.get<usertype[]>("http://localhost:3000/userType");
   }
 }

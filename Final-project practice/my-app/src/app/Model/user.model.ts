@@ -1,5 +1,5 @@
 export class user {
-
+    public id?: number;
     public FirstName?: string;
     public LastName?: string;
     public Email?: string;
@@ -12,6 +12,8 @@ export class user {
     public City?: number;
     public UserTypeId?: number;
     public UserType?: string;
-    public DisplayPicture?: string
+    public DisplayPicture?: string;
+
+    // public userDetailId
 
 }

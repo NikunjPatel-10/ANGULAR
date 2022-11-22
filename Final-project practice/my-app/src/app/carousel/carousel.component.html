@@ -27,7 +27,28 @@
   </div>
 </div>
 
-<!-- for studio section -->
+
+<!-- </div> -->
+
+
+<!-- for studio section   -->
+<div class=" card-title-wrapper pt-4 pb-5" *ngIf="showStudio">
+  <div class=" container ">
+    <div class=" d-flex justify-content-between align-items-center pb-4">
+      <span class=" explore-text text-nowrap  ">Explore Studio</span>
+      <span class="see-all-text text-primary text-nowrap ">SEE ALL</span>
+    </div>
+    <div class=" row text-nowrap  justify-content-between">
+      <div class="mt-4 col-xxl-2 col-xl-3 col-md-4 col-sm-6 col-xs-12 cards "
+        *ngFor="let userdata of studioLastFiveData">
+        <app-card [cardData]="userdata"></app-card>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- for artist section -->
 <div class=" bg-white pt-4 px-5 gx-0" *ngIf="showArtist">
 
   <div class="  ">
@@ -45,23 +66,4 @@
   <!-- for artist section  -->
   <!-- <div class="mt-4 d-flex gx-0" *ngFor="let userdata of carousellatestData"> -->
   <!-- <app-card [Data]="userdata"></app-card> -->
-</div>
-<!-- </div> -->
-
-
-<!-- for artist section   -->
-<div class=" card-title-wrapper pt-4 pb-5" *ngIf="showStudio">
-  <div class=" container ">
-    <div class=" d-flex justify-content-between align-items-center pb-4">
-      <span class=" explore-text text-nowrap  ">Explore Studio</span>
-      <span class="see-all-text text-primary text-nowrap ">SEE ALL</span>
-    </div>
-    <div class=" row text-nowrap  justify-content-between">
-      <div class="mt-4 col-xxl-2 col-xl-3 col-md-4 col-sm-6 col-xs-12 cards "
-        *ngFor="let userdata of studioLastFiveData">
-        <app-card [cardData]="userdata"></app-card>
-      </div>
-    </div>
-  </div>
-
 </div>
