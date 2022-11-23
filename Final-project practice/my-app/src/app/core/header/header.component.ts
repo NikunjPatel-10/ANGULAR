@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit {
   currentUser() {
     // var g = localStorage.getItem('userId')
     this.imageservice.getUserData().subscribe((res: user[]) => {
-      this.b = res.find(c => c.id == 2)
+      this.b = res.find(c => c.id == 6)
       console.log(this.b);
 
     })

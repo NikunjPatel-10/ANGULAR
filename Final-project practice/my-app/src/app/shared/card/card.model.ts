@@ -11,5 +11,6 @@ export class card {
     ];
     public name?: string;
     public description?: string;
+    public title?: string
     public artistType?: string
 }

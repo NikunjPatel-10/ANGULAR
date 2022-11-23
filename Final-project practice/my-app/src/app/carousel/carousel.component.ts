@@ -57,7 +57,6 @@ export class CarouselComponent implements OnInit {
     this.userData()
     localStorage.setItem("userTypeId", "3");
 
-
   }
 
   userData() {
@@ -117,7 +116,8 @@ export class CarouselComponent implements OnInit {
         return {
           image: item.StudioImages,
           description: item.StudioAddress,
-          name: item.StudioName
+          name: item.StudioName,
+          text: "STUDIO"
         }
       })
 
@@ -132,8 +132,10 @@ export class CarouselComponent implements OnInit {
           return {
             image: item.ArtistImages,
             description: item.ArtistType,
-            name: item.ArtistName
+            name: item.ArtistName,
+            text: "ARTIST"
           }
+
           // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
           // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
         })
@@ -152,6 +154,7 @@ export class CarouselComponent implements OnInit {
           this.mergeImage = ((this.studioTwoData.slice(-2).reverse()).concat(this.artistTwoData.slice(-2).reverse()))
           console.log(this.mergeImage);
         }
+
 
 
       })
@@ -226,7 +229,7 @@ export class CarouselComponent implements OnInit {
       console.log(this.lastFiveData);
 
       // this.text = (this.userTypeId == 1) ? "STUDIO" : "ARTIST"
-      this.userTypeId = localStorage.getItem("userTypeId")
+
 
       if (this.userTypeId == 1) {
         this.showArtist = true;
