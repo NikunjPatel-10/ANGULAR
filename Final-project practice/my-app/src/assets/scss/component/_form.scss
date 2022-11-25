@@ -1,0 +1,36 @@
+.form-wrapper {
+    height: 700px;
+}
+
+.profile-wrapper {
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+
+    }
+}
+
+.icon-wrapper {
+    left: 97px;
+    bottom: 10px;
+
+
+
+}
+
+.icon-bg {
+    background: linear-gradient(270.17deg, #2D6DD5 1.37%, #35B5C8 99.86%);
+    border-radius: 50%;
+    color: white;
+}
+
+.btn-color {
+    background: linear-gradient(270.17deg, #2D6DD5 1.37%, #35B5C8 99.86%);
+    ;
+}
+
+.logo {
+    z-index: 100;
+}

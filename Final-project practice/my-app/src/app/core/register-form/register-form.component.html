@@ -1,144 +1,166 @@
-<div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center ">
-    <div class="shadow">
-        <div class=" py-2 text-center ">
-            <h1>Registration Your Account</h1>
+<section class="h-100 w-100 background-image">
+    <div class="h-100 w-100 row align-items-center justify-content-center ">
+        <div class="col-lg-6 md-12 d-flex justify-content-center ali ">
+            <figure>
+                <img src="../../../assets/image/1Rhythm_logo.png">
+            </figure>
         </div>
-
-        <div class=" ">
-            <form class="  g-3  form-size p-3" [formGroup]="registerForm" (ngSubmit)="registerData()">
+        <div class="col-lg-6 md-12 d-flex align-items-center justify-content-center">
+            <form class="form-wrapper bg-light g-3   p-3" [formGroup]="registerForm" (ngSubmit)="registerData()">
+                <span class=" ms-3 mb-3">Already have an account <a [routerLink]="['../login']"> Sign In</a></span>
+                <div class=" profile-wrapper  ">
+                    <div class="position-relative">
+                        <img src="../../../assets/image/profile.jpg" class="rounded-circle">
+                        <span class=" position-absolute icon-wrapper "><span
+                                class="bi bi-plus-lg fs-3 icon-bg "></span></span>
+                    </div>
+                </div>
                 <div class="row ">
-                    <div class="col-6 d-flex flex-column ">
-                        <div class="mb-3">
-                            <label for="validationServer01" class="form-label">FirstName</label>
-                            <input type="text" placeholder="firstname" id="validationServer01" class="form-control"
-                                formControlName="firstname"
-                                [ngClass]="{'is-valid': registerFormControl['firstname'].valid, 'is-invalid': registerFormControl['firstname'].invalid && registerFormControl['firstname'].touched }">
+                    <div class=" mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer01" class="form-label">FirstName<span
+                                class="text-danger">*</span></label>
+                        <input type="text" placeholder="firstname" id="validationServer01" class="form-control"
+                            formControlName="firstname"
+                            [ngClass]="{'is-valid': registerFormControl['firstname'].valid, 'is-invalid': registerFormControl['firstname'].invalid && registerFormControl['firstname'].touched }">
 
-                            <div
-                                *ngIf="registerFormControl['firstname'].invalid && (isSubmitted || (registerFormControl['firstname'].touched || registerFormControl['firstname'].dirty) )">
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['firstname'].errors?.['required']">Please Enter your
-                                    firstname
-                                </span>
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['firstname'].errors?.['pattern']">Only alphabets are
-                                    allowed to be return
-                                </span>
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['firstname'].errors?.['minlength']">Minimum 3 characters
-                                    are allowed
-                                </span>
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['firstname'].errors?.['maxlength']">Maximum 25 characters
-                                    are allowed
-                                </span>
-
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="validationServer02" class="form-label">Email Address</label>
-                            <input type="text" placeholder="enter email" id="validationServer02" class="form-control"
-                                formControlName="email">
+                        <div
+                            *ngIf="registerFormControl['firstname'].invalid && (isSubmitted || (registerFormControl['firstname'].touched || registerFormControl['firstname'].dirty) )">
+                            <span class="text-danger"
+                                *ngIf="registerFormControl['firstname'].errors?.['required']">Please
+                                Enter your
+                                firstname
+                            </span>
+                            <span class="text-danger" *ngIf="registerFormControl['firstname'].errors?.['pattern']">Only
+                                alphabets are
+                                allowed to be return
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl['firstname'].errors?.['minlength']">Minimum
+                                3 characters
+                                are allowed
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl['firstname'].errors?.['maxlength']">Maximum
+                                25 characters
+                                are allowed
+                            </span>
 
                         </div>
-                        <div class="mb-3">
-                            <label for="validationServer03" class="form-label">Phone Number</label>
-                            <input type="text" placeholder="enter mobile number" id="validationServer03"
-                                class="form-control" formControlName="phonenumber">
+                    </div>
+                    <div class="mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer04" class="form-label">LastName<span
+                                class="text-danger">*</span></label>
+                        <input type="text" placeholder="lastname" id="validationServer04" class="form-control"
+                            formControlName="lastname"
+                            [ngClass]="{'is-valid': registerFormControl['lastname'].valid, 'is-invalid': registerFormControl['lastname'].invalid && registerFormControl['firstname'].touched }">
+                        <div
+                            *ngIf="registerFormControl['lastname'].invalid && (isSubmitted || (registerFormControl['lastname'].touched || registerFormControl['lastname'].dirty) )">
+                            <span class="text-danger"
+                                *ngIf="registerFormControl['lastname'].errors?.['required']">Please
+                                Enter your
+                                lastname
+                            </span>
+                            <span class="text-danger" *ngIf="registerFormControl['lastname'].errors?.['pattern']">Only
+                                alphabets are
+                                allowed to be return
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl['lastname'].errors?.['minlength']">Minimum
+                                3 characters
+                                are allowed
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="registerFormControl['lastname'].errors?.['maxlength']">Maximum
+                                25 characters
+                                are allowed
+                            </span>
+
+
                         </div>
-                        <div class="d-flex mb-3">
-                            <div><label for="validationServer03" class="form-label me-4">Select user-Type</label></div>
-                            <div class="dropdown">
-                                <select class="form-select" id="select" formControlName="usertype">
-                                    <option value="" class="dropdown-item" disabled selected> -- select-user --
+                    </div>
+                    <div class="mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer02" class="form-label">Email Address<span
+                                class="text-danger">*</span></label>
+                        <input type="text" placeholder="enter email" id="validationServer02" class="form-control"
+                            formControlName="email">
+
+                    </div>
+                    <div class="mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer05" class="form-label">Password<span
+                                class="text-danger">*</span></label>
+                        <input type="text" placeholder="Enter password" id="validationServer05" class="form-control"
+                            formControlName="password">
+                    </div>
+                    <div class="mb-3 col-sm-12 col-md-6 col-lg -6">
+                        <label for="validationServer03" class="form-label">Phone Number<span
+                                class="text-danger">*</span></label>
+                        <input type="text" placeholder="enter mobile number" id="validationServer03"
+                            class="form-control" formControlName="phonenumber">
+                    </div>
+                    <div class="d-flex flex-column mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <div><label for="validationServer03" class="form-label me-4">Select user-Type<span
+                                    class="text-danger">*</span></label></div>
+                        <div class="dropdown">
+                            <select class="form-select" id="select" formControlName="usertype">
+                                <option value="" class="dropdown-item" disabled selected>select-user
+                                </option>
+                                <option value="" class="dropdown-item" value="Studio-owner">Studio-owner</option>
+                                <option value="" class="dropdown-item" value="artist">Artist</option>
+                                <option value="" class="dropdown-item" value="general">General</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <div><label for="validationServer03" class="form-label me-4">Select Country</label></div>
+                        <div class="dropdown">
+                            <select class="form-select" id="select" formControlName="usertype">
+                                <option value="" class="dropdown-item" disabled selected>select-country
+                                </option>
+                                <option value="" class="dropdown-item" value="Studio-owner">India</option>
+                                <option value="" class="dropdown-item" value="artist">Australia</option>
+                                <option value="" class="dropdown-item" value="general">USA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex  mb-3 col-sm-12 col-md-6 col-lg-6">
+                        <div class="d-flex flex-column w-100">
+                            <label for="validationServer05" class="form-label ">Select State<span
+                                    class="text-danger">*</span></label>
+                            <div class="dropdown me-4">
+                                <select class="form-select" id="select" formControlName="state">
+                                    <option value="" class="dropdown-item " disabled selected>Select-state
                                     </option>
-                                    <option value="" class="dropdown-item" value="Studio-owner">Studio-owner</option>
-                                    <option value="" class="dropdown-item" value="artist">Artist</option>
-                                    <option value="" class="dropdown-item" value="general">General</option>
+                                    <option value="" class="dropdown-item" value="gujarat">Gujarat</option>
+                                    <option value="" class="dropdown-item" value="maharastra">maharastra</option>
+                                    <option value="" class="dropdown-item" value="up">up</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="d-flex flex-column w-100">
+                            <label for="validationServer05" class="form-label">Select City <span
+                                    class="text-danger">*</span></label>
+                            <div class="dropdown">
+                                <select class="form-select" id="select" formControlName="city">
+                                    <option value="" class="dropdown-item" disabled selected>Select-city
+                                    </option>
+                                    <option value="" class="dropdown-item" value="valsad">valsad</option>
+                                    <option value="" class="dropdown-item" value="mumbai">mumbai</option>
+                                    <option value="" class="dropdown-item" value="agra">agra</option>
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-6 d-flex flex-column">
-                        <div class="mb-3">
-                            <label for="validationServer04" class="form-label">LastName</label>
-                            <input type="text" placeholder="lastname" id="validationServer04" class="form-control"
-                                formControlName="lastname"
-                                [ngClass]="{'is-valid': registerFormControl['lastname'].valid, 'is-invalid': registerFormControl['lastname'].invalid && registerFormControl['firstname'].touched }">
-                            <div
-                                *ngIf="registerFormControl['lastname'].invalid && (isSubmitted || (registerFormControl['lastname'].touched || registerFormControl['lastname'].dirty) )">
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['lastname'].errors?.['required']">Please Enter your
-                                    lastname
-                                </span>
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['lastname'].errors?.['pattern']">Only alphabets are
-                                    allowed to be return
-                                </span>
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['lastname'].errors?.['minlength']">Minimum 3 characters
-                                    are allowed
-                                </span>
-                                <span class="text-danger"
-                                    *ngIf="registerFormControl['lastname'].errors?.['maxlength']">Maximum 25 characters
-                                    are allowed
-                                </span>
 
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="validationServer05" class="form-label">Password</label>
-                            <input type="text" placeholder="Enter password" id="validationServer05" class="form-control"
-                                formControlName="password">
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="d-flex flex-column">
-                                <label for="validationServer05" class="form-label">Select State</label>
-                                <div class="dropdown me-4">
-                                    <select class="form-select" id="select" formControlName="state">
-                                        <option value="" class="dropdown-item" disabled selected> -- select-state--
-                                        </option>
-                                        <option value="" class="dropdown-item" value="gujarat">Gujarat</option>
-                                        <option value="" class="dropdown-item" value="maharastra">maharastra</option>
-                                        <option value="" class="dropdown-item" value="up">up</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <label for="validationServer05" class="form-label">Select City</label>
-                                <div class="dropdown">
-                                    <select class="form-select" id="select" formControlName="city">
-                                        <option value="" class="dropdown-item" disabled selected> -- select-city --
-                                        </option>
-                                        <option value="" class="dropdown-item" value="valsad">valsad</option>
-                                        <option value="" class="dropdown-item" value="mumbai">mumbai</option>
-                                        <option value="" class="dropdown-item" value="agra">agra</option>
-                                    </select>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="  text-start w-100 mb-3">
-                            <button class="btn btn-secondary w-100">Add Display Picture</button>
-                        </div>
-                    </div>
-                </div>
-                <div class=" text-center w-100 mt-2">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Agree terms & Condition </label>
-                </div>
-                <div class="w-100 text-center mt-3">
-                    <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
 
-                <div class="text-center mt-2">Already memeber <a [routerLink]="['../login']">Click here</a></div>
 
-
-
+                <div class="w-100 mt-3">
+                    <button class=" btn-color px-5 py-2  border-0 cursor-pointer" type="submit">Submit</button>
+                </div>
             </form>
-        </div>
-    </div>
 
-</div>
+        </div>
+
+    </div>
+</section>

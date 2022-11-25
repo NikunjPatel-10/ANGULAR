@@ -34,6 +34,8 @@ export class CarouselComponent implements OnInit {
   public userType!: any;
   public allUserData: any
   public detail: any = [];
+  public userUniqueId: any
+  public b: any
   // public data: any = [];
 
 
@@ -55,8 +57,8 @@ export class CarouselComponent implements OnInit {
     this.profileData()
     this.studioFiveData()
     this.userData()
-    localStorage.setItem("userTypeId", "3");
-
+    this.currentUser()
+    // localStorage.setItem("userTypeId", "3");
   }
 
   userData() {
@@ -67,14 +69,22 @@ export class CarouselComponent implements OnInit {
       })
     })
 
+  }
+  currentUser() {
+    // var g = localStorage.getItem('userId')
+    this.imageservice.getUserData().subscribe((res: user[]) => {
+      this.b = res.find(c => c.UserTypeId == this.userTypeId)
+      console.log(this.b);
 
-
+    })
+    // console.log(this.b);?
   }
 
 
   /**
    * to show the lastest two data of artist and studio in carosuel 
    */
+
   CarouselData() {
     // -----to get get studio last-twodata----
     // this.imageservice.getStudioData().subscribe((res: studio[]) => {
@@ -120,13 +130,10 @@ export class CarouselComponent implements OnInit {
           text: "STUDIO"
         }
       })
-
-
       //   // ----- for practice to get in one data ----//
 
       this.imageservice.getArtistData().subscribe((res: artist[]) => {
         // console.log(res)
-
         this.artistTwoData = res.map(item => {
           // console.log(item)
           return {
@@ -135,30 +142,21 @@ export class CarouselComponent implements OnInit {
             name: item.ArtistName,
             text: "ARTIST"
           }
-
           // this.lastFiveData = this.artisFiveData.slice(-5).reverse()
           // this.lastFiveData = this.artisFiveData.slice((this.artisFiveData.length - 5), this.artisFiveData.length).reverse()
         })
-
-
         if (this.userTypeId == 1) {
           this.mergeImage = this.artistTwoData.slice(-4).reverse()
         }
-
         else if (this.userTypeId == 2) {
           this.mergeImage = this.studioTwoData.slice(-4).reverse()
 
         }
-
         else if (this.userTypeId == 3) {
           this.mergeImage = ((this.studioTwoData.slice(-2).reverse()).concat(this.artistTwoData.slice(-2).reverse()))
           console.log(this.mergeImage);
         }
-
-
-
       })
-
     })
 
   }
@@ -228,6 +226,7 @@ export class CarouselComponent implements OnInit {
       this.lastFiveData = res[0];    // this.lastFiveData = this.studiodata.
       console.log(this.lastFiveData);
 
+      // this.userTypeId = localStorage.getItem("userTypeId")
       // this.text = (this.userTypeId == 1) ? "STUDIO" : "ARTIST"
 
 
