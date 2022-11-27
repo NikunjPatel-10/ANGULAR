@@ -1,25 +1,27 @@
 <section class="h-100 w-100 background-image">
     <div class="h-100 w-100 row align-items-center justify-content-center ">
-        <div class="col-lg-6 md-12 d-flex justify-content-center ali ">
+       
+        <div class="col-lg-6 col-md-12 d-flex justify-content-center ali ">
             <figure>
                 <img src="../../../assets/image/1Rhythm_logo.png">
             </figure>
         </div>
-        <div class="col-lg-6 md-12 d-flex align-items-center justify-content-center">
-            <form class="form-wrapper bg-light g-3   p-3" [formGroup]="registerForm" (ngSubmit)="registerData()">
-                <span class=" ms-3 mb-3">Already have an account <a [routerLink]="['../login']"> Sign In</a></span>
-                <div class=" profile-wrapper  ">
+        <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center ">
+            <form class="form-wrapper bg-light g-3  p-4 overflow-auto" [formGroup]="registerForm" (ngSubmit)="registerData()">
+                <h2>Create Your Accounts</h2>
+                <span class=" mb-4">Already have an account <a [routerLink]="['../login']"> Sign In</a></span>
+                <div class=" profile-wrapper py-3 ">
                     <div class="position-relative">
-                        <img src="../../../assets/image/profile.jpg" class="rounded-circle">
+                        <img src="../../../assets/image/profile.jpg" class="">
                         <span class=" position-absolute icon-wrapper "><span
                                 class="bi bi-plus-lg fs-3 icon-bg "></span></span>
                     </div>
                 </div>
                 <div class="row ">
-                    <div class=" mb-3 col-sm-12 col-md-6 col-lg-6">
-                        <label for="validationServer01" class="form-label">FirstName<span
+                    <div class=" mb-4 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer01" class="form-label fw-bold">FirstName<span
                                 class="text-danger">*</span></label>
-                        <input type="text" placeholder="firstname" id="validationServer01" class="form-control"
+                        <input type="text" placeholder="First Name" id="validationServer01" class="form-control"
                             formControlName="firstname"
                             [ngClass]="{'is-valid': registerFormControl['firstname'].valid, 'is-invalid': registerFormControl['firstname'].invalid && registerFormControl['firstname'].touched }">
 
@@ -47,10 +49,10 @@
 
                         </div>
                     </div>
-                    <div class="mb-3 col-sm-12 col-md-6 col-lg-6">
-                        <label for="validationServer04" class="form-label">LastName<span
+                    <div class="mb-4 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer04" class="form-label fw-bold">LastName<span
                                 class="text-danger">*</span></label>
-                        <input type="text" placeholder="lastname" id="validationServer04" class="form-control"
+                        <input type="text" placeholder="Last Name" id="validationServer04" class="form-control"
                             formControlName="lastname"
                             [ngClass]="{'is-valid': registerFormControl['lastname'].valid, 'is-invalid': registerFormControl['lastname'].invalid && registerFormControl['firstname'].touched }">
                         <div
@@ -78,31 +80,31 @@
 
                         </div>
                     </div>
-                    <div class="mb-3 col-sm-12 col-md-6 col-lg-6">
-                        <label for="validationServer02" class="form-label">Email Address<span
+                    <div class="mb-4 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer02" class="form-label fw-bold">Email Address<span
                                 class="text-danger">*</span></label>
-                        <input type="text" placeholder="enter email" id="validationServer02" class="form-control"
+                        <input type="text" placeholder="Email ID" id="validationServer02" class="form-control"
                             formControlName="email">
 
                     </div>
-                    <div class="mb-3 col-sm-12 col-md-6 col-lg-6">
-                        <label for="validationServer05" class="form-label">Password<span
+                    <div class="mb-4 col-sm-12 col-md-6 col-lg-6">
+                        <label for="validationServer05" class="form-label fw-bold">Password<span
                                 class="text-danger">*</span></label>
-                        <input type="text" placeholder="Enter password" id="validationServer05" class="form-control"
+                        <input type="text" placeholder="Password" id="validationServer05" class="form-control"
                             formControlName="password">
                     </div>
-                    <div class="mb-3 col-sm-12 col-md-6 col-lg -6">
-                        <label for="validationServer03" class="form-label">Phone Number<span
+                    <div class="mb-4 col-sm-12 col-md-6 col-lg -6">
+                        <label for="validationServer03" class="form-label fw-bold">Phone Number<span
                                 class="text-danger">*</span></label>
                         <input type="text" placeholder="enter mobile number" id="validationServer03"
-                            class="form-control" formControlName="phonenumber">
+                            class="form-control" formControlName="Phone number">
                     </div>
-                    <div class="d-flex flex-column mb-3 col-sm-12 col-md-6 col-lg-6">
-                        <div><label for="validationServer03" class="form-label me-4">Select user-Type<span
+                    <div class="d-flex flex-column mb-4 col-sm-12 col-md-6 col-lg-6">
+                        <div><label for="validationServer03" class="form-label fw-bold me-4">Select user-Type<span
                                     class="text-danger">*</span></label></div>
                         <div class="dropdown">
-                            <select class="form-select" id="select" formControlName="usertype">
-                                <option value="" class="dropdown-item" disabled selected>select-user
+                            <select class="form-select" id="select" >
+                                <option value="" class="dropdown-item" disabled selected>Select User Type
                                 </option>
                                 <option value="" class="dropdown-item" value="Studio-owner">Studio-owner</option>
                                 <option value="" class="dropdown-item" value="artist">Artist</option>
@@ -110,11 +112,11 @@
                             </select>
                         </div>
                     </div>
-                    <div class="d-flex flex-column mb-3 col-sm-12 col-md-6 col-lg-6">
-                        <div><label for="validationServer03" class="form-label me-4">Select Country</label></div>
+                    <div class="d-flex flex-column mb-4 col-sm-12 col-md-6 col-lg-6">
+                        <div class=""><label for="validationServer03" class="form-label fw-bold me-4">Select Country</label></div>
                         <div class="dropdown">
-                            <select class="form-select" id="select" formControlName="usertype">
-                                <option value="" class="dropdown-item" disabled selected>select-country
+                            <select class="form-select" id="select" >
+                                <option value="" class="dropdown-item " disabled selected>select-country
                                 </option>
                                 <option value="" class="dropdown-item" value="Studio-owner">India</option>
                                 <option value="" class="dropdown-item" value="artist">Australia</option>
@@ -122,13 +124,13 @@
                             </select>
                         </div>
                     </div>
-                    <div class="d-flex  mb-3 col-sm-12 col-md-6 col-lg-6">
+                    <div class="d-flex  mb-4 col-sm-12 col-md-6 col-lg-6">
                         <div class="d-flex flex-column w-100">
-                            <label for="validationServer05" class="form-label ">Select State<span
+                            <label for="validationServer05" class="form-label fw-bold ">Select State<span
                                     class="text-danger">*</span></label>
                             <div class="dropdown me-4">
-                                <select class="form-select" id="select" formControlName="state">
-                                    <option value="" class="dropdown-item " disabled selected>Select-state
+                                <select class="form-select" id="select" >
+                                    <option value="" class="dropdown-item " disabled selected>Select State
                                     </option>
                                     <option value="" class="dropdown-item" value="gujarat">Gujarat</option>
                                     <option value="" class="dropdown-item" value="maharastra">maharastra</option>
@@ -137,11 +139,11 @@
                             </div>
                         </div>
                         <div class="d-flex flex-column w-100">
-                            <label for="validationServer05" class="form-label">Select City <span
+                            <label for="validationServer05" class="form-label fw-bold   ">Select City <span
                                     class="text-danger">*</span></label>
                             <div class="dropdown">
-                                <select class="form-select" id="select" formControlName="city">
-                                    <option value="" class="dropdown-item" disabled selected>Select-city
+                                <select class="form-select" id="select" >
+                                    <option value="" class="dropdown-item" disabled selected>Select City
                                     </option>
                                     <option value="" class="dropdown-item" value="valsad">valsad</option>
                                     <option value="" class="dropdown-item" value="mumbai">mumbai</option>
