@@ -1,19 +1,56 @@
-.main-image{
-    img{
+.main-image {
+    img {
+        height: auto;
         width: 100%;
         overflow: hidden;
     }
 }
 
-.image-wrapper{
-    img{
-    height: 151px;
-    width: 131px;
-    border-radius: 4px;
+.image-wrapper {
+    max-height: 150px;
     overflow: hidden;
+    border-radius: 4px;
+
+    img {
+        height: auto;
+        width: 100%;
+
     }
 }
 
-.studio-text{
-    color: rgb(35, 237, 203)
+.role-name {
+    font-size: $carousel-font-size;
+    background: -webkit-linear-gradient(right, #2D6DD5, #35B5C8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3.0px transparent;
+    color: #ffff;
+}
+
+
+
+.heading-text {
+    color: $heading-text;
+}
+
+.description-text {
+    color: $description-text;
+}
+
+.detail-text {
+    color: $deatil-text
+}
+
+.text-bg-color {
+    background-color: $text-bg-color;
+}
+
+.main-heading-text {
+    color: $font-weight-bold
+}
+
+.equipment {
+    display: inline-block;
+    color: $deatil-text;
+    background-color: $text-bg-color;
 }

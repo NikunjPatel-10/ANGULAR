@@ -25,10 +25,15 @@ $carousel-border-radius: 14px;
 $carousel-img-height: 350px;
 $carousel-font-size: 36px;
 $carousel-wrapper-margin: 53px 0 0 53px;
-$carousel-content-width:60%;
+$carousel-content-width: 60%;
 
 // variables used for card
 $card-img-height: 220px;
 $card-description-height: 48px;
 
-
+// variables for studio-detail-page;
+$heading-text: hsl(220deg 2% 65%);
+$description-text: hsl(223deg 21% 6%);
+$deatil-text: hsl(220deg 8% 14%);
+$text-bg-color: hsl(221deg 64% 92%);
+$main-heading-text: $font-weight-bold
