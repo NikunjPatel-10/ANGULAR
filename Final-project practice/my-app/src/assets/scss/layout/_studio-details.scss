@@ -7,15 +7,13 @@
 }
 
 .image-wrapper {
-    max-height: 150px;
-    overflow: hidden;
+    height: 170px;
     border-radius: 4px;
 
-    img {
-        height: auto;
-        width: 100%;
-
-    }
+    // img {
+    //     height: auto;
+    //     width: auto;
+    // }
 }
 
 .role-name {
@@ -23,7 +21,7 @@
     background: -webkit-linear-gradient(right, #2D6DD5, #35B5C8);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-stroke: 3.0px transparent;
+    -webkit-text-stroke: 3.5px transparent;
     color: #ffff;
 }
 
@@ -49,8 +47,18 @@
     color: $font-weight-bold
 }
 
-.equipment {
+.text-wrapper {
     display: inline-block;
     color: $deatil-text;
     background-color: $text-bg-color;
+}
+
+.uploadImage {
+    background-color: rgba(44, 97, 215, 0.04);
+    min-height: 300px;
+
+    img {
+        height: auto;
+        width: 100%;
+    }
 }
