@@ -3,17 +3,16 @@
         height: auto;
         width: 100%;
         overflow: hidden;
+        object-fit: cover;
     }
 }
 
 .image-wrapper {
-    height: 170px;
-    border-radius: 4px;
-
-    // img {
-    //     height: auto;
-    //     width: auto;
-    // }
+ .img_preview{
+    object-fit: cover;
+    cursor: pointer;
+   
+ }
 }
 
 .role-name {
