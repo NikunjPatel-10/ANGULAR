@@ -58,7 +58,7 @@ export class CarouselComponent implements OnInit {
     this.studioFiveData()
     this.userData()
     this.currentUser()
-    // localStorage.setItem("userTypeId", "3");
+    localStorage.setItem("userTypeId", "3");
   }
 
   userData() {
@@ -226,7 +226,7 @@ export class CarouselComponent implements OnInit {
       this.lastFiveData = res[0];    // this.lastFiveData = this.studiodata.
       console.log(this.lastFiveData);
 
-      // this.userTypeId = localStorage.getItem("userTypeId")
+      this.userTypeId = localStorage.getItem("userTypeId")
       // this.text = (this.userTypeId == 1) ? "STUDIO" : "ARTIST"
 
 
