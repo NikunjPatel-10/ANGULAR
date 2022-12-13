@@ -1,0 +1,65 @@
+<!--============================== form start =========================== -->
+<div class=" h-100 w-100 d-flex justify-content-center align-items-center">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-wrapper border p-3">
+    <h1>USER FORM</h1>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter Your Username" formControlName="username"
+        [ngClass]="{'is-invalid' : userFormControl['username'].invalid && (isSubmitted||userFormControl['username'].touched || userFormControl['username'].dirty),
+                      'is-valid' : userFormControl['username'].valid && (isSubmitted|| userFormControl['username'].touched || userFormControl['username'].dirty)}">
+    </div>
+    <div
+      *ngIf="userFormControl['username'].invalid && (isSubmitted||userFormControl['username'].touched || userFormControl['username'].dirty)"
+      class="danger">
+      <div *ngIf="userFormControl['username'].errors?.['required']" class="text-danger">
+        Name is required.
+      </div>
+
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Your email " formControlName="email"
+        [ngClass]="{'is-invalid' : userFormControl['email'].invalid && (isSubmitted||userFormControl['email'].touched || userFormControl['email'].dirty),
+                      'is-valid' : userFormControl['email'].valid && ( isSubmitted||userFormControl['email'].touched || userFormControl['email'].dirty)}">
+    </div>
+    <div
+      *ngIf="userFormControl['email'].invalid && (isSubmitted||userFormControl['email'].touched || userFormControl['email'].dirty)"
+      class="danger">
+      <div *ngIf="userFormControl['email'].errors?.['required']" class="text-danger">
+        Name is required.
+      </div>
+
+    </div>
+    <div class="mb-3">
+      <label for="phoneNo" class="form-label">Phone No</label>
+      <input type="text" class="form-control" id="phoneNo" placeholder="Enter Your Phone No" formControlName="phoneNo"
+        [ngClass]="{'is-invalid' : userFormControl['phoneNo'].invalid && (isSubmitted||userFormControl['phoneNo'].touched || userFormControl['phoneNo'].dirty),
+                      'is-valid' : userFormControl['phoneNo'].valid && ( isSubmitted||userFormControl['phoneNo'].touched || userFormControl['phoneNo'].dirty)}">
+    </div>
+    <div
+      *ngIf="userFormControl['phoneNo'].invalid && (isSubmitted||userFormControl['phoneNo'].touched || userFormControl['phoneNo'].dirty)"
+      class="danger">
+      <div *ngIf="userFormControl['phoneNo'].errors?.['required']" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter Your Password"
+        formControlName="password"
+        [ngClass]="{'is-invalid' : userFormControl['password'].invalid && (isSubmitted||userFormControl['password'].touched || userFormControl['password'].dirty),
+                      'is-valid' : userFormControl['password'].valid && ( isSubmitted||userFormControl['password'].touched || userFormControl['password'].dirty)}">
+    </div>
+    <div
+      *ngIf="userFormControl['password'].invalid && (isSubmitted||userFormControl['password'].touched || userFormControl['password'].dirty)"
+      class="danger">
+      <div *ngIf="userFormControl['password'].errors?.['required']" class="text-danger">
+        Name is required.
+      </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- <button type="button" class="btn btn-danger  ms-3" (click)=" onclose()" >Close</button> -->
+  </form>
+</div>
+<!--============================== form end =========================== -->
