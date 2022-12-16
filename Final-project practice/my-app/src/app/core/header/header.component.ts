@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
     this.userData()
     this.currentUser1()
 
-    // this.userTypeId = localStorage.getItem("userTypeId")
+    this.userTypeId = localStorage.getItem("userTypeId")
 
     if (this.userTypeId == 1) {
       this.showArtist = true;

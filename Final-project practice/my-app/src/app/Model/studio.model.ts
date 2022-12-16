@@ -29,3 +29,7 @@ export class studio {
 
 
 }
+export class Pagination {
+    public pageSize!: number;
+    public pageNumber!: number;
+}

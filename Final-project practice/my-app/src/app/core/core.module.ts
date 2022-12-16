@@ -30,8 +30,8 @@ import { SharedModule } from '../shared/shared.module';
     // HttpClientModule,
     // SharedModule
   ],
-  exports: [MasterComponent,
-    HeaderComponent
+  exports: [
+    // HeaderComponent
   ]
 })
 export class CoreModule { }

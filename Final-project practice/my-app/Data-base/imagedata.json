@@ -199,6 +199,906 @@
           "img5": "https://picsum.photos/900/500?random&t=5"
         }
       ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-7",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=9",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-8",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=1",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-9",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=3",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-10",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=5",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-11",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=10",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-12",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=14",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-13",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-14",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-15",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-16",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-17",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=1",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-18",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=12",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-19",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=19",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-20",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=18",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-21",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=17",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-22",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=16",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-23",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=15",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-24",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=14",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-25",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=13",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-26",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=12",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-27",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=10",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-28",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=9",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-29",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=8",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-30",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=1",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-31",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-32",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=2",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-33",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=3",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-34",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=6",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-35",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=5",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
+    },
+    {
+      "StudioId": 1,
+      "StudioName": "Creative Studio-36",
+      "StudioDescription": "Having All the Instruments",
+      "StudioAddress": "Valsad-6, 396375",
+      "HardwareAndEquipment": "Microphones",
+      "CountryId": 1,
+      "Country": "India",
+      "StateId": 1,
+      "State": "Gujarat",
+      "CityId": 1,
+      "City": "Valsad",
+      "StudioDays": "Monday to Friday",
+      "StudioHours": "10:00 to 8:00",
+      "Status": "Available",
+      "StudioServiceTypeId": 1,
+      "StudioServiceType": "Recording",
+      "EventRates": [
+        "Jam:2000, Record:4000"
+      ],
+      "StudioImages": [
+        {
+          "img1": "https://picsum.photos/900/500?random&t=4",
+          "img2": "https://picsum.photos/900/500?random&t=2",
+          "img3": "https://picsum.photos/900/500?random&t=7",
+          "img4": "https://picsum.photos/900/500?random&t=8",
+          "img5": "https://picsum.photos/900/500?random&t=5"
+        }
+      ]
     }
   ],
   "artist": [
@@ -383,6 +1283,59 @@
       "ClassAddress": "Valsad, 396375"
     }
   ],
+
+  "State": [
+    {
+      "id": 1,
+      "state": "Gujarat"
+    },
+    {
+      "id": 2,
+      "state": "Maharastra"
+    },
+    {
+      "id": 3,
+      "state": "Rajasthan"
+    }
+  ],
+  "Cities": [
+    {
+      "id": 1,
+      "stateId": 1,
+      "city": "Ahmedabad"
+    },
+    {
+      "id": 2,
+      "stateId": 1,
+      "city": "Rajkot"
+    },
+    {
+      "id": 3,
+      "stateId": 1,
+      "city": "Gandhinagar"
+    },
+    {
+      "id": 4,
+      "stateId": 2,
+      "city": "Mumbai"
+    },
+    {
+      "id": 5,
+      "stateId": 2,
+      "city": "Pune"
+    },
+    {
+      "id": 5,
+      "stateId": 3,
+      "city": "Udaipur"
+    },
+    {
+      "id": 6,
+      "stateId": 3,
+      "city": "Jaipur"
+    }
+  ],
+
   "userType": [
     {
       "userTypeId": 1,

@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StudioDetailComponent } from './studio-detail/studio-detail.component';
+import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 // import { NgSelectModule } from '@ng-select/ng-select';
 
 
@@ -26,6 +29,9 @@ import { StudioDetailComponent } from './studio-detail/studio-detail.component';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SharedModule,
+    InfiniteScrollModule,
+    // CoreModule
     // NgSelectModule
   ]
 })

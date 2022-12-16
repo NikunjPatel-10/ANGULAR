@@ -25,6 +25,7 @@ export class CarouselComponent implements OnInit {
   public artistLastFourData: any = [];
   public studioLastFourData: any = [];
   public userTypeId: any
+  public userTypeDataId: any
   public userTypeId1: any
   public userTypeId2: any
   public showStudio: boolean;
@@ -52,19 +53,19 @@ export class CarouselComponent implements OnInit {
 
 
   ngOnInit(): void {
+    localStorage.setItem("userTypeId", "2");
     this.CarouselData();
     this.artistData()
     this.profileData()
     this.studioFiveData()
-    this.userData()
-    this.currentUser()
-    localStorage.setItem("userTypeId", "3");
+    // this.userData()
+    // this.currentUser()
   }
 
   userData() {
     this.imageservice.getalluser().subscribe((res: usertype[]) => {
       this.userType = res.filter((c) => {
-        this.userTypeId = c.userTypeId
+        this.userTypeDataId = c.userTypeId
         console.log(this.userTypeId);
       })
     })
@@ -161,7 +162,10 @@ export class CarouselComponent implements OnInit {
 
   }
   // ----two show the data randomly in the carousel----//
-
+/**
+ * 
+ * @param arr 
+ */
   shuffleArray(arr: any) {
     for (var i = arr.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -209,10 +213,6 @@ export class CarouselComponent implements OnInit {
       }).slice(-6).reverse();
 
     })
-
-
-
-
   }
 
   profileData() {
