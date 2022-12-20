@@ -34,9 +34,9 @@ export class ImageService {
    * @param pageSize 
    * @returns 
    */
-  getStudioData(page:Pagination): Observable<studio[]> {
-    const url = this.baseUrl + "studio"
-    return this.http.get<studio[]>(`${url}?_page=${page.pageNumber}?_limit=${page.pageSize}`)
+  getStudioData(pageNumber:number, pageSize:number): Observable<studio[]> {
+    const url = this.baseUrl + "studio" 
+    return this.http.get<studio[]>(`${url}?_page=${pageNumber}?_limit=${pageSize}`)
   }
 
   getArtistData(): Observable<artist[]> {

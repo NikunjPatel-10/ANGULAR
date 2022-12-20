@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Pagination, studio } from 'src/app/Model/studio.model';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { ImageService } from 'src/app/shared/services/image/image.service';
-import { image } from '../studio-form/studio.model';
+
 
 @Component({
   selector: 'app-studio-list',
@@ -11,11 +12,11 @@ import { image } from '../studio-form/studio.model';
   styleUrls: ['./studio-list.component.scss']
 })
 export class StudioListComponent implements OnInit {
-  // public datalist: any = [];
-  // public pageNumber = 12;
-  public distance = 2;
-  // public pageSize = 1;
-  public tableProperty: Pagination
+  public studioList$!: Observable<studio[]>
+  public distance: number = 2;
+  public pageSize = 1;
+  public pageNumber = 10;
+  // public tableProperty: Pagination
   public imageData: any = []
   public studioData: any = []
   // state data
@@ -31,12 +32,13 @@ export class StudioListComponent implements OnInit {
    * @param imageservice 
    */
   constructor(private apiservice: ApiService, private http: HttpClient, private imageservice: ImageService) {
-    this.tableProperty = new Pagination();
-    this.tableProperty.pageNumber = 1;
-    this.tableProperty.pageSize = 12
+    // this.tableProperty = new Pagination();
+    // this.tableProperty.pageNumber = 10;
+    // this.tableProperty.pageSize = 1
   }
 
   ngOnInit(): void {
+    // this.getAllStudios(this.tableProperty)
     this.studioFiveData()
     this.getImageDataList()
     this.getStatename()
@@ -84,33 +86,28 @@ export class StudioListComponent implements OnInit {
    * 
    */
   studioFiveData() {
-    this.imageservice.getStudioData(this.tableProperty).subscribe((res: studio[]) => {
-      this.studioData = res.map(item => {
-        return {
-          image: item.StudioImages,
-          description: item.StudioAddress,
-          name: item.StudioName
-        }
-      }).reverse();
-      this.studioData = this.studioData.concat(res);
-      console.log(this.studioData);
+    this.imageservice.getStudioData(this.pageNumber, this.pageSize).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.studioData = res.map(item => {
+          return {
+            image: item.StudioImages,
+            description: item.StudioAddress,
+            name: item.StudioName
+          }
+        }).reverse();
+        this.studioData = this.studioData.concat(res);
+        console.log(this.studioData);
+      }
     })
-
-    // this.imageservice.getStudioData(this.pageNumber , this.pageSize).subscribe({
-    //   next: (res:studio[]) => {
-    //     this.studioData = res.map(item => {
-    //       return {
-    //         image: item.StudioImages,
-    //         description: item.StudioAddress,
-    //         name: item.StudioName
-    //       }
-    //     }).reverse();
-    //     this.studioData = this.studioData.concat(res);
-    //     console.log(this.studioData);  
-    //   }
-    // })
-
   }
+
+  // getAllStudios(tableProperty: Pagination) {
+  //   this.tableProperty = tableProperty;
+  //   this.studioList$ = this.imageservice.getStudioData(tableProperty);
+  //   console.log(this.studioList$);
+
+  // }
 
   // DataList() {
   //   this.apiservice.getjsonData(this.pageSize, this.pageNumber).subscribe({
@@ -123,10 +120,11 @@ export class StudioListComponent implements OnInit {
 
   /**
    * for scrolling the page
+   * description: method for scrolling studio page
    */
   onScrolllist() {
-    this.tableProperty.pageNumber++;
-    this.studioData(this.tableProperty);
+    this.pageSize++;
+    this.studioFiveData();
   }
 
 
