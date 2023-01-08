@@ -1,0 +1,82 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "img": "https://picsum.photos/900/500?random&t=5",
+            "name": "Avengers Black Widow",
+            "category": {
+                "category1": "Action",
+                "category2": "Blockbuster"
+            },
+            "img1": "https://picsum.photos/900/500?random&t=5",
+            "popularity": "trending",
+            "watchlists": "590,972,542",
+            "streams": "21,452",
+            "releasedate": "21th May,2003"
+        },
+        {
+            "id": 2,
+            "img": "https://picsum.photos/900/500?random&t=4",
+            "name": "After Hours",
+            "category": {
+                "category1": "Action",
+                "category2": "Blockbuster"
+            },
+            "watchlists": "88,458,892",
+            "streams": "32,892",
+            "releasedate": "21th May,2003"
+        },
+        {
+            "id": 3,
+            "img": "https://picsum.photos/900/500?random&t=3",
+            "name": "Ant-man",
+            "category": {
+                "category1": "Action",
+                "category2": "Blockbuster"
+            },
+            "watchlists": "22,008,901",
+            "streams": "345,321",
+            "releasedate": "21th May,2003"
+        },
+        {
+            "id": 4,
+            "img": "https://picsum.photos/900/500?random&t=2",
+            "name": "Captain Marvel",
+            "category": {
+                "category1": "Action",
+                "category2": "Blockbuster"
+            },
+            "watchlists": "80961",
+            "streams": "903",
+            "releasedate": "21th May,2003"
+        },
+        {
+            "id": 5,
+            "img": "https://picsum.photos/900/500?random&t=1",
+            "name": "Grimsby",
+            "category": {
+                "category1": "Action",
+                "category2": "Blockbuster"
+            },
+            "img1": "https://picsum.photos/900/500?random&t=1",
+            "popularity": "trending",
+            "watchlists": "670,901",
+            "streams": "2,453",
+            "releasedate": "21th May,2003"
+        },
+        {
+            "id": 1,
+            "img": "https://picsum.photos/900/500?random&t=6",
+            "name": "Moonlight",
+            "category": {
+                "category1": "Action",
+                "category2": "Blockbuster"
+            },
+            "img1": "https://picsum.photos/900/500?random&t=6",
+            "popularity": "trending",
+            "watchlists": "56,893",
+            "streams": "24,512,232",
+            "releasedate": "4th July,2012"
+        }   
+    ]
+}

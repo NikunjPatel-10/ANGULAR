@@ -1,0 +1,163 @@
+<div class=" w-100 m-0 p-0 overflow-hidden">
+    <div class="p-4 ms-4 mb-0 align-items-center">
+
+        <!-- Avengers -->
+        <div>
+            <div class="d-flex justify-content-between align-items-center mb-0">
+                <h5 class="fw-bold">Avengers Black Widow</h5>
+                <div class="me-5 border p-1 rounded">
+                    <span> <img src="../../assets/Images/cloud.png" alt=""></span>
+                    <span> Export</span>
+                </div>
+            </div>
+
+
+
+            <!-- Image & Graph -->
+            <div class="d-flex justify-content-between align-items-center my-4 flex-md-wrap flex-sm-wrap">
+                <img class="image1 rounded-4 me-4" src="../../assets/Images/Movie Image.png" alt="">
+                <div class=" border rounded-4 flex-grow-1 p-3 me-5 fw-semibold ">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h6 class="fw-semibold">Average watch time</h6>
+                            <p>This track the average watch by users every month</p>
+                        </div>
+                        <div>
+                            <img src="../../assets/Images/Vector (1).png">
+                        </div>
+                    </div>
+                    <img class=" image2 flex-grow-1 me-5 w-100" src="../../assets/Images/Container.png" alt="image">
+                </div>
+            </div>
+
+
+
+
+            <!-- Movie Properties -->
+            <div class="d-flex justify-content-between align-items-center mb-0 me-5 ">
+                <div>
+                    <h6 class="fw-semibold">Movie Properties</h6>
+                    <p>A list of details for this movie</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-0">
+                    <img class="me-1 mb-3" src="../../assets/Images/trending.png" alt="image">
+                    <p class="text-primary">Trending</p>
+                </div>
+            </div>
+
+
+            <!-- Table -->
+            <div class="me-5 border rounded-3 overflow-hidden mb-3">
+                <table class="table ">
+                    <tr>
+                        <th>Category</th>
+                        <th>Streams</th>
+                        <th>Watchlists</th>
+                        <th>Owner</th>
+                        <th>Release Date</th>
+                    </tr>
+                    <tr >
+                        <td>
+                            <div class="d-flex">
+                                <div class="badge rounded-pill me-2 p-3 ">Action</div>
+                                <div class="badge rounded-pill p-3 ">Thriller</div>
+                            </div>
+                        </td>
+                        <td>24,512,343</td>
+                        <td>389,754</td>
+                        <td>Sony,Entertainment</td>
+                        <td>21st May,2022</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- Interest Tracking Insights -->
+            <div class="row">
+                <h6 class="fw-semibold">Interest Tracking Insights</h6>
+                <p>Keep track of the insights on this movie</p>
+            </div>
+
+
+            <div class="me-5 border rounded-3 overflow-hidden mb-3">
+                <table class="table ">
+                    <tr>
+                        <th>People Reached</th>
+                        <th>Content Interaction</th>
+                        <th>Impressions</th>
+                        <th>Shares</th>
+                        <th>Likes</th>
+                    </tr>
+                    <tr>
+                        <td>39,823,154</td>
+                        <td>76,923,304</td>
+                        <td>101,783,945</td>
+                        <td>14,895</td>
+                        <td>34,056,147</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <!-- All Movies -->
+            <div class="row me-5 mb-3">
+                <ul class=" d-flex  align-items-center  ">
+                    <li class="active">All Movies</li>
+                    <li>Trending</li>
+                    <li>Upcoming Premier</li>
+                </ul>
+            </div>
+
+            <!-- Collection -->
+            <div class="d-flex justify-content-between align-items-center mb-0 me-5 mb-3">
+                <div>
+                    <h6 class="fw-semibold">Collection of all movies</h6>
+                    <p>Keep track of all the movies on moviebox</p>
+                </div>
+                <div class="d-flex align-text-top   unset p-3 rounded">
+                    <img class="search-icon fs-1" src="../../assets/Images/Vector.png" alt="">
+                    <input type="text" class=" me-2 px-3 border-0 "  placeholder="Search" aria-label="Search">
+                </div>
+            </div>
+
+            <div class="me-5 border rounded-3 overflow-hidden mb-3">
+                <table class="main-table table"  >
+                    <tr class="">
+                        <th>Name<img src="../../assets/Images/down-arrow.png" alt="image" class="ms-2"></th>
+                        <th>Category</th>
+                        <th>Popularity/Interest</th>
+                        <th>Watchlists</th>
+                        <th>Streams</th>
+                        <th>Release Date</th>
+                        <th></th>
+                    </tr>
+                    <tr *ngFor="let items of moviedata">
+                        <td>
+                            <img src="{{items.img}}" alt="image"
+                                style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">{{items.name}}
+                        </td>
+
+                        <td class="">
+                            <div class="d-flex ">
+                                <div class=" badge rounded-pill p-3 me-2">{{items.category.category1}}</div>
+                                <div class="badge rounded-pill p-3">{{items.category.category2}}</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <img src="{{items.img1}}" alt=" "
+                                style="width: 50px; height: 50px; border-radius: 50%;">
+                            {{items.popularity}}
+                        </td>
+                        <td>{{items.watchlists}}</td>
+                        <td>{{items.streams}}</td>
+                        <td>{{items.releasedate}}</td>
+                        <td>
+                            <button type="button" class="btn px-3 rounded">View</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
