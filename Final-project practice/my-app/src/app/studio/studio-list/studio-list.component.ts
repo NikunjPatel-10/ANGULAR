@@ -86,7 +86,7 @@ export class StudioListComponent implements OnInit {
    * 
    */
   studioFiveData() {
-    this.imageservice.getStudioData(this.pageNumber, this.pageSize).subscribe({
+    this.imageservice.getStudioData().subscribe({
       next: (res) => {
         console.log(res);
         this.studioData = res.map(item => {

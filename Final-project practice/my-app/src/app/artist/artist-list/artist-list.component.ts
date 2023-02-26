@@ -14,7 +14,7 @@ export class ArtistListComponent implements OnInit {
   public pageNumber = 20;
   public distance = 2;
   public pageSize = 1;
-
+    
   // state data
   public Statename: any
   public Cityname: any

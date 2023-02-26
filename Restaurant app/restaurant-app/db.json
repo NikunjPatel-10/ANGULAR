@@ -39,6 +39,14 @@
       "mobile": 4784687348,
       "address": "AT  POST:NANDARKHA,UGAMNA FALIYA",
       "services": "karamchand"
+    },
+    {
+      "id": 17,
+      "name": "rahul",
+      "email": "rahul123@gmail.com",
+      "mobile": 23456567,
+      "address": "tukvada",
+      "services": "chai"
     }
   ],
   "signup": [
@@ -139,6 +147,13 @@
       "email": "jay@gmail.com",
       "password": "1234",
       "id": 14
+    },
+    {
+      "name": "rahul",
+      "mobile": 34763784,
+      "email": "rahul123@gmail.com",
+      "password": "rahul123",
+      "id": 15
     }
   ],
   "comments": [],
