@@ -22,8 +22,16 @@
                 <span class="fs-6">Booking History</span>
             </li>
         </ul>
-        <div class="profile-wrap me-5 nav-item  d-flex justify-content-center align-items-center ">
-            <img src="{{b1.DisplayPicture}}">
+        <div class="d-flex justify-content-end">
+            <div class="profile-wrap me-5 nav-item  d-flex justify-content-center align-items-center ">
+                <img src="{{b1.DisplayPicture}}">
+            </div>
+            <li class="nav-item d-flex justify-content-center align-items-center" ngbDropdown display="dynamic" placement="bottom-end">
+                <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> </a>
+                <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+                    <li class="dropdown-item"  [routerLink]="'/login'"  (click)="onLogout()">Logout</li>
+                </div>
+            </li>
         </div>
     </div>
 </nav>

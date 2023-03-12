@@ -20,8 +20,11 @@
 
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import './../node_modules/bootstrap/scss/bootstrap.scss';
 
 
 // for ngselect
 // @import "~@ng-select/ng-select/themes/default.theme.css";
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

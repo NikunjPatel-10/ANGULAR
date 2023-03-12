@@ -97,13 +97,13 @@
                         <label for="validationServer03" class="form-label fw-bold">Phone Number<span
                                 class="text-danger">*</span></label>
                         <input type="text" placeholder="enter mobile number" id="validationServer03"
-                            class="form-control" formControlName="Phone number">
+                            class="form-control" formControlName="phonenumber">
                     </div>
                     <div class="d-flex flex-column mb-4 col-sm-12 col-md-6 col-lg-6">
                         <div><label for="validationServer03" class="form-label fw-bold me-4">Select user-Type<span
                                     class="text-danger">*</span></label></div>
                         <div class="dropdown">
-                            <select class="form-select" id="select" >
+                            <select class="form-select" id="select" formControlName="usertype">
                                 <option value="" class="dropdown-item" disabled selected>Select User Type
                                 </option>
                                 <option value="" class="dropdown-item" value="Studio-owner">Studio-owner</option>
@@ -115,7 +115,7 @@
                     <div class="d-flex flex-column mb-4 col-sm-12 col-md-6 col-lg-6">
                         <div class=""><label for="validationServer03" class="form-label fw-bold me-4">Select Country</label></div>
                         <div class="dropdown">
-                            <select class="form-select" id="select" >
+                            <select class="form-select" id="select" formControlName="state">
                                 <option value="" class="dropdown-item " disabled selected>select-country
                                 </option>
                                 <option value="" class="dropdown-item" value="Studio-owner">India</option>
@@ -129,7 +129,7 @@
                             <label for="validationServer05" class="form-label fw-bold ">Select State<span
                                     class="text-danger">*</span></label>
                             <div class="dropdown me-4">
-                                <select class="form-select" id="select" >
+                                <select class="form-select" id="select" formControlName="state">
                                     <option value="" class="dropdown-item " disabled selected>Select State
                                     </option>
                                     <option value="" class="dropdown-item" value="gujarat">Gujarat</option>
@@ -142,7 +142,7 @@
                             <label for="validationServer05" class="form-label fw-bold   ">Select City <span
                                     class="text-danger">*</span></label>
                             <div class="dropdown">
-                                <select class="form-select" id="select" >
+                                <select class="form-select" id="select" formControlName="city">
                                     <option value="" class="dropdown-item" disabled selected>Select City
                                     </option>
                                     <option value="" class="dropdown-item" value="valsad">valsad</option>
@@ -158,7 +158,7 @@
 
 
                 <div class="w-100 mt-3">
-                    <button class=" btn-color px-5 py-2  border-0 cursor-pointer" type="submit">Submit</button>
+                    <button class=" btn-color px-5 py-2  border-0 cursor-pointer" type="submit" [routerLink]="'/login'">Submit</button>
                 </div>
             </form>
 

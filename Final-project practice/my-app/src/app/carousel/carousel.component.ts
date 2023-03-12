@@ -53,7 +53,7 @@ export class CarouselComponent implements OnInit {
 
 
   ngOnInit(): void {
-    localStorage.setItem("userTypeId", "2");
+    localStorage.setItem("userTypeId", "3");
     this.CarouselData();
     this.artistData()
     this.profileData()

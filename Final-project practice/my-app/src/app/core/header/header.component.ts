@@ -10,7 +10,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   public showStudio: boolean;
@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   isOpen = false
   public b: any;
   public b1: any;
-  constructor(private overlayservice: CdkOverlayService, private imageservice: ImageService) {
+  constructor(private imageservice: ImageService) {
     this.showArtist = false;
     this.showStudio = false;
   }
@@ -91,5 +91,8 @@ export class HeaderComponent implements OnInit {
     // console.log(this.b);?
   }
 
+public onLogout(){
+  localStorage.clear()
+}
 
 }

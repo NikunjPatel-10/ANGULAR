@@ -9,13 +9,15 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
 import { RegisterComponent } from './register/register.component';
+import { MasterComponent } from './core/master/master.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
-    RegisterComponent
+    RegisterComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import { RegisterComponent } from './register/register.component';
     NgbModule,
     SharedModule,
     HttpClientModule,
-    NgbDropdownModule
+    // NgbDropdownModule
 
 
   ],

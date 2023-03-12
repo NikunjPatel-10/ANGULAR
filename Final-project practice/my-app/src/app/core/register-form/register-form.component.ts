@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-register-form',
@@ -9,7 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterFormComponent implements OnInit {
   public isSubmitted: boolean
   public registerForm: FormGroup
-  constructor(private formBuilder: FormBuilder) {
+
+  /**
+   * 
+   * @param formBuilder 
+   */
+  constructor(private formBuilder: FormBuilder, private _apiService:ApiService) {
     this.isSubmitted = false
     this.registerForm = this.formBuilder.group({
       firstname: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$'), Validators.minLength(3), Validators.maxLength(25)]],
@@ -31,9 +37,13 @@ export class RegisterFormComponent implements OnInit {
     return this.registerForm.controls
   }
 
-  registerData() {
-    console.log(this.registerForm.value);
-
+  /**
+   * 
+   */
+  public registerData() {
+   this._apiService.postRegisterData(this.registerForm.value).subscribe(res=>{
+    console.log(res);  
+   })
   }
 
 }

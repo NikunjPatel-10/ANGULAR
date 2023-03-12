@@ -9,11 +9,11 @@ const routes: Routes = [{
   path: '', component: StudioComponent,
 
   children: [
-    {
-      path: '',
-      pathMatch: 'full',
-      redirectTo: 'details'
-    },
+    // {
+    //   path: '',
+    //   pathMatch: 'full',
+    //   redirectTo: 'details'
+    // },
     {
       path: 'form',
       component: StudioFormComponent

@@ -10,7 +10,7 @@ import { CardComponent } from './card/card.component';
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
+    // HttpClientModule,
     OverlayModule
   ],
   exports:[

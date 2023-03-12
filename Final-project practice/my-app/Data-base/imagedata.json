@@ -1283,7 +1283,6 @@
       "ClassAddress": "Valsad, 396375"
     }
   ],
-
   "State": [
     {
       "id": 1,
@@ -1335,7 +1334,6 @@
       "city": "Jaipur"
     }
   ],
-
   "userType": [
     {
       "userTypeId": 1,
@@ -1431,5 +1429,68 @@
       "UserType": "artist",
       "DisplayPicture": "https://picsum.photos/900/500?random&t=8"
     }
-  ]
+  ],
+  "register": [
+    {
+      "firstname": "Nikunj",
+      "lastname": "patel",
+      "email": "nikunj19942@gmail.com",
+      "password": "dfrfr",
+      "phonenumber": "23343445",
+      "state": "gujarat",
+      "city": "valsad",
+      "usertype": "Studio-owner",
+      "filepath": "",
+      "id": 1
+    },
+    {
+      "firstname": "abc",
+      "lastname": "accd",
+      "email": "abc@gmail.com",
+      "password": "abc123",
+      "phonenumber": "2344455",
+      "state": "gujarat",
+      "city": "valsad",
+      "usertype": "Studio-owner",
+      "filepath": "",
+      "id": 2
+    },
+    {
+      "firstname": "abc",
+      "lastname": "accd",
+      "email": "abc@gmail.com",
+      "password": "abc123",
+      "phonenumber": "2344455",
+      "state": "gujarat",
+      "city": "valsad",
+      "usertype": "Studio-owner",
+      "filepath": "",
+      "id": 3
+    },
+    {
+      "firstname": "abc",
+      "lastname": "accd",
+      "email": "abc@gmail.com",
+      "password": "abc123",
+      "phonenumber": "2344455",
+      "state": "gujarat",
+      "city": "valsad",
+      "usertype": "Studio-owner",
+      "filepath": "",
+      "id": 4
+    },
+    {
+      "firstname": "abc",
+      "lastname": "accd",
+      "email": "abc@gmail.com",
+      "password": "abc123",
+      "phonenumber": "2344455",
+      "state": "gujarat",
+      "city": "valsad",
+      "usertype": "Studio-owner",
+      "filepath": "",
+      "id": 5
+    }
+  ],
+  "login": []
 }
